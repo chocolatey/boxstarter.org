@@ -1,6 +1,9 @@
 ﻿@using System.Security.Policy
 @{
     Layout = "~/_SiteLayout.cshtml";
+    var absPath = Document.GetLink();
+    var thisPage = absPath.ToLower().Substring(absPath.LastIndexOf('/') + 1);
+    ViewData[thisPage + "Style"] = "active";
     ViewBag.Learn = "active";
 }
 
@@ -18,9 +21,9 @@
             </button>
             <div class="navbar-collapse navbar-left px-0 collapse">
                 <div class="list-group">
-                    <a href="WebLauncher" class="list-group-item @ViewBag.weblauncherStyle">Run with a Gist</a>
-                    <a href="SimplePackage" class="list-group-item @ViewBag.simplepackageStyle">Simple package creation</a>
-                    <a href="RemotePackageWithArtifacts" class="list-group-item @ViewBag.remotepackageWithartifactsStyle">Deploying a web application remotely</a>
+                    <a href="@Context.GetLink("WebLauncher")" class="list-group-item @ViewBag.weblauncherStyle">Run with a Gist</a>
+                    <a href="@Context.GetLink("SimplePackage")" class="list-group-item @ViewBag.simplepackageStyle">Simple package creation</a>
+                    <a href="@Context.GetLink("RemotePackageWithArtifacts")" class="list-group-item @ViewBag.remotepackageWithartifactsStyle">Deploying a web application remotely</a>
                 </div>
             </div><!-- /.nav-collapse -->
         </div><!-- /.navbar -->

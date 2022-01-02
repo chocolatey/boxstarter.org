@@ -23,7 +23,7 @@
     is located. The Boxstarter repository is a single directory on disk
     that contains one subdirectory per package. By default, Boxstarter
     maintains this directory in a directory called <code>BuildPackages</code> inside
-    the same root directory where the Boxstarter modules reside. See <a href="CreatingPackages.cshtml">Creating Packages</a>
+    the same root directory where the Boxstarter modules reside. See <a href="@Context.GetLink("CreatingPackages")">Creating Packages</a>
     for detailed information on using Boxstarter commands to simplify package creation. All
     Boxstarter commands that create and build packages act within this
     directory. The repository location can be found using the <code>$boxstarter</code>
@@ -235,7 +235,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
             to download your subscription file from Azure and then
             <pre>Import-AzurePublishSettingsFile -PublishSettingsFile "C:\saved\subscription\file.publishsettings"</pre>
             You may also add the Azure management key as a MSBuild parameter
-            described next. See <a href="VMIntegration.cshtml#azure">these instructions</a> for setting up an Azure subscription for more details.
+            described next. See <a href="@Context.GetLink("VMIntegration#azure")">these instructions</a> for setting up an Azure subscription for more details.
         </li>
         <li>
             <p>

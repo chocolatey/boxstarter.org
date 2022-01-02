@@ -1,7 +1,10 @@
 @using System.Security.Policy
 @{
     Layout = "~/_SiteLayout.cshtml";
-    ViewBag.Documentation = "active";
+    var absPath = Document.GetLink();
+    var thisPage = absPath.ToLower().Substring(absPath.LastIndexOf('/') + 1);
+    ViewData[thisPage + "Style"] = "active";
+    ViewData["Documentation"] = "active";
 }
 
 @section styles {
@@ -17,17 +20,17 @@
             </button>
             <div class="navbar-collapse navbar-left px-0 collapse">
                 <div class="list-group">
-                    <a href="WhyBoxstarter" class="list-group-item @ViewBag.whyBoxstarterStyle">Why Boxstarter?</a>
-                    <a href="InstallBoxstarter" class="list-group-item @ViewBag.installboxstarterStyle">Installing Boxstarter</a>
-                    <a href="UsingBoxstarter" class="list-group-item @ViewBag.usingboxstarterStyle">Using Boxstarter Commands</a>
-                    <a href="UnderstandingPackages" class="list-group-item @ViewBag.understandingpackagesStyle">Understanding Packages</a>
-                    <a href="CreatingPackages" class="list-group-item @ViewBag.creatingpackagesStyle">Creating Packages</a>
-                    <a href="PublishingPackages" class="list-group-item @ViewBag.publishingpackagesStyle">Publishing Packages</a>
-                    <a href="InstallingPackages" class="list-group-item @ViewBag.installingpackagesStyle">Installing Packages</a>
-                    <a href="VMIntegration" class="list-group-item @ViewBag.VMIntegrationStyle">Installing packages on a Virtual Machine</a>
-                    <a href="TestingPackages" class="list-group-item @ViewBag.testingpackagesStyle">Testing Packages and Build Server Integration</a>
-                    <a href="WinConfig" class="list-group-item @ViewBag.winconfigStyle">Boxstarter WinConfig Features</a>
-                    <a href="BoxstarterResources" class="list-group-item @ViewBag.boxstarterresourcesStyle">More Boxstarter Resources</a>
+                    <a href="@Context.GetLink("WhyBoxstarter")" class="list-group-item @ViewData["whyboxstarterStyle"]">Why Boxstarter?</a>
+                    <a href="@Context.GetLink("InstallBoxstarter")" class="list-group-item @ViewData["installboxstarterStyle"]">Installing Boxstarter</a>
+                    <a href="@Context.GetLink("UsingBoxstarter")" class="list-group-item @ViewData["usingboxstarterStyle"]">Using Boxstarter Commands</a>
+                    <a href="@Context.GetLink("UnderstandingPackages")" class="list-group-item @ViewData["understandingpackagesStyle"]">Understanding Packages</a>
+                    <a href="@Context.GetLink("CreatingPackages")" class="list-group-item @ViewData["creatingpackagesStyle"]">Creating Packages</a>
+                    <a href="@Context.GetLink("PublishingPackages")" class="list-group-item @ViewData["publishingpackagesStyle"]">Publishing Packages</a>
+                    <a href="@Context.GetLink("InstallingPackages")" class="list-group-item @ViewData["installingpackagesStyle"]">Installing Packages</a>
+                    <a href="@Context.GetLink("VMIntegration")" class="list-group-item @ViewData["vmintegrationStyle"]">Installing packages on a Virtual Machine</a>
+                    <a href="@Context.GetLink("TestingPackages")" class="list-group-item @ViewData["testingpackagesStyle"]">Testing Packages and Build Server Integration</a>
+                    <a href="@Context.GetLink("WinConfig")" class="list-group-item @ViewData["winconfigStyle"]">Boxstarter WinConfig Features</a>
+                    <a href="@Context.GetLink("BoxstarterResources")" class="list-group-item @ViewData["boxstarterresourcesStyle"]">More Boxstarter Resources</a>
                 </div>
             </div><!-- /.nav-collapse -->
         </div><!-- /.navbar -->

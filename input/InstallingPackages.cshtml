@@ -24,7 +24,7 @@ Install-BoxstarterPackage -PackageName "MyPackage1","MyPackage2" -DisableReboots
 <p>If you are familiar with Chocolatey, you know that Chocolatey will check if a package has been previously installed and will skip the installation if there is already a install for that same package. Boxstarter changes this logic just a bit depending on whether or not one or multiple packages are provided to Install-BoxstarterPackage or the Boxstarter URL. If just one package is provided, Boxstarter will always attempt to re-download and install the package regardless of whether it had been previously installed. Its important to note this only applies to the "outer" package. If your package includes calls to <code>CINST</code>, those packages will abide by the normal Chocolatey install rules and will not be installed if they already exist in the Chocolatey lib folder. Furthermore, when you supply multiple packages to Boxstarter's command line or URL, it will skip installation for packages already installed.</p>
 
 <h3>Installing a package without a package</h3>
-<p>As mentioned previously on <a href="/CreatingPackages">Creating Packages</a>, you may not need to create a package. If your install script is limited to a single script file, you can use a file path or URL to a script and Boxstarter will create a package on the fly using this script as the ChocolateyInstall.ps1.</p>
+<p>As mentioned previously on <a href="@Context.GetLink("CreatingPackages")">Creating Packages</a>, you may not need to create a package. If your install script is limited to a single script file, you can use a file path or URL to a script and Boxstarter will create a package on the fly using this script as the ChocolateyInstall.ps1.</p>
 <pre>
 Install-BoxstarterPackage -PackageName https://gist.github.com/mwrock/8066325/raw/e0c830528429cd68a8c71dbff6f48298576d8d20/gistfile1.txt
 </pre>
@@ -32,7 +32,7 @@ Install-BoxstarterPackage -PackageName https://gist.github.com/mwrock/8066325/ra
 
 <h3>Understanding and controlling installation output</h3>
 <h4>Pipeline Output</h4>
-<p>For each machine that Boxstarter installs (see <a href="#RemoteInstallations">below</a> for remote installation details) an object is emitted to the PowerShell pipeline containing details about the install:</p>
+<p>For each machine that Boxstarter installs (see <a href="@Context.GetLink("InstallingPackages#RemoteInstallations")">below</a> for remote installation details) an object is emitted to the PowerShell pipeline containing details about the install:</p>
 <pre>
 Errors       : {}
 ComputerName : localhost
@@ -109,7 +109,7 @@ Set-BoxstarterShare BoxShare
 <pre>
 Enable-PSRemoting -Force
 </pre>
-<p>NOTE: If you are installing a Boxstarter install on a Hyper-V VM from a Hyper-V host machine, using the Boxstarter.HyperV module's <code>Enable-BoxstarterVM</code> command will configure the VM remote connectivity for you if needed. See <a href="VMIntegration">Installing packages on a Virtual Machine</a> for details.</p>
+<p>NOTE: If you are installing a Boxstarter install on a Hyper-V VM from a Hyper-V host machine, using the Boxstarter.HyperV module's <code>Enable-BoxstarterVM</code> command will configure the VM remote connectivity for you if needed. See <a href="@Context.GetLink("VMIntegration")">Installing packages on a Virtual Machine</a> for details.</p>
 <h4>Invoking from the local machine</h4>
 <p>Now on your machine where Boxstarter is installed:</p>
 <pre>
