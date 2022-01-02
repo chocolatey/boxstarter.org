@@ -25,5 +25,10 @@ namespace Docs
         {
             return !document.GetBool(Constants.NoLink, false);
         }
+
+        public static IEnumerable<IDocument> OnlyVisible(this IEnumerable<IDocument> source)
+        {
+            return source.Where(x => x.IsVisible());
+        }
     }
 }
