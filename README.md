@@ -1,8 +1,8 @@
-# Chocolatey Docs
+# Boxstarter Docs
 
 This repository contains the source files for the documentation site that can be found here:
 
-https://docs.chocolatey.org/en-us/
+https://boxstarter.org
 
 This site is built using [Statiq](https://statiq.dev/).
 
@@ -30,20 +30,11 @@ To build the site locally on your machine, either run the `.\build.ps1` or the `
 
 To preview the site locally on your machine, either run the `.\preview.ps1` or the `preview.sh` file (depending on your system).  Once completed, you should be able to open a browser on your machine to `http://localhost:5080` and the site will be loaded.  Once running, any changes made to the files within the `input` folder will cause the site to be rebuilt with the new content.
 
-### Troubleshooting the build
-
-If you are having build errors with `'copyTheme' errored after`, try removing the `node_modules` directory and clearing your yarn cache with `yarn cache clean`.
-
 ## Build Status
 
-[![GitHub Actions Build Status](https://github.com/chocolatey/docs/workflows/Publish%20Documentation/badge.svg)](https://github.com/chocolatey/docs/actions?query=workflow%3A%22Build+Pull+Request%22)
+[![GitHub Actions Build Status](https://github.com/chocolatey/boxstarter.org/workflows/Publish%20Documentation/badge.svg)](https://github.com/chocolatey/boxstarter.org/actions?query=workflow%3A%22Build+Pull+Request%22)
 
 ## Chat Room
 Come join in the conversation about Chocolatey in our [Community Chat Room](https://ch0.co/community).
 
 Please make sure you've read over and agree with the [etiquette regarding communication](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication).
-
-## Search
-
-Search uses [Algolia DocSearch](https://docsearch.algolia.com/) as backend.
-Configuration for crawler is available at https://github.com/algolia/docsearch-configs/blob/master/configs/chocolatey.json.
