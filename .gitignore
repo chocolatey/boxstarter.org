@@ -7,12 +7,6 @@ output/
 bin/
 obj/
 publish/
-node_modules/
-input/assets/css/
-input/assets/js/
-input/assets/fonts/
-input/assets/images/global-shared/
-input/global-partials/
 apple-touch-*.png
 favicon.ico
 cache/
