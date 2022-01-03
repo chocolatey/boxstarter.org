@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/boxstarter.org/favicon.ico">
+
+    <title>Boxstarter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/boxstarter.org/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .jumbotron {
+            background-color: #fafad2;
+            background-color: rgba(235, 214, 61, 0.24);
+            padding-bottom: 10px;
+        }
+
+        .btn-navbar {
+            margin-top: 8px;
+            margin-left:20px;
+        }
+
+        .twitter-follow-button {
+            margin-top: 8px;
+        }
+
+        .px-0 {
+            padding: 0;
+        }
+        
+    
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="/boxstarter.org/">Boxstarter</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/boxstarter.org/WhyBoxstarter">Docs</a></li>
+                <li><a href="/boxstarter.org/Learn/WebLauncher">Learn</a></li>
+                <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
+                <li><a href="https://groups.google.com/forum/#!forum/boxstarter">Discussion</a></li>
+                <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
+                <li><a href="/boxstarter.org/Blog">Blog</a></li>
+                <li><a href="/boxstarter.org/License">License</a></li>
+            </ul>
+            <a class="btn btn-primary btn-navbar" role="button" href="/boxstarter.org/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    
+
+   <div class="container">
+       
+
+<div class="row">
+    <div class="col-sm-3" id="sidebar">
+        <div class="navbar" role="navigation">
+            <button type="button" class="btn btn-secondary center-block visible-xs" data-toggle="collapse" data-target=".navbar-left">
+                Table of Contents
+                <span class="caret"></span>
+            </button>
+            <div class="navbar-collapse navbar-left px-0 collapse">
+                <div class="list-group">
+                    <a href="/boxstarter.org/WhyBoxstarter" class="list-group-item">Why Boxstarter?</a>
+                    <a href="/boxstarter.org/InstallBoxstarter" class="list-group-item">Installing Boxstarter</a>
+                    <a href="/boxstarter.org/UsingBoxstarter" class="list-group-item active">Using Boxstarter Commands</a>
+                    <a href="/boxstarter.org/UnderstandingPackages" class="list-group-item">Understanding Packages</a>
+                    <a href="/boxstarter.org/CreatingPackages" class="list-group-item">Creating Packages</a>
+                    <a href="/boxstarter.org/PublishingPackages" class="list-group-item">Publishing Packages</a>
+                    <a href="/boxstarter.org/InstallingPackages" class="list-group-item">Installing Packages</a>
+                    <a href="/boxstarter.org/VMIntegration" class="list-group-item">Installing packages on a Virtual Machine</a>
+                    <a href="/boxstarter.org/TestingPackages" class="list-group-item">Testing Packages and Build Server Integration</a>
+                    <a href="/boxstarter.org/WinConfig" class="list-group-item">Boxstarter WinConfig Features</a>
+                    <a href="/boxstarter.org/BoxstarterResources" class="list-group-item">More Boxstarter Resources</a>
+                </div>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /.navbar -->
+    </div>
+    <div class="col-sm-9" role="main">
+        <div class="media">
+            <div class="media-body">
+                
+    <h1>Using Boxstarter Commands</h1>
+    <p class="lead">
+    You can use the Boxstarter Shell to run Boxstarter Commands or any PowerShell console of your choice. Here is some guidance to get you started.
+
+            </div>
+            <div class="media-right">
+                <img class="media-object" src="/boxstarter.org/assets/images/boxLogo_sm.png" />
+            </div>
+        </div>
+        
+<h3>The Boxstarter Shell</h3>
+<p>Especially if you are not comfortable with Windows PowerShell, you may prefer to use the Boxstarter Shell to run Boxstarter commands. The Boxstarter Shell will make sure that the user is running with administrative privileges, the execution policy is compatible and all Boxstarter PowerShell modules are loaded and accessible. This shell also prints some basic "Getting Started" text at startup to assist you in running your first commands. To access the Boxstarter Shell:</p>
+<p>If you installed Boxstarter using Chocolatey, you can simply type BoxstarterShell from any command line:</p>
+<pre>
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+C:\Windows\system32>BOXSTARTERSHELL
+Welcome to the Boxstarter shell!
+The Boxstarter commands have been imported from C:\Users\mwrock\AppData\Roaming
+\Boxstarter and are available for you to run in this shell.
+You may also import them into the shell of your choice.
+Here are some commands to get you started:
+Install a Package:   Install-BoxstarterPackage
+Create a Package:    New-BoxstarterPackage
+Build a Package:     Invoke-BoxstarterBuild
+Enable a VM:         Enable-BoxstarterVM
+For Command help:    Get-Help <command name> -Full
+For Boxstarter documentation, source code, to report bugs or participate in dis
+cussions, please visit https://boxstarter.org
+PS C:\>
+</pre>
+
+<p>Or you can use the shortcuts installed to the desktop and start menu:</p>
+<div class="row">
+    <div class="col-sm-2 col-md-2">
+            <img class="img-responsive" src="/boxstarter.org/assets/images/shortcut.png">
+    </div>
+    <div class="col-sm-10 col-md-4">
+            <img class="img-responsive" src="/boxstarter.org/assets/images/shell.png">
+    </div>
+</div>
+<p>The remainder of the instructions on this page cover requirements to consider if using your own shell.</p>
+<h3>Administrative Privileges</h3>
+<p>Many Boxstarter commands require an "Elevated" PowerShell console. This is a PowerShell window opened explicitly with administrative privileges. Where it can, Boxstarter will attempt to open a new command with administrative privileges, but in some other cases, you may get an error stating that administrative rights are required.</p>
+
+<p>Depending on the OS version you are using, there are a few ways to launch PowerShell as an Administrator. One way that works everywhere is:</p>
+<ol>
+    <li>Press the Windows key.</li>
+    <li>Start typing "PowerShell" until you see the Windows PowerShell shortcut appear.</li>
+    <li>Select this shortcut and then type <b>Ctrl+Shift+Enter</b></li>
+</ol>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <b>Windows 8</b>
+            </div>
+            <img class="img-responsive" src="/boxstarter.org/assets/images/win8admin.png">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <b>Windows 7</b>
+            </div>
+            <img class="img-responsive" src="/boxstarter.org/assets/images/win7admin.png">
+        </div>
+    </div>
+</div>
+
+<h3>Execution Policy</h3>
+<p>By default, PowerShell blocks the running of scripts and will therefore block the execution of all Boxstarter commands. If you have not done so already on the machine you are using Boxstarter, there is a one time command you must run in order to lift this restriction:</p>
+<pre>
+Set-ExecutionPolicy Unrestricted -Force
+</pre>
+<p>This must be run with administrative privileges. Now you can call Boxstarter commands.</p>
+
+<h3>Importing the Boxstarter Modules</h3>
+<p>Like all other PowerShell modules, the Boxstarter modules must be imported in order to be used. As long as Boxstarter was installed using Chocolatey or the Boxstarter download zip file, the directory where the Boxstarter PowerShell modules are installed, is added to the PSModulePath. This means that the module can be imported simply by referencing the module name and there is no need to specify the exact path of one's module manifest:</p>
+<pre>
+Import-Module Boxstarter.Chocolatey
+</pre>
+<p>Although there are several Boxstarter modules, you should only ever need to import the Boxstarter.Chocolatey module. This is because during Module initialization, all other modules are loaded by the Boxstarter.Chocolatey module.</p>
+
+<h3>Discovering Boxstarter Commands</h3>
+<p>Once the Boxstarter Modules are imported, you can see them in your session:</p>
+<pre>
+C:\dev\boxstarter> Get-Module
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     2.0.11     Boxstarter.Bootstrapper             {Enter-BoxstarterL...
+Script     2.0.11     Boxstarter.Chocolatey               {Get-BoxStarterCon...
+Script     2.0.11     BoxStarter.WinConfig                {Disable-InternetE...
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add...
+Manifest   3.0.0.0    Microsoft.PowerShell.Security       {ConvertFrom-Secur...
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-T...
+</pre>
+
+<p>You can list all commands available from a PowerShell module by using:</p>
+<pre>
+C:\dev\boxstarter> Get-Command -Module Boxstarter.Chocolatey
+CommandType     Name                                               ModuleName
+-----------     ----                                               ----------
+Alias           Install-ChocolateyInstallPackage                   Boxstarte...
+Function        Get-BoxStarterConfig                               Boxstarte...
+Function        Get-PackageRoot                                    Boxstarte...
+Function        Install-BoxstarterPackage                          Boxstarte...
+Function        Install-ChocolateyInstallPackageOverride           Boxstarte...
+Function        Invoke-BoxStarterBuild                             Boxstarte...
+Function        Invoke-ChocolateyBoxstarter                        Boxstarte...
+Function        New-BoxstarterPackage                              Boxstarte...
+Function        New-PackageFromScript                              Boxstarte...
+Function        Set-BoxStarterConfig                               Boxstarte...
+Function        Set-BoxstarterShare                                Boxstarte...
+</pre>
+
+<h3>Help!</h3>
+<p>PowerShell can provide detailed help for any command that provides this metadata. Calling <code>Get-Help CommandName -Full</code> will return this information:</p>
+<pre>
+C:\dev\boxstarter> Get-Help Install-BoxstarterPackage -Full
+NAME
+    Install-BoxstarterPackage
+SYNOPSIS
+    Installs a Boxstarter package
+SYNTAX
+    Install-BoxstarterPackage [-PackageName] &lt;string&gt; [-Credential
+&lt;pscredential&gt;] [-Force] [-DisableReboots] [-KeepWindowOpen] [-LocalRepo
+&lt;string&gt;] [&lt;commonparameters&gt;]
+    Install-BoxstarterPackage [-ComputerName] &lt;string&gt; [-PackageName] &lt;string&gt;
+    [-Credential &lt;pscredential&gt;] [-Force] [-DisableReboots] [-LocalRepo
+&lt;string&gt;] [&lt;commonparameters&gt;]
+    Install-BoxstarterPackage [-ConnectionUri] &lt;uri&gt; [-PackageName] &lt;string&gt;
+    [-Credential &lt;pscredential&gt;] [-Force] [-DisableReboots] [-LocalRepo
+&lt;string&gt;] [&lt;commonparameters&gt;]
+    Install-BoxstarterPackage [-Session] &lt;pssession&gt; [-PackageName] &lt;string&gt;
+    [-Credential &lt;pscredential&gt;] [-Force] [-DisableReboots] [-LocalRepo
+&lt;string&gt;] [&lt;commonparameters&gt;]
+DESCRIPTION
+    This function must be run as administrator.
+    This function wraps a Chocolatey Install and provides these additional
+    features
+     - Installs Chocolatey if it is not already installed
+     - Installs the .net 4.5 framework if it is not installed which is a
+    Chocolatey requirement
+     - Disables windows update service during installation to prevent
+    installation conflicts and minimize the need for reboots
+     - Imports the Boxstarter.WinConfig module that provides functions for
+    customizing windows
+     - Detects pending reboots and restarts the machine when necessary to
+    avoid installation failures
+     - Provides Reboot Resiliency by ensuring the package installation is
+    immediately restarted up on reboot if there is a reboot during the
+    installation.
+     - Ensures everything runs under admin
+     - Supports remote installations allowing packages to be installed on a
+    remote machine
+    ...
+</pre>
+<p>Boxstarter also provides certain topical help resources you can find with:</p>
+<pre>
+C:\dev\boxstarter> Get-Help about_Boxstarter
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+about_boxstarter_logging          HelpFile                            Descri...
+about_boxstarter_bootstrapper     HelpFile                            Descri...
+About_Boxstarter_Variable_In_B... HelpFile                            A Hash...
+about_boxstarter_chocolatey       HelpFile                            Descri...
+About_Boxstarter_Variable_In_C... HelpFile                            A Hash...
+about_boxstarter_bootstrapper     HelpFile                            Descri...
+About_Boxstarter_Variable_In_B... HelpFile                            A Hash...
+about_boxstarter_chocolatey       HelpFile                            Descri...
+About_Boxstarter_Variable_In_C... HelpFile                            A Hash...
+about_boxstarter_logging          HelpFile                            Descri...
+</pre>
+
+    </div>
+</div>
+      <hr>
+
+      <footer>
+        <p>&copy; 2018 - 2020 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
+        <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/boxstarter.org/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39271380-1']);
+      _gaq.push(['_setDomainName', 'boxstarter.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
