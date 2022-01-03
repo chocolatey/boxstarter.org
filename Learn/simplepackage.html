@@ -57,15 +57,15 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/boxstarter.org/WhyBoxstarter">Docs</a></li>
-                <li class="active"><a href="/boxstarter.org/Learn/WebLauncher">Learn</a></li>
+                <li><a href="/boxstarter.org/whyboxstarter">Docs</a></li>
+                <li class="active"><a href="/boxstarter.org/Learn/webLauncher">Learn</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
                 <li><a href="https://groups.google.com/forum/#!forum/boxstarter">Discussion</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/boxstarter.org/Blog">Blog</a></li>
-                <li><a href="/boxstarter.org/License">License</a></li>
+                <li><a href="/boxstarter.org/blog">Blog</a></li>
+                <li><a href="/boxstarter.org/license">License</a></li>
             </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/boxstarter.org/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
+            <a class="btn btn-primary btn-navbar" role="button" href="/boxstarter.org/downloads/boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -85,9 +85,9 @@
             </button>
             <div class="navbar-collapse navbar-left px-0 collapse">
                 <div class="list-group">
-                    <a href="/boxstarter.org/Learn/WebLauncher" class="list-group-item">Run with a Gist</a>
-                    <a href="/boxstarter.org/Learn/SimplePackage" class="list-group-item active">Simple package creation</a>
-                    <a href="/boxstarter.org/Learn/RemotePackageWithArtifacts" class="list-group-item">Deploying a web application remotely</a>
+                    <a href="/boxstarter.org/learn/weblauncher" class="list-group-item">Run with a Gist</a>
+                    <a href="/boxstarter.org/learn/simplepackage" class="list-group-item active">Simple package creation</a>
+                    <a href="/boxstarter.org/learn/remotepackagewithartifacts" class="list-group-item">Deploying a web application remotely</a>
                 </div>
             </div><!-- /.nav-collapse -->
         </div><!-- /.navbar -->
@@ -112,7 +112,7 @@
 <h4><span class="text-primary">Install Boxstarter</span></h4>
 <p>If you have Chocolatey:</p>
 <pre>CINST Boxstarter</pre>
-<p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/boxstarter.org/InstallBoxstarter">Installing Boxstarter</a> for details.</p>
+<p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/boxstarter.org/installboxstarter">Installing Boxstarter</a> for details.</p>
 
 <h3>Step 2</h3>
 <h4><span class="text-primary">Create your installer script</span></h4>
@@ -129,12 +129,12 @@ cinst poshgit
 cinst dotpeek
 Install-WindowsUpdate -AcceptEula
 </pre>
-<p>These are just Chocolatey Install calls and Boxstarter commands. Save this to a file - name and location do not matter. For a complete list of Boxstarter commands available in a package, see <a href="/boxstarter.org/WinConfig">Boxstarter WinConfig Commands</a> and <a href="/boxstarter.org/CreatingPackages">Creating Packages</a> for details covering the creation of Chocolatey packages.</p>
+<p>These are just Chocolatey Install calls and Boxstarter commands. Save this to a file - name and location do not matter. For a complete list of Boxstarter commands available in a package, see <a href="/boxstarter.org/winconfig">Boxstarter WinConfig Commands</a> and <a href="/boxstarter.org/creatingpackages">Creating Packages</a> for details covering the creation of Chocolatey packages.</p>
 
 <h3>Step 3</h3>
 <h4><span class="text-primary">Invoke the Boxstarter shell</span></h4>
 <img class="img-responsive" src="/boxstarter.org/assets/images/shortcut.png">
-<p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/boxstarter.org/UsingBoxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
+<p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/boxstarter.org/usingboxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
 
 <h3>Step 4</h3>
 <h4><span class="text-primary">Convert your Script to a Package</span></h4>
@@ -151,7 +151,7 @@ Install-WindowsUpdate -AcceptEula
 <pre>
  CPUSH (Join-Path $Boxstarter.LocalRepo mwrock.DefaultInstall.1.0.0.nupkg)
 </pre>
-<p>Boxstarter saves all packages to its LocalRepo property. Now cpush will find the .nupkg file and upload it to the Chocolatey community feed. See <a href="/boxstarter.org/PublishingPackages">Publishing Packages</a>for more details regarding package publishing and using different feeds.</p>
+<p>Boxstarter saves all packages to its LocalRepo property. Now cpush will find the .nupkg file and upload it to the Chocolatey community feed. See <a href="/boxstarter.org/publishingpackages">Publishing Packages</a>for more details regarding package publishing and using different feeds.</p>
 
 <h3>Step 6</h3>
 <h4><span class="text-primary">Install the Package anywhere</span></h4>
@@ -159,7 +159,7 @@ Install-WindowsUpdate -AcceptEula
 <pre>START https://boxstarter.org/package/mwrock.DefaultInstall</pre>
 
 <p>Accept the prompts for installing the Boxstarter installer and running with administrative privileges. When the install begins, Boxstarter will ask for a password do that it can resume the installer in the event it needs to reboot.</p>
-<p>There are other ways to install the package as well. You can even <a href="/boxstarter.org/InstallingPackages#RemoteInstallations">install to a remote machine</a> or to an <a href="/boxstarter.org/VMIntegration">Azure or Hyper-V VM with checkpointing support</a>.</p>
+<p>There are other ways to install the package as well. You can even <a href="/boxstarter.org/installingpackages#RemoteInstallations">install to a remote machine</a> or to an <a href="/boxstarter.org/vmintegration">Azure or Hyper-V VM with checkpointing support</a>.</p>
 
     </div>
 </div>
