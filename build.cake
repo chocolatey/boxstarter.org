@@ -164,8 +164,8 @@ Task("Publish-Documentation")
         Information("Stage all changes...");
         GitAddAll(publishFolder);
 
-        if (GitHasStagedChanges(publishFolder))
-        {
+        //if (GitHasStagedChanges(publishFolder))
+        //{
             Information("Commit all changes...");
             GitCommit(
                 publishFolder,
@@ -186,11 +186,11 @@ Task("Publish-Documentation")
                 Information("Pushing with token...");
                 GitPush(publishFolder, buildData.GitHubToken, "x-oauth-basic", buildData.DeployBranch);
             }
-        }
-        else
-        {
-            Information("There are no changes that need to be committed");
-        }
+        //}
+        //else
+        //{
+        //    Information("There are no changes that need to be committed");
+        //}
     }
     else
     {
