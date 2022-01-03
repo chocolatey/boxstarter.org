@@ -187,6 +187,14 @@ Task("Publish-Documentation")
                 GitPush(publishFolder, buildData.GitHubToken, "x-oauth-basic", buildData.DeployBranch);
             }
         }
+        else
+        {
+            Information("There are no changes that need to be committed");
+        }
+    }
+    else
+    {
+        Information("There are no changes that need to be staged");
     }
 });
 
