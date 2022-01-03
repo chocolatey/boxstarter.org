@@ -99,7 +99,7 @@ Task("Statiq-Preview")
       Configuration = configuration
     };
 
-    DotNetCoreRun(projectPath, new ProcessArgumentBuilder().Append(string.Format("preview --output \"{0}\" --virtual-dir chocolatey.org", buildData.OutputDirectory)), settings);
+    DotNetCoreRun(projectPath, new ProcessArgumentBuilder().Append(string.Format("preview --output \"{0}\" --virtual-dir boxstarter.org", buildData.OutputDirectory)), settings);
 });
 
 Task("Statiq-Build")
