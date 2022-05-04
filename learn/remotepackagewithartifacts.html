@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/boxstarter.org/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <title>Boxstarter</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/boxstarter.org/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -53,19 +53,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="/boxstarter.org/">Boxstarter</a>
+            <a class="navbar-brand" href="/">Boxstarter</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/boxstarter.org/whyboxstarter">Docs</a></li>
-                <li class="active"><a href="/boxstarter.org/learn/weblauncher">Learn</a></li>
+                <li><a href="/whyboxstarter">Docs</a></li>
+                <li class="active"><a href="/learn/weblauncher">Learn</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
                 <li><a href="https://groups.google.com/forum/#!forum/boxstarter">Discussion</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/boxstarter.org/blog">Blog</a></li>
-                <li><a href="/boxstarter.org/license">License</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/license">License</a></li>
             </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/boxstarter.org/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
+            <a class="btn btn-primary btn-navbar" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -85,9 +85,9 @@
             </button>
             <div class="navbar-collapse navbar-left px-0 collapse">
                 <div class="list-group">
-                    <a href="/boxstarter.org/learn/weblauncher" class="list-group-item">Run with a Gist</a>
-                    <a href="/boxstarter.org/learn/simplepackage" class="list-group-item">Simple package creation</a>
-                    <a href="/boxstarter.org/learn/remotepackagewithartifacts" class="list-group-item active">Deploying a web application remotely</a>
+                    <a href="/learn/weblauncher" class="list-group-item">Run with a Gist</a>
+                    <a href="/learn/simplepackage" class="list-group-item">Simple package creation</a>
+                    <a href="/learn/remotepackagewithartifacts" class="list-group-item active">Deploying a web application remotely</a>
                 </div>
             </div><!-- /.nav-collapse -->
         </div><!-- /.navbar -->
@@ -102,7 +102,7 @@
 
             </div>
             <div class="media-right">
-                <img class="media-object" src="/boxstarter.org/assets/images/boxLogo_sm.png" />
+                <img class="media-object" src="/assets/images/boxLogo_sm.png" />
             </div>
         </div>
         
@@ -111,18 +111,18 @@
 <h3>Step 1</h3>
 <h4><span class="text-primary">Create and Build the NuGet server</span></h4>
 <p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>cinst VisualStudio2013ExpressWeb</code>.</p>
-<img class="img-responsive" src="/boxstarter.org/assets/images/NugetServer.png">
+<img class="img-responsive" src="/assets/images/NugetServer.png">
 
 <h3>Step 2</h3>
 <h4><span class="text-primary">Install Boxstarter</span></h4>
 <p>If you have Chocolatey:</p>
 <pre>CINST Boxstarter</pre>
-<p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/boxstarter.org/installboxstarter">Installing Boxstarter</a> for details.</p>
+<p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/installboxstarter">Installing Boxstarter</a> for details.</p>
 
 <h3>Step 3</h3>
 <h4><span class="text-primary">Invoke the Boxstarter shell</span></h4>
-<img class="img-responsive" src="/boxstarter.org/assets/images/shortcut.png">
-<p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/boxstarter.org/usingboxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
+<img class="img-responsive" src="/assets/images/shortcut.png">
+<p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/usingboxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
 
 <h3>Step 4</h3>
 <h4><span class="text-primary">Create the Package</span></h4>
@@ -194,7 +194,7 @@ Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Cred
 <h3>Step 9</h3>
 <h4><span class="text-primary">Run the application</span></h4>
 <p>Now we should be able to browse to our NuGet server application at http://MyServer</p>
-<img class="img-responsive" src="/boxstarter.org/assets/images/NugetServerWeb.png">
+<img class="img-responsive" src="/assets/images/NugetServerWeb.png">
 
     </div>
 </div>
@@ -202,7 +202,7 @@ Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Cred
       <hr>
 
       <footer>
-        <p>&copy; 2018 - 2020 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
+        <p>&copy; 2018 - 2022 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
         <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
       </footer>
     </div> <!-- /container -->
@@ -212,7 +212,7 @@ Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Cred
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/boxstarter.org/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];

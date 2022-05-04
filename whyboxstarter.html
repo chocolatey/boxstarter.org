@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/boxstarter.org/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <title>Boxstarter</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/boxstarter.org/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -53,19 +53,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="/boxstarter.org/">Boxstarter</a>
+            <a class="navbar-brand" href="/">Boxstarter</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/boxstarter.org/whyboxstarter">Docs</a></li>
-                <li><a href="/boxstarter.org/learn/weblauncher">Learn</a></li>
+                <li class="active"><a href="/whyboxstarter">Docs</a></li>
+                <li><a href="/learn/weblauncher">Learn</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
                 <li><a href="https://groups.google.com/forum/#!forum/boxstarter">Discussion</a></li>
                 <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/boxstarter.org/blog">Blog</a></li>
-                <li><a href="/boxstarter.org/license">License</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/license">License</a></li>
             </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/boxstarter.org/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
+            <a class="btn btn-primary btn-navbar" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -84,17 +84,17 @@
             </button>
             <div class="navbar-collapse navbar-left px-0 collapse">
                 <div class="list-group">
-                    <a href="/boxstarter.org/whyboxstarter" class="list-group-item active">Why Boxstarter?</a>
-                    <a href="/boxstarter.org/installboxstarter" class="list-group-item">Installing Boxstarter</a>
-                    <a href="/boxstarter.org/usingboxstarter" class="list-group-item">Using Boxstarter Commands</a>
-                    <a href="/boxstarter.org/understandingpackages" class="list-group-item">Understanding Packages</a>
-                    <a href="/boxstarter.org/creatingpackages" class="list-group-item">Creating Packages</a>
-                    <a href="/boxstarter.org/publishingpackages" class="list-group-item">Publishing Packages</a>
-                    <a href="/boxstarter.org/installingpackages" class="list-group-item">Installing Packages</a>
-                    <a href="/boxstarter.org/vmintegration" class="list-group-item">Installing packages on a Virtual Machine</a>
-                    <a href="/boxstarter.org/testingpackages" class="list-group-item">Testing Packages and Build Server Integration</a>
-                    <a href="/boxstarter.org/winconfig" class="list-group-item">Boxstarter WinConfig Features</a>
-                    <a href="/boxstarter.org/boxstarterresources" class="list-group-item">More Boxstarter Resources</a>
+                    <a href="/whyboxstarter" class="list-group-item active">Why Boxstarter?</a>
+                    <a href="/installboxstarter" class="list-group-item">Installing Boxstarter</a>
+                    <a href="/usingboxstarter" class="list-group-item">Using Boxstarter Commands</a>
+                    <a href="/understandingpackages" class="list-group-item">Understanding Packages</a>
+                    <a href="/creatingpackages" class="list-group-item">Creating Packages</a>
+                    <a href="/publishingpackages" class="list-group-item">Publishing Packages</a>
+                    <a href="/installingpackages" class="list-group-item">Installing Packages</a>
+                    <a href="/vmintegration" class="list-group-item">Installing packages on a Virtual Machine</a>
+                    <a href="/testingpackages" class="list-group-item">Testing Packages and Build Server Integration</a>
+                    <a href="/winconfig" class="list-group-item">Boxstarter WinConfig Features</a>
+                    <a href="/boxstarterresources" class="list-group-item">More Boxstarter Resources</a>
                 </div>
             </div><!-- /.nav-collapse -->
         </div><!-- /.navbar -->
@@ -107,7 +107,7 @@
 
             </div>
             <div class="media-right">
-                <img class="media-object" src="/boxstarter.org/assets/images/boxLogo_sm.png" />
+                <img class="media-object" src="/assets/images/boxLogo_sm.png" />
             </div>
         </div>
         
@@ -122,7 +122,7 @@
 <p>While using Chocolatey in a PowerShell Remoting session will most often succeed, many installs leverage the Windows Update service under the hood for certain installation steps. These will fail in a remote PowerShell session. Boxstarter intercepts all calls to MSIEXEC, DISM and its own Windows Update command and wraps then in a scheduled task that an run with a local administrative token leading to a successful install.</p>
 
 <h3>Integrates with Hyper-V and Windows Azure VMs</h3>
-<p>Boxstarter can run on a Hyper-V host and setup a Guest VM with no pre-configuration required. It can also be pointed to a Windows Azure VM to quickly provision your cloud servers. For both of these VM providers, Boxstarter can restore to a known saved checkpoint or create a new checkpoint before it executes. Even if your final target environment is a physical machine, working with VM snapshots is a great way to develop and test your ChocolateyInstall scripts! See <a href="/boxstarter.org/vmintegration">installing packages on a virtual machine</a> for details.</p>
+<p>Boxstarter can run on a Hyper-V host and setup a Guest VM with no pre-configuration required. It can also be pointed to a Windows Azure VM to quickly provision your cloud servers. For both of these VM providers, Boxstarter can restore to a known saved checkpoint or create a new checkpoint before it executes. Even if your final target environment is a physical machine, working with VM snapshots is a great way to develop and test your ChocolateyInstall scripts! See <a href="/vmintegration">installing packages on a virtual machine</a> for details.</p>
 
 <h3>Runs with Administrative Privileges</h3>
 <p>Many applications require administrative privileges to install. Chocolatey, for good reason, allows non administrative users to perform installs and will request administrative privileges throughout the installation whenever they are required. Since a Boxstarter installation must not interrupt the session once it begins, Boxstarter runs with administrative privileges the whole way through to avoid these interactive prompts.</p>
@@ -165,7 +165,7 @@
       <hr>
 
       <footer>
-        <p>&copy; 2018 - 2020 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
+        <p>&copy; 2018 - 2022 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
         <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
       </footer>
     </div> <!-- /container -->
@@ -175,7 +175,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/boxstarter.org/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
