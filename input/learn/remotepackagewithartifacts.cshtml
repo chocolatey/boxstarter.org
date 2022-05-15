@@ -11,13 +11,13 @@
 
 <h3>Step 1</h3>
 <h4><span class="text-primary">Create and Build the NuGet server</span></h4>
-<p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>cinst VisualStudio2013ExpressWeb</code>.</p>
+<p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>choco install VisualStudio2013ExpressWeb</code>.</p>
 <img class="img-responsive" src="@Context.GetLink("assets/images/NugetServer.png")">
 
 <h3>Step 2</h3>
 <h4><span class="text-primary">Install Boxstarter</span></h4>
 <p>If you have Chocolatey:</p>
-<pre>CINST Boxstarter</pre>
+<pre>choco install Boxstarter</pre>
 <p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="@Context.GetLink("installboxstarter")">Installing Boxstarter</a> for details.</p>
 
 <h3>Step 3</h3>
@@ -39,17 +39,17 @@ Copy-Item c:\dev\NugetServer "$($Boxstarter.LocalRepo)\NugetServer" -Recurse -Fo
 <p>Boxstarter has created a skeletal ChocolateyInstall.ps1 file at $($Boxstarter.LocalRepo)\NugetServer\tools\chocolateyInstall.ps1. Edit this file and replace its contents with the following script:</p>
 <pre>
 try {
-    cinst DotNet4.5
+    choco install DotNet4.5
 
     #Enable Web Services
-    cinst IIS-WebServerRole -source WindowsFeatures
-    cinst IIS-ISAPIFilter -source WindowsFeatures
-    cinst IIS-ISAPIExtensions -source WindowsFeatures
+    choco install IIS-WebServerRole -source WindowsFeatures
+    choco install IIS-ISAPIFilter -source WindowsFeatures
+    choco install IIS-ISAPIExtensions -source WindowsFeatures
 
     #Enable ASP.NET on win 2012/8
-    cinst IIS-NetFxExtensibility45 -source WindowsFeatures
-    cinst NetFx4Extended-ASPNET45 -source WindowsFeatures
-    cinst IIS-ASPNet45 -source WindowsFeatures
+    choco install IIS-NetFxExtensibility45 -source WindowsFeatures
+    choco install NetFx4Extended-ASPNET45 -source WindowsFeatures
+    choco install IIS-ASPNet45 -source WindowsFeatures
 
     #Enable ASP.NET on win 7/2008R2
     ."$env:windir\microsoft.net\framework\v4.0.30319\aspnet_regiis.exe" -i

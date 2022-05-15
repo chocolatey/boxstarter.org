@@ -44,6 +44,6 @@ nuget push MyPackage.1.0.0.nupkg &lt;Your MyGet API Key&gt; -Source https://www.
 </pre>
 <p>If you want to publish to the Chocolatey community feed, Chocolatey has a command, <a href="https://docs.chocolatey.org/en-us/create/commands/push">choco push</a>, which will publish your package to Chocolatey without needing to specify the feed URL.</p>
 <pre>
-cpush MyPackage.1.0.0.nupkg &lt;Your Chocolatey API Key&gt;
+choco push MyPackage.1.0.0.nupkg &lt;Your Chocolatey API Key&gt;
 </pre>
 <p>All NuGet feed hosts require package authors to provide a key when publishing packages. This identifies you as the actual package owner. See the host's documentation for information on how to obtain a key.</p>

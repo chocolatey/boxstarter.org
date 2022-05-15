@@ -12,7 +12,7 @@
 <h3>Step 1</h3>
 <h4><span class="text-primary">Install Boxstarter</span></h4>
 <p>If you have Chocolatey:</p>
-<pre>CINST Boxstarter</pre>
+<pre>choco install Boxstarter</pre>
 <p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="@Context.GetLink("installboxstarter")">Installing Boxstarter</a> for details.</p>
 
 <h3>Step 2</h3>
@@ -22,12 +22,12 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 Enable-RemoteDesktop
 Set-StartScreenOptions -EnableBootToDesktop
-cinst fiddler4
-cinst git-credential-winstore
-cinst console-devel
-cinst sublimetext2
-cinst poshgit
-cinst dotpeek
+choco install fiddler4
+choco install git-credential-winstore
+choco install console-devel
+choco install sublimetext2
+choco install poshgit
+choco install dotpeek
 Install-WindowsUpdate -AcceptEula
 </pre>
 <p>These are just Chocolatey Install calls and Boxstarter commands. Save this to a file - name and location do not matter. For a complete list of Boxstarter commands available in a package, see <a href="@Context.GetLink("winconfig")">Boxstarter WinConfig Commands</a> and <a href="@Context.GetLink("creatingpackages")">Creating Packages</a> for details covering the creation of Chocolatey packages.</p>
@@ -48,11 +48,11 @@ Install-WindowsUpdate -AcceptEula
 <h3>Step 5</h3>
 <h4><span class="text-primary">Publish the Package</span></h4>
 <p>You can publish your package to any feed you have access to. We will publish to the public Chocolatey community feed. To do this you will need to <a href="https://community.chocolatey.org/account/Register">register</a> a free Chocolatey account and obtain an API key. </p>
-<p>Once you have a Chocolatey account and have followed the instructions on the Registration confirmation regarding setting your API key, you can use Chocolatey's cpush command to accomplish this:</p>
+<p>Once you have a Chocolatey account and have followed the instructions on the Registration confirmation regarding setting your API key, you can use Chocolatey's choco push command to accomplish this:</p>
 <pre>
- CPUSH (Join-Path $Boxstarter.LocalRepo mwrock.DefaultInstall.1.0.0.nupkg)
+ choco push (Join-Path $Boxstarter.LocalRepo mwrock.DefaultInstall.1.0.0.nupkg)
 </pre>
-<p>Boxstarter saves all packages to its LocalRepo property. Now cpush will find the .nupkg file and upload it to the Chocolatey community feed. See <a href="@Context.GetLink("publishingpackages")">Publishing Packages</a>for more details regarding package publishing and using different feeds.</p>
+<p>Boxstarter saves all packages to its LocalRepo property. Now choco push will find the .nupkg file and upload it to the Chocolatey community feed. See <a href="@Context.GetLink("publishingpackages")">Publishing Packages</a>for more details regarding package publishing and using different feeds.</p>
 
 <h3>Step 6</h3>
 <h4><span class="text-primary">Install the Package anywhere</span></h4>

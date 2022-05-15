@@ -77,7 +77,7 @@ Install-WindowsFeature -name hyper-v -IncludeManagementTools
 
 <h3>Installing the Boxstarter.Azure module</h3>
 <p>The Boxstarter.Azure module does not automatically install with the main Boxstarter install package, but just a single Chocolatey command can accomplish this.</p>
-<pre>CINST Boxstarter.Azure</pre>
+<pre>choco install Boxstarter.Azure</pre>
 <p>This will install the Boxstarter.Azure module and all of its prerequisites: Windows Azure PowerShell, Windows Azure SDK for .Net Libraries, and the .Net Framework v4.5.</p>
 <h3>One time configuration of Azure subscription information</h3>
 <p>Before Windows Azure PowerShell can begin to manage your VMs, it needs your account information as well as authentication verification. This is incredibly easy, <b>only needs to be performed once</b> and involves just three commands:</p>

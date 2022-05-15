@@ -83,18 +83,18 @@ Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFil
 Set-TaskbarSmall
 Enable-RemoteDesktop
 
-cinst VisualStudio2013ExpressWeb
-cinst fiddler4
-cinst mssqlserver2012express
-cinst git-credential-winstore
-cinst console-devel
-cinst poshgit
-cinst windbg
+choco install VisualStudio2013ExpressWeb
+choco install fiddler4
+choco install mssqlserver2012express
+choco install git-credential-winstore
+choco install console-devel
+choco install poshgit
+choco install windbg
 
-cinst Microsoft-Hyper-V-All -source windowsFeatures
-cinst IIS-WebServerRole -source windowsfeatures
-cinst IIS-HttpCompressionDynamic -source windowsfeatures
-cinst TelnetClient -source windowsFeatures
+choco install Microsoft-Hyper-V-All -source windowsFeatures
+choco install IIS-WebServerRole -source windowsfeatures
+choco install IIS-HttpCompressionDynamic -source windowsfeatures
+choco install TelnetClient -source windowsFeatures
 
 Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\mstsc.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
@@ -124,7 +124,7 @@ Install-WindowsUpdate -AcceptEula
 <p>	Boxstarter can run any Chocolatey package and any valid PowerShell inside that package. However, there are a few things to consider that may make a Boxstarter Chocolatey package a better installation experience.</p>
 <ul>
     <li>Boxstarter Chocolatey packages should be repeatable. This is especially true if you anticipate the need to reboot. When Boxstarter reboots, it starts running the package from the beginning. So ensure that there is nothing that would cause the package to break if run twice.</li>
-    <li>If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call CINST directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies so those packages will not have any reboot protections.</li>
+    <li>If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call choco install directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies so those packages will not have any reboot protections.</li>
     <li>Do not use <code>Restart-Computer</code> or any other command that will reboot the computer. Instead use <code>Invoke-Reboot</code>. This will allow Boxstarter to get things in order first so that after the machine recovers from the reboot, Boxstarter can log the user back in and restart the install script.</li>
 </ul>
 <h3>Packing your Package .nupkg</h3>
