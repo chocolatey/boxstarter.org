@@ -2214,7 +2214,7 @@ __metadata:
 
 "choco-theme@git+https://github.com/chocolatey/choco-theme.git":
   version: 0.1.0
-  resolution: "choco-theme@https://github.com/chocolatey/choco-theme.git#commit=178a4a8d0ed6963b1626b87d722bd893671730d0"
+  resolution: "choco-theme@https://github.com/chocolatey/choco-theme.git#commit=2f92f314ef515a435b7a95107790f41c8ae6d137"
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/preset-env": ^7.12.1
@@ -2252,7 +2252,7 @@ __metadata:
     mousetrap: ^1.6.5
     node-sass: ^7.0.1
     nouislider: ^15.5.1
-  checksum: 0dc6890072df54a2cd54e7ac69d2c7ac410778e22cb34fc9b04b506d2d0bb60e0e4f39de239bcfc7ce1abbc1bb412173c191df417bb8cfb61d749079fdb24b10
+  checksum: d81a050f4821f9c6a93994fe598b34ec25ad0f3ee418f8ff1af68f45efefeca2c7ca45e63091974254ed6e8774a4caf90ee5dc27b5703d2697ba52534f8e985d
   languageName: node
   linkType: hard
 

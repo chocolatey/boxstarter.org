@@ -1,44 +1,124 @@
-@{
-    Layout = "~/_SiteLayout.cshtml";
-}
+---
+Title: 100% Uninterrupted Windows Environment Installs
+Description: Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward.
+NoSidebar: true
+ShowInSidebar: false
+---
 
-@section featured {
-<div class="jumbotron">
+<section class="py-5 py-md-7 bg-architect-factory-top bg-img-cover">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <img class="img-responsive" src="@Context.GetLink("assets/images/boxLogo.png")" />
-            </div>
-            <div class="col-sm-8">
-                <h1>Boxstarter</h1>
-                <p>Repeatable, <span class="text-primary"><b>reboot resilient</b></span> windows environment installations made easy using <a href="https://chocolatey.org">Chocolatey</a> packages. When its time to repave either <span class="text-primary"><b>bare metal or virtualized</b></span> instances, locally or on a <span class="text-primary"><b>remote machine</b></span>, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from <span class="text-primary"><b>Windows 7/2008 R2 forward</b></span>.</p>
-                <p><a class="btn btn-primary btn-lg" role="button" href="@Context.GetLink("downloads/Boxstarter.2.13.0.zip")"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a></p>
+        <h1 class="text-transform-none display-3 fw-bold title text-center mb-0">Repeatable, <span class="text-primary">Reboot Resilient</span> Windows Environment Installations Made Easy</h1>
+        <div class="col-md-8 mx-auto text-center pb-4 pt-3">
+            <p class="lead mb-0">When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations using Chocolatey packages. Compatible with all Windows versions from Windows 7/2008 R2 forward.</p>
+        </div>
+        <div class="col-md-10 col-lg-6 d-grid gap-2 d-md-flex align-items-center justify-content-center mx-auto">
+            <button class="btn btn-outline-primary btn-lg text-nowrap d-flex align-items-center justify-content-space-between text-theme bg-theme me-md-4 fw-normal btn-copy tt tt-top" type="button" data-clipboard-text="choco install boxstarter" data-bs-toggle="button" data-tooltip-text="Copy" data-tooltip-text-active="Copied!" aria-label="Copy download command to clipboard.">choco install boxstarter<i class="fas fa-clipboard text-green ms-5"></i></button>
+            <a class="btn btn-outline-primary btn-lg text-nowrap d-block" href="whyboxstarter" role="button">Read the Docs<i class="fas fa-angle-right ms-2"></i></a>
+        </div>
+        <p class="text-center pt-3 mb-0">Currently <strong>v2.13.0</strong> | <a href='@Context.GetLink("/downloads/Boxstarter.2.13.0.zip")' download>Download</a></p>
+    </div>
+</section>
+<section class="py-5 py-md-6 py-lg-7 container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <p class="mb-2 text-muted font-monospace lead"># Boxstarter v2</p>
+            <h2 class="h1 text-transform-none title mb-3 mt-0">100% Uninterrupted Windows Environment Installs</h2>
+            <p class="mb-0 lead">Boxstarter leverages Chocolatey packages to automate the installation of software and create repeatable, scripted Windows environments.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/sgzVTG-zIPE?vq=hd1080" title="Boxstarter The Movie" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-</div>
-}
-
-<div class="row">
-    <div class="col-md-4">
-        <h2><a href="@Context.GetLink("whyboxstarter")">Why Boxstarter?</a></h2>
-        <p>Checkout the features that Boxstarter provides on top of Chocolatey to ensure 100% uninterrupted Windows environment installs.</p>
-
-        <h2><a href="@Context.GetLink("installingpackages#RemoteInstallations")">Run Remotely</a></h2>
-        <p>Need to install a bunch of machines or repeatedly setup a VM? Invoke Boxstarter commands to install environments on remote machines. Supports all VM technologies and <a href="@Context.GetLink("vmintegration")">deep integration with Hyper-V and Windows Azure VMs.</a></p>
-
-        <h2><a href="@Context.GetLink("weblauncher")">Launch with one easy URL</a></h2>
-        <p>You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed using an easy to remember URL.</p>
+</section>
+<section class="py-5 py-md-7 bg-architect-factory bg-img-cover">
+    <div class="container">
+        <div class="col-lg-10 mx-auto text-center border p-5 bg-theme">
+            <div class="d-flex align-items-center justify-content-center">
+                <img loading="lazy" class="w-100-px" src="https://chocolatey.org/assets/images/global-shared/logo-square.svg" alt="Chocolatey Software" />
+                <span class="display-1 my-0 mx-4">+</i>
+                <img loading="lazy" class="w-100-px" src='@Context.GetLink("/assets/images/boxstarter-logo.png")' alt="Boxstarter" />
+            </div>
+            <h2 class="display-5 text-transform-none title fw-bold">A Resilient Combination</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center pb-4 pt-3">
+                    <p class="lead mb-0">Chocolatey makes installing software very easy with no user intervention. Boxstarter enhances Chocolatey's functionality and provides an environment that is optimized for installing a complete environment on a fresh OS install.</p>
+                </div>
+            </div>
+            <a class="btn btn-outline-primary btn-lg text-nowrap" href="whyboxstarter" role="button">Learn About Boxstarter<i class="fas fa-angle-right ms-2"></i></a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2><a href="@Context.GetLink("learn/weblauncher")">Store Configs in a Gist</a></h2>
-        <p>You can use Boxstarter to install a complete environment or install a small set of tools and windows settings with absolutely no software pre installed and configuration scripts stored in a gist.</p>
-
-        <h2><a href="@Context.GetLink("creatingpackages")">Simplify Package Creation</a></h2>
-        <p>Boxstarter composes an environment using <a href="https://chocolatey.org">Chocolatey</a> style <a href="https://nuget.org">NuGet</a> Packages. Boxstarter provides commands to make package authoring, testing and publishing a snap.</p>
+</section>
+<section class="container">
+    <div class="row py-5 py-md-6 align-items-center">
+        <div class="col-md-6 order-2 order-md-1">
+            <p class="text-blue fw-bold font-monospace mb-2 lead"># Time Saving</p>
+            <h2 class="mt-0">Run Remotely</h2>
+            <p class="lead">Need to install a bunch of machines or repeatedly setup a VM? Invoke Boxstarter commands to install environments on remote machines.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="installingpackages#RemoteInstallations" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to run Boxstarter remotely.</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='@Context.GetLink("/assets/images/undraw_dev_productivity.svg")' alt="Run Boxstarter Remotely" />
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Boxstarter, The Movie</h2>
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/sgzVTG-zIPE?vq=hd1080" frameborder="0" allowfullscreen></iframe>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='@Context.GetLink("/assets/images/undraw_speed_test.svg")' alt="Launch Boxstarter With one Easy URL" />
+        </div>
+        <div class="col-md-6">
+            <p class="text-pink fw-bold font-monospace mb-2 lead"># Convienient</p>
+            <h2 class="mt-0">Launch With One Easy URL</h2>
+            <p class="lead">You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed using an easy to remember URL.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="weblauncher" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to launch Boxstarter with one easy URL.</span>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 order-2 order-md-1">
+            <p class="text-orange fw-bold font-monospace mb-2 lead"># Familiar</p>
+            <h2 class="mt-0">Store Configs In A Gist</h2>
+            <p class="lead">You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed and configuration scripts stored in a gist.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="learn/weblauncher" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to store Boxstarter configs in a gist.</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='@Context.GetLink("/assets/images/undraw_version_control.svg")' alt="Store Boxstarter Configs In A Gist" />
+        </div>
+    </div>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='@Context.GetLink("/assets/images/undraw_check_boxes.svg")' alt="Simplify Package Creation with Boxstarter" />
+        </div>
+        <div class="col-md-6 ">
+            <p class="text-purple fw-bold font-monospace mb-2 lead"># Practical</p>
+            <h2 class="mt-0">Simplify Package Creation</h2>
+            <p class="lead">Boxstarter composes an environment using <a href="https://chocolatey.org">Chocolatey</a> style <a href="https://nuget.org">NuGet</a> Packages. Boxstarter provides commands to make package authoring, testing, and publishing a snap.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="creatingpackages" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how Boxstarter simplifies package creationL.</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 py-md-7 bg-architect-factory-bottom-primary bg-img-cover">
+    <div class="container text-center">
+        <h2 class="text-transform-none display-3 fw-bold title mb-4">Let Boxstarter Do The Heavy Work</h1>
+        <a class="btn btn-primary btn-lg text-nowrap" href="whyboxstarter" role="button">Get Started Now<i class="fas fa-angle-right ms-2"></i></a>
+    </div>
+</section>
