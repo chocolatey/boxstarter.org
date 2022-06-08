@@ -1,0 +1,20 @@
+@{
+	IDocument root = OutputPages["index.html"].FirstOrDefault();
+
+	<h1 class="title">@(Document.GetString(Keys.Title) ?? Document.GetTitle())</h1>                 
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			@foreach (IDocument parent in OutputPages.GetAncestorsOf(Document, Document.IdEquals(root)).Reverse())
+			{
+				string breadcrumbTitle = parent.GetTitle();
+				if (breadcrumbTitle == root.GetTitle()) {
+					breadcrumbTitle = "Boxstarter";
+				}
+
+				<li class="breadcrumb-item @(Document.IdEquals(root) ? "d-none" : null)">@Html.DocumentLink(parent, parent.GetString(Constants.BreadcrumbTitle, breadcrumbTitle))</li>
+			}
+			
+			<li class="breadcrumb-item active @(Document.IdEquals(root) ? "d-none" : null)" aria-current="page">@(Document.GetString(Keys.Title) ?? Document.GetTitle())</li>
+		</ol>
+	</nav>
+}
