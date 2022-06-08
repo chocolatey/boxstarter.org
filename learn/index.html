@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
-        <meta property="og:title" content="Boxstarter | Simple Package Creation" />
+        <meta property="og:title" content="Boxstarter | Guides" />
         <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
         <meta property="og:site_name" content="Boxstarter" />
         <meta property="og:type" content="product" />
         <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
-        <meta property="og:url" content="https://boxstarter.org/learn/simplepackage" />
+        <meta property="og:url" content="https://boxstarter.org/learn" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@chocolateynuget">
         <meta name="twitter:creator" content="@chocolateynuget">
@@ -34,7 +34,7 @@
             gtag('js', new Date());
             gtag('config', 'UA-39271380-1');
         </script>
-        <title>Boxstarter | Simple Package Creation</title>
+        <title>Boxstarter | Guides</title>
     </head>
     <body class="chocolatey-docs boxstarter-org">
         <header>
@@ -144,7 +144,7 @@
                                                         <a class="nav-link ps-c2" href="/boxstarterresources">More Boxstarter Resources</a>
                                                     </li>
                                                     <li class="nav-item active">
-                                                        <div class="nav-link nav-link-collapse d-flex active">
+                                                        <div class="nav-link nav-link-collapse d-flex active active-page">
                                                             <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-18007c35-800b-4c7c-b8b2-78b8d50132ab" aria-label="collapse or expand navigation" href="#id-18007c35-800b-4c7c-b8b2-78b8d50132ab"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
@@ -154,7 +154,7 @@
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
                                                                         </li>
                                                                         <li class="nav-item">
-                                                                            <a class="nav-link ps-5 active active-page" href="/learn/simplepackage">Simple Package Creation</a>
+                                                                            <a class="nav-link ps-5" href="/learn/simplepackage">Simple Package Creation</a>
                                                                         </li>
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/weblauncher">Run With A Gist</a>
@@ -172,13 +172,12 @@
                         </div>
                         <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
                             <div class="ms-md-4 d-xl-none">
-                                	<h1 class="title">Simple Package Creation</h1>                 
+                                	<h1 class="title">Guides</h1>                 
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
-				<li class="breadcrumb-item"><a href="/learn">Guides</a></li>
 			
-			<li class="breadcrumb-item active" aria-current="page">Simple Package Creation</li>
+			<li class="breadcrumb-item active" aria-current="page">Guides</li>
 		</ol>
 	</nav>
 
@@ -186,91 +185,60 @@
                             <div class="row">
                                 <div id="mainContent" class="col-xl-10 ps-md-5 order-2 order-xl-1">
                                     <div class="d-none d-xl-block">
-                                        	<h1 class="title">Simple Package Creation</h1>                 
+                                        	<h1 class="title">Guides</h1>                 
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
-				<li class="breadcrumb-item"><a href="/learn">Guides</a></li>
 			
-			<li class="breadcrumb-item active" aria-current="page">Simple Package Creation</li>
+			<li class="breadcrumb-item active" aria-current="page">Guides</li>
 		</ol>
 	</nav>
 
                                     </div>
-                                    <h1 id="create-a-package-for-your-machine-install">Create a package for your machine install</h1>
-<p>Perhaps you have a common collection of applications and settings that you would like to install on any machine you have to work on. You don't want to memorize complicated URLs.</p>
-<p>Create and publish a package to create simple Boxstarter URLs!</p>
-<h2 id="step-1">Step 1</h2>
-<h3 id="install-boxstarter">Install Boxstarter</h3>
-<p>If you have Chocolatey:</p>
-<pre><code class="language-powershell">choco install Boxstarter
-</code></pre>
-<p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/installboxstarter">Installing Boxstarter</a> for details.</p>
-<h2 id="step-2">Step 2</h2>
-<h3 id="create-your-installer-script">Create your installer script</h3>
-<p>Open your favorite text editor and compose your installer. Although this can contain any valid PowerShell, you really do not need to know any PowerShell to create your script. This could just be a collection of Boxstarter commands. Here is an example:</p>
-<pre><code class="language-powershell">Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-Enable-RemoteDesktop
-Set-StartScreenOptions -EnableBootToDesktop
-choco install fiddler4
-choco install git-credential-winstore
-choco install console-devel
-choco install sublimetext2
-choco install poshgit
-choco install dotpeek
-Install-WindowsUpdate -AcceptEula
-</code></pre>
-<p>These are just Chocolatey Install calls and Boxstarter commands. Save this to a file - name and location do not matter. For a complete list of Boxstarter commands available in a package, see <a href="/winconfig">Boxstarter WinConfig Commands</a> and <a href="/creatingpackages">Creating Packages</a> for details covering the creation of Chocolatey packages.</p>
-<h2 id="step-3">Step 3</h2>
-<h3 id="invoke-the-boxstarter-shell">Invoke the Boxstarter shell</h3>
-<p><img src="/assets/images/shortcut.png" alt="Boxstarter shortcut icon" /></p>
-<p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/usingboxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
-<h2 id="step-4">Step 4</h2>
-<h3 id="convert-your-script-to-a-package">Convert your Script to a Package</h3>
-<p>Lets assume the script was saved to c:\dev\script.ps1 and I wanted to name my package mwrock.DefaultInstall. Run this command:</p>
-<pre><code class="language-powershell">New-PackageFromScript -Source c:\dev\script.ps1 -PackageName mwrock.DefaultInstall
-</code></pre>
-<p>This creates a simple Chocolatey package and packs it to a .nupkg file.</p>
-<h2 id="step-5">Step 5</h2>
-<h3 id="publish-the-package">Publish the Package</h3>
-<p>You can publish your package to any feed you have access to. We will publish to the public Chocolatey community feed. To do this you will need to <a href="https://community.chocolatey.org/account/Register">register</a> a free Chocolatey account and obtain an API key.</p>
-<p>Once you have a Chocolatey account and have followed the instructions on the Registration confirmation regarding setting your API key, you can use Chocolatey's choco push command to accomplish this:</p>
-<pre><code class="language-powershell">choco push (Join-Path $Boxstarter.LocalRepo mwrock.DefaultInstall.1.0.0.nupkg)
-</code></pre>
-<p>Boxstarter saves all packages to its LocalRepo property. Now choco push will find the .nupkg file and upload it to the Chocolatey community feed. See <a href="/publishingpackages">Publishing Packages</a>for more details regarding package publishing and using different feeds.</p>
-<h2 id="step-6">Step 6</h2>
-<h3 id="install-the-package-anywhere">Install the Package anywhere</h3>
-<p>Using IE (or any other browser that has a click-once extension installed) or from a command line (if IE or a click-once enabled browser is your default browser) run:</p>
-<p>START <a href="https://boxstarter.org/package/mwrock.DefaultInstall">https://boxstarter.org/package/mwrock.DefaultInstall</a></p>
-<p>Accept the prompts for installing the Boxstarter installer and running with administrative privileges. When the install begins, Boxstarter will ask for a password do that it can resume the installer in the event it needs to reboot.</p>
-<p>There are other ways to install the package as well. You can even <a href="/installingpackages#RemoteInstallations">install to a remote machine</a> or to an <a href="/vmintegration">Azure or Hyper-V VM with checkpointing support</a>.</p>
-
+                                    
+	<h2 class="title-child d-none mb-3">Child Pages</h2>
+	<div class="row ms-md-n5 ms-xl-n3">
+			<div class="col-lg-6 col-xl-4 pb-4">
+				<a href="/learn/remotepackagewithartifacts">
+				<div class="card card-body card-index">
+					<div class="circle">
+						<i class="fas fa-file" aria-hidden="true"></i>
+					</div>
+					<div class="d-flex flex-column ps-3">
+						<p class="h5 fw-bold card-title">Deploying A Web Application Remotely</p>
+							<p class="card-content">Learn how to install web services and deploy a web application to a remote server.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			<div class="col-lg-6 col-xl-4 pb-4">
+				<a href="/learn/simplepackage">
+				<div class="card card-body card-index">
+					<div class="circle">
+						<i class="fas fa-file" aria-hidden="true"></i>
+					</div>
+					<div class="d-flex flex-column ps-3">
+						<p class="h5 fw-bold card-title">Simple Package Creation</p>
+							<p class="card-content">Learn how to create a package for a machine install.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			<div class="col-lg-6 col-xl-4 pb-4">
+				<a href="/learn/weblauncher">
+				<div class="card card-body card-index">
+					<div class="circle">
+						<i class="fas fa-file" aria-hidden="true"></i>
+					</div>
+					<div class="d-flex flex-column ps-3">
+						<p class="h5 fw-bold card-title">Run With A Gist</p>
+							<p class="card-content">Learn how to quickly setup and machine with just a Gist.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+	</div>
                                 </div>
-                                        <div id="rightSidebarNav" class="col-xl-2 ps-md-5 ps-xl-3 order-1 order-xl-2">
-                                            <button class="btn btn-link btn-collapse fw-bold w-100 d-xl-none mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
-                                            <div id="rightSidebar" class="sticky-xl-top collapse collapse-lg">
-                                                <div class="card card-body py-0 px-xl-0 mb-3 border-0 shadow-none">
-                                                        <p class="fw-bold pt-3"><a href="https://github.com/chocolatey/boxstarter.org/edit/master/input/learn/simplepackage.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
-                                                        <hr class="m-0" />
-                                                    <p class="fw-bold pt-3 mb-2">On This Page</p>
-                                                    <ul class="nav nav-scrollspy flex-column pb-3">
-                                                            <li class="nav-item"><a class="nav-link d-none" href="#create-a-package-for-your-machine-install">Create a package for your machine install</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-1">Step 1</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#install-boxstarter">Install Boxstarter</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-2">Step 2</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#create-your-installer-script">Create your installer script</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-3">Step 3</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#invoke-the-boxstarter-shell">Invoke the Boxstarter shell</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-4">Step 4</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#convert-your-script-to-a-package">Convert your Script to a Package</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-5">Step 5</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#publish-the-package">Publish the Package</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#step-6">Step 6</a></li>
-                                                            <li class="nav-item"><a class="nav-link ps-4" href="#install-the-package-anywhere">Install the Package anywhere</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
                             </div>
                         </div>
                     </div>

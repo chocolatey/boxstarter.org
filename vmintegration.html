@@ -1,303 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-    <title>Boxstarter</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        .jumbotron {
-            background-color: #fafad2;
-            background-color: rgba(235, 214, 61, 0.24);
-            padding-bottom: 10px;
-        }
-
-        .btn-navbar {
-            margin-top: 8px;
-            margin-left:20px;
-        }
-
-        .twitter-follow-button {
-            margin-top: 8px;
-        }
-
-        .px-0 {
-            padding: 0;
-        }
-        
-    
-
-    </style>
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="/">Boxstarter</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/whyboxstarter">Docs</a></li>
-                <li><a href="/learn/weblauncher">Learn</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
-                <li><a href="https://ch0.co/community">Discussion</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/license">License</a></li>
-            </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-    
-
-   <div class="container">
-       
-
-<div class="row">
-    <div class="col-sm-3" id="sidebar">
-        <div class="navbar" role="navigation">
-            <button type="button" class="btn btn-secondary center-block visible-xs" data-toggle="collapse" data-target=".navbar-left">
-                Table of Contents
-                <span class="caret"></span>
-            </button>
-            <div class="navbar-collapse navbar-left px-0 collapse">
-                <div class="list-group">
-                    <a href="/whyboxstarter" class="list-group-item">Why Boxstarter?</a>
-                    <a href="/weblauncher" class="list-group-item">Launch from the web</a>
-                    <a href="/installboxstarter" class="list-group-item">Installing Boxstarter</a>
-                    <a href="/usingboxstarter" class="list-group-item">Using Boxstarter Commands</a>
-                    <a href="/understandingpackages" class="list-group-item">Understanding Packages</a>
-                    <a href="/creatingpackages" class="list-group-item">Creating Packages</a>
-                    <a href="/publishingpackages" class="list-group-item">Publishing Packages</a>
-                    <a href="/installingpackages" class="list-group-item">Installing Packages</a>
-                    <a href="/vmintegration" class="list-group-item active">Installing packages on a Virtual Machine</a>
-                    <a href="/testingpackages" class="list-group-item">Testing Packages and Build Server Integration</a>
-                    <a href="/winconfig" class="list-group-item">Boxstarter WinConfig Features</a>
-                    <a href="/boxstarterresources" class="list-group-item">More Boxstarter Resources</a>
-                </div>
-            </div><!-- /.nav-collapse -->
-        </div><!-- /.navbar -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:title" content="Boxstarter | Installing Packages On A Virtual Machine" />
+        <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:site_name" content="Boxstarter" />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
+        <meta property="og:url" content="https://boxstarter.org/vmintegration" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@chocolateynuget">
+        <meta name="twitter:creator" content="@chocolateynuget">
+        <meta property="product:brand" content="Boxstarter" />
+        <meta property="product:category" content="software" />
+        <link rel="shortcut icon" href="https://boxstarter.org/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://boxstarter.org/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://boxstarter.org/apple-touch-icon-180x180.png" />
+        <link rel="manifest" href="https://boxstarter.org/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href='/assets/css/boxstarter.bundle.min.css'>
+        <script type="text/javascript" src='/assets/js/boxstarter-head.bundle.min.js'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39271380-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-39271380-1');
+        </script>
+        <title>Boxstarter | Installing Packages On A Virtual Machine</title>
+    </head>
+    <body class="chocolatey-docs boxstarter-org">
+        <header>
+            
+            <nav class="navbar navbar-expand-lg bg-theme-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand link-theme" href="/">
+                        <img src='/assets/images/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
+                        Boxstarter
+                    </a>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="d-flex me-3 d-lg-none">
+                            <label class="mb-0" for="themeToggle">
+                                <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
     </div>
-    <div class="col-sm-9" role="main">
-        <div class="media">
-            <div class="media-body">
-                
-    <h1>Installing packages on a Virtual Machine</h1>
-    <p class="lead">Boxstarter provides convenient integration with both <a href="/vmintegration#HyperV">Hyper-V</a> and <a href="/vmintegration#azure">Windows Azure</a> Virtual Machines with support for auto configuration of remote connectivity as well as setting and restoring checkpoints. Of course Boxstarter can run on any VM guest as long as PowerShell remoting is enabled.
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                            </label>
+                        </div>
+                        <button class="navbar-toggler link-theme" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href='/whyboxstarter'>Docs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://github.com/chocolatey/boxstarter"><i class="fab fa-github me-2"></i>GitHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://ch0.co/community"><i class="fab fa-discord me-2"></i>Discussion</a>
+                            </li>
+                            <li class="nav-item d-none d-lg-flex px-lg-3">
+                                <label class="mb-0" for="themeToggle">
+                                    <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
+    </div>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                                </label>
+                            </li>
+                            <li class="nav-item pt-2 pt-lg-0 ps-lg-3">
+                                <a class="btn btn-primary d-block d-lg-inline-block" role="button" href='/downloads/Boxstarter.2.13.0.zip' download><i class="fas fa-download me-2"></i>Download v2.13.0</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-xl-2 p-0 bg-theme-light">
+                            <div id="leftSidebarNav" class="sticky-md-top collapse-y-height">
+                                <nav class="navbar navbar-expand-md p-0">
+                                    <div id="leftSidebar" class="collapse navbar-collapse">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                            </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/whyboxstarter">Why Boxstarter?</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/weblauncher">Launch from the Web</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/installboxstarter">Installing Boxstarter</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/usingboxstarter">Using Boxstarter Commands</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/understandingpackages">Understanding Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/creatingpackages">Creating Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/publishingpackages">Pushing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/installingpackages">Installing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2 active active-page" href="/vmintegration">Installing Packages On A Virtual Machine</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/testingpackages">Testing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/winconfig">Boxstarter WinConfig Features</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/boxstarterresources">More Boxstarter Resources</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="nav-link nav-link-collapse d-flex">
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-18007c35-800b-4c7c-b8b2-78b8d50132ab" aria-label="collapse or expand navigation" href="#id-18007c35-800b-4c7c-b8b2-78b8d50132ab"></button>
+                                                            <a href="/learn">Guides</a>
+                                                        </div>
+                                                        <div class="collapse" id="id-18007c35-800b-4c7c-b8b2-78b8d50132ab">
+                                                            <ul class="navbar-nav">
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5" href="/learn/simplepackage">Simple Package Creation</a>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5" href="/learn/weblauncher">Run With A Gist</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/license">License</a>
+                                                    </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
+                            <div class="ms-md-4 d-xl-none">
+                                	<h1 class="title">Installing Packages On A Virtual Machine</h1>                 
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
+			
+			<li class="breadcrumb-item active" aria-current="page">Installing Packages On A Virtual Machine</li>
+		</ol>
+	</nav>
 
-            </div>
-            <div class="media-right">
-                <img class="media-object" src="/assets/images/boxLogo_sm.png" />
-            </div>
-        </div>
-        
-<h2 id="HyperV">Hyper-V</h2>
-<h3>Limitations and Prerequisites</h3>
+                            </div>
+                            <div class="row">
+                                <div id="mainContent" class="col-xl-10 ps-md-5 order-2 order-xl-1">
+                                    <div class="d-none d-xl-block">
+                                        	<h1 class="title">Installing Packages On A Virtual Machine</h1>                 
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
+			
+			<li class="breadcrumb-item active" aria-current="page">Installing Packages On A Virtual Machine</li>
+		</ol>
+	</nav>
+
+                                    </div>
+                                    <h1 id="installing-packages-on-a-virtual-machine">Installing packages on a Virtual Machine</h1>
+<p>Boxstarter provides convenient integration with both <a href="vmintegration#HyperV">Hyper-V</a> and <a href="vmintegration#azure">Windows Azure</a> Virtual Machines with support for auto configuration of remote connectivity as well as setting and restoring checkpoints. Of course Boxstarter can run on any VM guest as long as PowerShell remoting is enabled.</p>
+<h2 id="hyper-v">Hyper-V</h2>
+<h3 id="limitations-and-prerequisites">Limitations and Prerequisites</h3>
 <p>Boxstarter's Hyper-V support is limited to:</p>
 <ul>
-    <li>PowerShell Version 3 Hyper-V Hosts and above. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
-    <li>Microsoft's Hyper-V virtualization technology comes with Windows Server and also the Windows client operating systems 8 and 8.1 professional and enterprise. It cannot be installed on Home editions of Windows 8 or on any version of Windows 7.</li>
-    <li>If Boxstarter determines that configuration is necessary for PowerShell Remoting, the VHD file of the VM must be accessible and writable to the user issuing the <code>Enable-BoxstarterVM</code> command.</li>
-    <li>Boxstarter's Hyper-V commands must be run on the Hyper-V host machine.</li>
-    <li>Hyper-V Guests are subject to the same limitations as any other Boxstarter installation environment: PowerShell v2, .net 4, and OS's Windows 7/Server 2008 R2 and higher.</li>
+<li>PowerShell Version 3 Hyper-V Hosts and above. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
+<li>Microsoft's Hyper-V virtualization technology comes with Windows Server and also the Windows client operating systems 8 and 8.1 professional and enterprise. It cannot be installed on Home editions of Windows 8 or on any version of Windows 7.</li>
+<li>If Boxstarter determines that configuration is necessary for PowerShell Remoting, the VHD file of the VM must be accessible and writable to the user issuing the <code>Enable-BoxstarterVM</code> command.</li>
+<li>Boxstarter's Hyper-V commands must be run on the Hyper-V host machine.</li>
+<li>Hyper-V Guests are subject to the same limitations as any other Boxstarter installation environment: PowerShell v2, .net 4, and OS's Windows 7/Server 2008 R2 and higher.</li>
 </ul>
-
-<h3>Automatic configuration of Hyper-V guest instances</h3>
+<h3 id="automatic-configuration-of-hyper-v-guest-instances">Automatic configuration of Hyper-V guest instances</h3>
 <p>Boxstarter will configure PowerShell Remoting on the Hyper-V guest if it finds that it is not enabled already. The amount of configuration depends on the environment. If web services management (WSMAN) or WMI ports are already enabled and a built-in administrator or domain credential is being used, Boxstarter should not need to perform any special configuration above that done by <code>Install-BoxstarterPackage</code>. Boxstarter can enable PowerShell Remoting from a WMI method call. If WSMAN or WMI are not open (by default they are not enabled on client versions of windows) or if the credential being used is a local user other than the built-in administrator, Boxstarter will shut down the VM, mount its VHD, and make a couple small changes to the Windows registry to either enable WMI, enable the LocalAccountTokenFilterPolicy, or both.</p>
-<pre>
-$cred=Get-Credential domain\username
+<pre><code class="language-powershell">$cred=Get-Credential domain\username
 Enable-BoxstarterVM -VMName myVM -Credential $cred
-</pre>
+</code></pre>
 <p>This will perform any of the configuration mentioned above if necessary and return a <code>BoxstarterConnectionConfig</code> object holding the DNS name of the guest machine and the Credential passed to the command.</p>
 <p>This object can be piped to Boxstarter's Install-BoxstarterPackage command.</p>
-<pre>
-$cred=Get-Credential domain\username
-"myVM1","myVM2" |
+<pre><code class="language-powershell">$cred=Get-Credential domain\username
+&quot;myVM1&quot;,&quot;myVM2&quot; |
   Enable-BoxstarterVM -Credential $cred |
     Install-BoxstarterPackage -PackageName myPackage
-</pre>
+</code></pre>
 <p>This installs myPackage on myVM1 and myVM2 after ensuring that both are properly configured for a remote install.</p>
-
-<h3>Checkpoints</h3>
+<h3 id="checkpoints">Checkpoints</h3>
 <p>The <code>Enable-BoxstarterVM</code> command can take a CheckpointName parameter. If this checkpoint exists, Boxstarter will restore the VM to this checkpoint before performing any action. If the checkpoint does not exist, Boxstarter will create a new Checkpoint after any configurations have been made.</p>
 <p>This is particularly useful when you want to restore a machine to a known state before performing an installation.</p>
-<pre>
-$cred=Get-Credential domain\username
+<pre><code class="language-powershell">$cred=Get-Credential domain\username
 Enable-BoxstarterVM -VMName myVM1 -Credential $cred -CheckPointName BareOS |
     Install-BoxstarterPackage -PackageName myPackage
-</pre>
+</code></pre>
 <p>This resets the VM to its BareOS state before Installing the myPackage package.</p>
-<h3>What about creating New VMs with Boxstarter?</h3>
+<h3 id="what-about-creating-new-vms-with-boxstarter">What about creating New VMs with Boxstarter?</h3>
 <p>I considered adding a New-BoxstarterVM command but the fact is that Microsoft's own Hyper-V PowerShell module does a fine job of making this easy. This is typically a task that is not done nearly as frequently as tearing down and resetting an existing VM so it did not seem like a feature much worth the effort. To demonstrate how you would setup a New Hyper-V VM. You could use a script like this:</p>
-<pre>
-New-VMSwitch -NetAdapterInterfaceDescription "Intel(R) Centrino(R) Advanced-N 6205" -Name MySwitch
-New-VM -Name "myVM" -MemoryStartupBytes 1GB -SwitchName MySwitch -VHDPath "C:\Users\Matt\Downloads\Windows Server 2008 R2 Enterprise Evaluation (Full Edition).vhd"
-Start-VM "myVM"
-</pre>
+<pre><code class="language-powershell">New-VMSwitch -NetAdapterInterfaceDescription &quot;Intel(R) Centrino(R) Advanced-N 6205&quot; -Name MySwitch
+New-VM -Name &quot;myVM&quot; -MemoryStartupBytes 1GB -SwitchName MySwitch -VHDPath &quot;C:\Users\Matt\Downloads\Windows Server 2008 R2 Enterprise Evaluation (Full Edition).vhd&quot;
+Start-VM &quot;myVM&quot;
+</code></pre>
 <p>That's pretty simple. This creates a virtual switch that binds to our network adapter. Your adapter might be named differently. Run <code>Get-NetAdapter</code> to get a list of your adapters. Then create the VM and attach it to a VHD and the switch you just created. Now you have a VM with Windows Server 2008 R2 connected to the Internet. There are a ton of other useful commands. Run <code>Get-Command -Module Hyper-V</code> to see them all. They are all well documented. For example, to view the documentation on the <code>Add-VMDvdDrive</code> command, run:</p>
-<pre>
-Get-Help Add-VMDvdDrive -Full
-</pre>
+<pre><code class="language-powershell">Get-Help Add-VMDvdDrive -Full
+</code></pre>
 <p>If for some reason you cannot find the Hyper-V module on your machine (it's supported with Windows PowerShell 4), you may need to enable the feature:</p>
-<pre>
-Install-WindowsFeature -name hyper-v -IncludeManagementTools
-</pre>
-<h3>Download a free evaluation edition Windows VHD</h3>
+<pre><code class="language-powershell">Install-WindowsFeature -name hyper-v -IncludeManagementTools
+</code></pre>
+<h3 id="download-a-free-evaluation-edition-windows-vhd">Download a free evaluation edition Windows VHD</h3>
 <p>You don't need a purchased copy of Windows or a fancy shmancy MSDN subscription to test out Boxstarter Installs on a VM. Microsoft provides evaluation copies of many of its OS versions on VHD that can be used for a limited number of days (usually 90). You can legally reinstall a new copy when the evaluation expires. While this is unfit for a production environment, its a great way to test your Boxstarter or Chocolatey installs.</p>
 <p>Here are links to free Windows evaluation VHDs:</p>
 <ul>
-    <li><a href="https://technet.microsoft.com/en-US/evalcenter/evaluate-windows-8-1-enterprise">Windows 8.1</a></li>
-    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=16572">Windows 2008 R2</a></li>
-    <li><a href="https://technet.microsoft.com/en-us/evalcenter/evaluate-windows-server-2012-r2">Windows 2012 R2</a></li>
+<li><a href="https://technet.microsoft.com/en-US/evalcenter/evaluate-windows-8-1-enterprise">Windows 8.1</a></li>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=16572">Windows 2008 R2</a></li>
+<li><a href="https://technet.microsoft.com/en-us/evalcenter/evaluate-windows-server-2012-r2">Windows 2012 R2</a></li>
 </ul>
-
-<h2 id="azure">Windows Azure VMs</h2>
-
-<h3>Prerequisites</h3>
+<h2 id="windows-azure-vms">Windows Azure VMs</h2>
+<h3 id="prerequisites">Prerequisites</h3>
 <p>Boxstarter's Windows Azure VM support is limited to:</p>
 <ul>
-    <li>PowerShell Version 3 or above. Boxstarter leverages the Windows Azure PowerShell toolkit which requires at least PowerShell version 3. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows 7 and Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
-    <li>The default PowerShell remoting and endpoints that Azure creates on new VMs mus be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.</li>
+<li>PowerShell Version 3 or above. Boxstarter leverages the Windows Azure PowerShell toolkit which requires at least PowerShell version 3. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows 7 and Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
+<li>The default PowerShell remoting and endpoints that Azure creates on new VMs mus be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.</li>
 </ul>
-
-<h3>Installing the Boxstarter.Azure module</h3>
+<h3 id="installing-the-boxstarter.azure-module">Installing the Boxstarter.Azure module</h3>
 <p>The Boxstarter.Azure module does not automatically install with the main Boxstarter install package, but just a single Chocolatey command can accomplish this.</p>
-<pre>choco install Boxstarter.Azure</pre>
+<pre><code class="language-powershell">choco install Boxstarter.Azure
+</code></pre>
 <p>This will install the Boxstarter.Azure module and all of its prerequisites: Windows Azure PowerShell, Windows Azure SDK for .Net Libraries, and the .Net Framework v4.5.</p>
-<h3>One time configuration of Azure subscription information</h3>
-<p>Before Windows Azure PowerShell can begin to manage your VMs, it needs your account information as well as authentication verification. This is incredibly easy, <b>only needs to be performed once</b> and involves just three commands:</p>
-<pre>Get-AzurePublishSettingsFile</pre>
+<h3 id="one-time-configuration-of-azure-subscription-information">One time configuration of Azure subscription information</h3>
+<p>Before Windows Azure PowerShell can begin to manage your VMs, it needs your account information as well as authentication verification. This is incredibly easy, <strong>only needs to be performed once</strong> and involves just three commands:</p>
+<pre><code class="language-powershell">Get-AzurePublishSettingsFile
+</code></pre>
 <p>This command will launch your default browser and initiate a Publisher Settings download. First you will land on the Windows Azure sign in page and as soon as you successfully authenticate, the download will begin.</p>
-<img class="img-responsive" src="/assets/images/publishAzure.png" />
+<p><img src="/assets/images/publishAzure.png" alt="Windows Azure download page" /></p>
 <p>Now simply import the file just downloaded:</p>
-<pre>Import-AzurePublishSettingsFile -PublishSettingsFile C:\Users\Matt\Downloads\Subscription-1-1-19-2014-credentials.publishsettings</pre>
+<pre><code class="language-powershell">Import-AzurePublishSettingsFile -PublishSettingsFile C:\Users\Matt\Downloads\Subscription-1-1-19-2014-credentials.publishsettings
+</code></pre>
 <p>Finally, specify the name of the storage account you want to use. You can run <code>Get-AzureStorageAccount</code> for a list of all of your storage accounts.</p>
-<pre>Set-AzureSubscription -SubscriptionName MySubscription -CurrentStorageAccountName MyStorageAccount</pre>
+<pre><code class="language-powershell">Set-AzureSubscription -SubscriptionName MySubscription -CurrentStorageAccountName MyStorageAccount
+</code></pre>
+<blockquote>
 <p>Note: Boxstarter will attempt to set your Current Storage Account for you if it has not been specified. However, you will need to run the command yourself if you need to run other Windows Azure PowerShell commands prior to using Boxstarter.</p>
+</blockquote>
 <p>That's it. You can now use the Windows Azure PowerShell and Boxstarter commands to provision VMs in Azure.</p>
-<h3>Creating an Azure VM</h3>
+<h3 id="creating-an-azure-vm">Creating an Azure VM</h3>
 <p>Creating Azure VMs is simple. You can either use the Azure portal or PowerShell. Since the Boxstarter.Azure module also loads the Windows Azure PowerShell module, all of the Azure PowerShell commands are available in the Boxstarter Shell. The easiest way to create new VMs using PowerShell is with the <code>New-AzureQuickVM</code> command:</p>
-<pre>
-$cred=Get-Credential AzureAdmin
+<pre><code class="language-powershell">$cred=Get-Credential AzureAdmin
 New-AzureQuickVM -ServiceName MyService -Windows -Name MyVM `
   -ImageName 3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20131217-enus `
   -Password $cred.GetNetworkCredential().Password -AdminUsername $cred.UserName `
-  -Location "West US" -WaitForBoot
-</pre>
+  -Location &quot;West US&quot; -WaitForBoot
+</code></pre>
 <p>This creates a small Windows Server 2012 R2 VM located in the West US region and will wait for the VM to complete its boot sequence. Note: If the Service Name already exists, do not include the <code>-Location</code> argument since the VM will be created in the location that service is configured for. To find out what all of the Location options are, use the <code>Get-AzureLocation</code> command.</p>
 <p>While this example uses a Windows Server 2012 R2 image, you can use any of the images in the Azure gallery or even images you have created yourself. Use <code>Get-AzureVMImage</code> for information on all of the images available.</p>
 <p>The Azure PowerShell commands are very useful. Use <code>Get-Command -Module Azure</code> to find all commands available in the Windows Azure PowerShell module. All commands include the customary PowerShell command line help. Simply run <code>Get-Help [Command Name] -Full</code> to view the full documentation of a command.</p>
-<h3>Provisioning your Windows Azure VM</h3>
-
+<h3 id="provisioning-your-windows-azure-vm">Provisioning your Windows Azure VM</h3>
 <p>Boxstarter will locate the VMs PowerShell remoting Connection URI and install the VMs certificate on the local machine which will enable a SSL connection to be established so that Boxstarter can install your package on the VM. Here is an example:</p>
-<pre>
-$cred=Get-Credential AzureAdmin
-"myVM1","myVM2" |
+<pre><code class="language-powershell">$cred=Get-Credential AzureAdmin
+&quot;myVM1&quot;,&quot;myVM2&quot; |
   Enable-BoxstarterVM -provider Azure -CloudServiceName MyService -Credential $cred |
     Install-BoxstarterPackage -PackageName myPackage
-</pre>
+</code></pre>
 <p>This installs myPackage on myVM1 and myVM2.</p>
-
-<h3>Checkpoints</h3>
+<h3 id="checkpoints-1">Checkpoints</h3>
 <p>Just like with the HyperV provider, the <code>Enable-BoxstarterVM</code> command can take a CheckpointName parameter. If this checkpoint exists, Boxstarter will restore the VM to this checkpoint before performing any action. If the checkpoint does not exist, Boxstarter will create a new Checkpoint before installing any packages.</p>
-
 <p>This is particularly useful when you want to restore a machine to a known state before performing an installation.</p>
-<pre>
-$cred=Get-Credential domain\username
+<pre><code class="language-powershell">$cred=Get-Credential domain\username
 Enable-BoxstarterVM -Provider azure -CloudServiceName MyService `
   -VMName myVM1 -Credential $cred -CheckPointName BareOS |
     Install-BoxstarterPackage -PackageName myPackage
-</pre>
+</code></pre>
 <p>This resets the VM to its BareOS state before Installing the myPackage package.</p>
 <p>Boxstarter leverages Azure Blob snapshots to support this check-pointing functionality. Note that the checkpoints are not visible in the Azure portal. However, if you would like to manage these checkpoints, Boxstarter exposes the following commands:</p>
 <ul>
-    <li>Get-AzureVMCheckpoint</li>
-    <li>Set-AzureVMCheckpoint</li>
-    <li>Restore-AzureVMCheckpoint</li>
-    <li>Remove-AzureVMCheckpoint</li>
+<li>Get-AzureVMCheckpoint</li>
+<li>Set-AzureVMCheckpoint</li>
+<li>Restore-AzureVMCheckpoint</li>
+<li>Remove-AzureVMCheckpoint</li>
 </ul>
 <p>All commands take a <code>-VM</code> and a <code>-CheckpointName</code> parameter.</p>
 <p>For example, to create or reset a checkpoint:</p>
-<pre>
-$vm=Get-AzureVM -ServiceName MyService -Name MyVM
+<pre><code class="language-powershell">$vm=Get-AzureVM -ServiceName MyService -Name MyVM
 Set-AzureVMCheckpoint -VM $vm -CheckpointName BareOS
-</pre>
+</code></pre>
 <p>Now the BareOS checkpoint resembles the current state of the MyVM VM.</p>
 <p>To list all checkpoints of a VM, you can omit the CheckpointName parameter of <code>Get-AzureVMCheckpoint</code>:</p>
-<pre>
-$vm=Get-AzureVM -ServiceName MyService -Name MyVM
+<pre><code class="language-powershell">$vm=Get-AzureVM -ServiceName MyService -Name MyVM
 Get-AzureVMCheckpoint -VM $vm
-</pre>
-
-<h2>Working with other virtualization technologies</h2>
-<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using <cose>Install-BoxstarterPackage</cose> as long as the VM has PowerShell remoting enabled and the VM's DNS name is accessible on the network. For "On Premise" VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
-<pre>
-Enable-BoxstarterVHD -VHDPath "C:\Virtual hard disks\win81diff_F2AE6535-2532-455F-8E5A-0211595221F8.avhdx"
-</pre>
+</code></pre>
+<h2 id="working-with-other-virtualization-technologies">Working with other virtualization technologies</h2>
+<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled and the VM's DNS name is accessible on the network. For &quot;On Premise&quot; VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
+<pre><code class="language-powershell">Enable-BoxstarterVHD -VHDPath &quot;C:\Virtual hard disks\win81diff_F2AE6535-2532-455F-8E5A-0211595221F8.avhdx&quot;
+</code></pre>
 <p>This will mount the VHD provided in the VHDPath, enable the WMI Firewall ports and enable LocalAccountTokenFilterPolicy in the Windows registry stored in the VHD.</p>
+<blockquote>
 <p>NOTE: Although The parameter is explicitly referred to as <code>VHDPath</code>, any valid VHD file extension is accepted. The above example uses a differencing disk, but is valid since that is the primary hard drive of a guest VM.</p>
-
-<h3>Troubleshooting Boxstarter VM Installs</h3>
-<h4>General Connectivity</h4>
+</blockquote>
+<h3 id="troubleshooting-boxstarter-vm-installs">Troubleshooting Boxstarter VM Installs</h3>
+<h4 id="general-connectivity">General Connectivity</h4>
 <p>Boxstarter makes a best effort attempt to test and configure your VM for remote installation. However, every environment is different and may include slightly tweaked configurations that Boxstarter cannot anticipate. Especially if you are inside a domain environment, there may be various group policies in place that edit various settings and permission levels that will cause a Boxstarter install to fail. Almost all of these scenarios can be corrected for and over time, Boxstarter should improve at compensating for these nuances.</p>
-
 <p>The first thing to do if Boxstarter is unable to reach the VM is to run:</p>
-<pre>Enable-PSRemoting -Force</pre>
+<pre><code class="language-powershell">Enable-PSRemoting -Force
+</code></pre>
 <p>on the VM. This will most often put the machine in a state where it can accept remote sessions from Boxstarter.</p>
-<h4>Have you lost your domain trust relationship?</h4>
+<h4 id="have-you-lost-your-domain-trust-relationship">Have you lost your domain trust relationship?</h4>
 <p>In a domain environment, it is possible that over time a VM may lose its trust relationship with the Domain Controller especially if you revert to a snapshot that has an expired machine password. When this happens things stop authenticating correctly and often remote communication sessions are denied. It is not always obvious that this is the problem. Usually you can tell by examining the Network Adapter on the VM and it states that it is Unauthenticated. The most reliable fix for this is to unjoin the domain and then rejoin.</p>
 
-    </div>
-</div>
-      <hr>
-
-      <footer>
-        <p>&copy; 2018 - 2022 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
-        <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39271380-1']);
-      _gaq.push(['_setDomainName', 'boxstarter.org']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </body>
+                                </div>
+                                        <div id="rightSidebarNav" class="col-xl-2 ps-md-5 ps-xl-3 order-1 order-xl-2">
+                                            <button class="btn btn-link btn-collapse fw-bold w-100 d-xl-none mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
+                                            <div id="rightSidebar" class="sticky-xl-top collapse collapse-lg">
+                                                <div class="card card-body py-0 px-xl-0 mb-3 border-0 shadow-none">
+                                                        <p class="fw-bold pt-3"><a href="https://github.com/chocolatey/boxstarter.org/edit/master/input/vmintegration.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                        <hr class="m-0" />
+                                                    <p class="fw-bold pt-3 mb-2">On This Page</p>
+                                                    <ul class="nav nav-scrollspy flex-column pb-3">
+                                                            <li class="nav-item"><a class="nav-link d-none" href="#installing-packages-on-a-virtual-machine">Installing packages on a Virtual Machine</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#hyper-v">Hyper-V</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#limitations-and-prerequisites">Limitations and Prerequisites</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#automatic-configuration-of-hyper-v-guest-instances">Automatic configuration of Hyper-V guest instances</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#checkpoints">Checkpoints</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#what-about-creating-new-vms-with-boxstarter">What about creating New VMs with Boxstarter?</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#download-a-free-evaluation-edition-windows-vhd">Download a free evaluation edition Windows VHD</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#windows-azure-vms">Windows Azure VMs</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#prerequisites">Prerequisites</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#installing-the-boxstarter.azure-module">Installing the Boxstarter.Azure module</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#one-time-configuration-of-azure-subscription-information">One time configuration of Azure subscription information</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#creating-an-azure-vm">Creating an Azure VM</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#provisioning-your-windows-azure-vm">Provisioning your Windows Azure VM</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#checkpoints-1">Checkpoints</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#working-with-other-virtualization-technologies">Working with other virtualization technologies</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#troubleshooting-boxstarter-vm-installs">Troubleshooting Boxstarter VM Installs</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-5" href="#general-connectivity">General Connectivity</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-5" href="#have-you-lost-your-domain-trust-relationship">Have you lost your domain trust relationship?</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        <footer class="flex-shrink-0">
+            <div class="bg-theme-light border-top text-center p-3">
+                <span class="small">© 2018 - 2022 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
+                <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/7d63dbc0a54d273765906076dbb3403779e605f4">7d63dbc</a></span><br />
+                <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
+            </div>
+            <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
+                <p class="mb-0"><strong>boxstarter.org uses cookies to enhance the user experience of the site.</strong></p>
+                <button type="button" class="btn btn-theme btn-sm d-none d-md-inline-block" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+                <button type="button" class="btn btn-theme d-md-none" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Array.prototype.find,Number.parseFloat%2CNumber.parse%2CNodeList.prototype.forEach%2CNumber.parseInt"></script>
+        <script type="text/javascript" src='/assets/js/boxstarter.bundle.min.js'></script>
+    </body>
 </html>

@@ -1,143 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-    <title>Boxstarter</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        .jumbotron {
-            background-color: #fafad2;
-            background-color: rgba(235, 214, 61, 0.24);
-            padding-bottom: 10px;
-        }
-
-        .btn-navbar {
-            margin-top: 8px;
-            margin-left:20px;
-        }
-
-        .twitter-follow-button {
-            margin-top: 8px;
-        }
-
-        .px-0 {
-            padding: 0;
-        }
-        
-    </style>
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="/">Boxstarter</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/whyboxstarter">Docs</a></li>
-                <li><a href="/learn/weblauncher">Learn</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
-                <li><a href="https://ch0.co/community">Discussion</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/license">License</a></li>
-            </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-    
-<div class="jumbotron">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:title" content="Boxstarter | 100% Uninterrupted Windows Environment Installs" />
+        <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:site_name" content="Boxstarter" />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
+        <meta property="og:url" content="https://boxstarter.org/" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@chocolateynuget">
+        <meta name="twitter:creator" content="@chocolateynuget">
+        <meta property="product:brand" content="Boxstarter" />
+        <meta property="product:category" content="software" />
+        <link rel="shortcut icon" href="https://boxstarter.org/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://boxstarter.org/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://boxstarter.org/apple-touch-icon-180x180.png" />
+        <link rel="manifest" href="https://boxstarter.org/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href='/assets/css/boxstarter.bundle.min.css'>
+        <script type="text/javascript" src='/assets/js/boxstarter-head.bundle.min.js'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39271380-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-39271380-1');
+        </script>
+        <title>Boxstarter | 100% Uninterrupted Windows Environment Installs</title>
+    </head>
+    <body class="chocolatey-docs boxstarter-org">
+        <header>
+            
+            <nav class="navbar navbar-expand-lg bg-theme-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand link-theme" href="/">
+                        <img src='/assets/images/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
+                        Boxstarter
+                    </a>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="d-flex me-3 d-lg-none">
+                            <label class="mb-0" for="themeToggle">
+                                <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
+    </div>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                            </label>
+                        </div>
+                        <button class="navbar-toggler link-theme" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href='/whyboxstarter'>Docs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://github.com/chocolatey/boxstarter"><i class="fab fa-github me-2"></i>GitHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://ch0.co/community"><i class="fab fa-discord me-2"></i>Discussion</a>
+                            </li>
+                            <li class="nav-item d-none d-lg-flex px-lg-3">
+                                <label class="mb-0" for="themeToggle">
+                                    <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
+    </div>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                                </label>
+                            </li>
+                            <li class="nav-item pt-2 pt-lg-0 ps-lg-3">
+                                <a class="btn btn-primary d-block d-lg-inline-block" role="button" href='/downloads/Boxstarter.2.13.0.zip' download><i class="fas fa-download me-2"></i>Download v2.13.0</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            <main id="noSidebar">
+                
+<section class="py-5 py-md-7 bg-architect-factory-top bg-img-cover">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <img class="img-responsive" src="/assets/images/boxLogo.png" />
-            </div>
-            <div class="col-sm-8">
-                <h1>Boxstarter</h1>
-                <p>Repeatable, <span class="text-primary"><b>reboot resilient</b></span> windows environment installations made easy using <a href="https://chocolatey.org">Chocolatey</a> packages. When its time to repave either <span class="text-primary"><b>bare metal or virtualized</b></span> instances, locally or on a <span class="text-primary"><b>remote machine</b></span>, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from <span class="text-primary"><b>Windows 7/2008 R2 forward</b></span>.</p>
-                <p><a class="btn btn-primary btn-lg" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a></p>
+        <h1 class="text-transform-none display-3 fw-bold title text-center mb-0">Repeatable, <span class="text-primary">Reboot Resilient</span> Windows Environment Installations Made Easy</h1>
+        <div class="col-md-8 mx-auto text-center pb-4 pt-3">
+            <p class="lead mb-0">When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations using Chocolatey packages. Compatible with all Windows versions from Windows 7/2008 R2 forward.</p>
+        </div>
+        <div class="col-md-10 col-lg-6 d-grid gap-2 d-md-flex align-items-center justify-content-center mx-auto">
+            <button class="btn btn-outline-primary btn-lg text-nowrap d-flex align-items-center justify-content-space-between text-theme bg-theme me-md-4 fw-normal btn-copy tt tt-top" type="button" data-clipboard-text="choco install boxstarter" data-bs-toggle="button" data-tooltip-text="Copy" data-tooltip-text-active="Copied!" aria-label="Copy download command to clipboard.">choco install boxstarter<i class="fas fa-clipboard text-green ms-5"></i></button>
+            <a class="btn btn-outline-primary btn-lg text-nowrap d-block" href="whyboxstarter" role="button">Read the Docs<i class="fas fa-angle-right ms-2"></i></a>
+        </div>
+        <p class="text-center pt-3 mb-0">Currently <strong>v2.13.0</strong> | <a href='/downloads/Boxstarter.2.13.0.zip' download>Download</a></p>
+    </div>
+</section>
+<section class="py-5 py-md-6 py-lg-7 container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <p class="mb-2 text-muted font-monospace lead"># Boxstarter v2</p>
+            <h2 class="h1 text-transform-none title mb-3 mt-0">100% Uninterrupted Windows Environment Installs</h2>
+            <p class="mb-0 lead">Boxstarter leverages Chocolatey packages to automate the installation of software and create repeatable, scripted Windows environments.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/sgzVTG-zIPE?vq=hd1080" title="Boxstarter The Movie" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-</div>
-
-
-   <div class="container">
-       
-
-<div class="row">
-    <div class="col-md-4">
-        <h2><a href="/whyboxstarter">Why Boxstarter?</a></h2>
-        <p>Checkout the features that Boxstarter provides on top of Chocolatey to ensure 100% uninterrupted Windows environment installs.</p>
-
-        <h2><a href="/installingpackages#RemoteInstallations">Run Remotely</a></h2>
-        <p>Need to install a bunch of machines or repeatedly setup a VM? Invoke Boxstarter commands to install environments on remote machines. Supports all VM technologies and <a href="/vmintegration">deep integration with Hyper-V and Windows Azure VMs.</a></p>
-
-        <h2><a href="/weblauncher">Launch with one easy URL</a></h2>
-        <p>You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed using an easy to remember URL.</p>
+</section>
+<section class="py-5 py-md-7 bg-architect-factory bg-img-cover">
+    <div class="container">
+        <div class="col-lg-10 mx-auto text-center border p-5 bg-theme">
+            <div class="d-flex align-items-center justify-content-center">
+                <img loading="lazy" class="w-100-px" src="https://chocolatey.org/assets/images/global-shared/logo-square.svg" alt="Chocolatey Software" />
+                <span class="display-1 my-0 mx-4">+</i>
+                <img loading="lazy" class="w-100-px" src='/assets/images/boxstarter-logo.png' alt="Boxstarter" />
+            </div>
+            <h2 class="display-5 text-transform-none title fw-bold">A Resilient Combination</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center pb-4 pt-3">
+                    <p class="lead mb-0">Chocolatey makes installing software very easy with no user intervention. Boxstarter enhances Chocolatey's functionality and provides an environment that is optimized for installing a complete environment on a fresh OS install.</p>
+                </div>
+            </div>
+            <a class="btn btn-outline-primary btn-lg text-nowrap" href="whyboxstarter" role="button">Learn About Boxstarter<i class="fas fa-angle-right ms-2"></i></a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2><a href="/learn/weblauncher">Store Configs in a Gist</a></h2>
-        <p>You can use Boxstarter to install a complete environment or install a small set of tools and windows settings with absolutely no software pre installed and configuration scripts stored in a gist.</p>
-
-        <h2><a href="/creatingpackages">Simplify Package Creation</a></h2>
-        <p>Boxstarter composes an environment using <a href="https://chocolatey.org">Chocolatey</a> style <a href="https://nuget.org">NuGet</a> Packages. Boxstarter provides commands to make package authoring, testing and publishing a snap.</p>
+</section>
+<section class="container">
+    <div class="row py-5 py-md-6 align-items-center">
+        <div class="col-md-6 order-2 order-md-1">
+            <p class="text-blue fw-bold font-monospace mb-2 lead"># Time Saving</p>
+            <h2 class="mt-0">Run Remotely</h2>
+            <p class="lead">Need to install a bunch of machines or repeatedly setup a VM? Invoke Boxstarter commands to install environments on remote machines.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="installingpackages#RemoteInstallations" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to run Boxstarter remotely.</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='/assets/images/undraw_dev_productivity.svg' alt="Run Boxstarter Remotely" />
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Boxstarter, The Movie</h2>
-        <iframe width="420" height="315" src="https://www.youtube.com/embed/sgzVTG-zIPE?vq=hd1080" frameborder="0" allowfullscreen></iframe>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='/assets/images/undraw_speed_test.svg' alt="Launch Boxstarter With one Easy URL" />
+        </div>
+        <div class="col-md-6">
+            <p class="text-pink fw-bold font-monospace mb-2 lead"># Convienient</p>
+            <h2 class="mt-0">Launch With One Easy URL</h2>
+            <p class="lead">You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed using an easy to remember URL.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="weblauncher" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to launch Boxstarter with one easy URL.</span>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
-      <hr>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 order-2 order-md-1">
+            <p class="text-orange fw-bold font-monospace mb-2 lead"># Familiar</p>
+            <h2 class="mt-0">Store Configs In A Gist</h2>
+            <p class="lead">You can use Boxstarter to install a complete environment or install a small set of tools and Windows settings with absolutely no software pre installed and configuration scripts stored in a gist.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="learn/weblauncher" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how to store Boxstarter configs in a gist.</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='/assets/images/undraw_version_control.svg' alt="Store Boxstarter Configs In A Gist" />
+        </div>
+    </div>
+    <div class="row align-items-center py-5 py-md-6">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
+            <img loading="lazy" class="w-75" src='/assets/images/undraw_check_boxes.svg' alt="Simplify Package Creation with Boxstarter" />
+        </div>
+        <div class="col-md-6 ">
+            <p class="text-purple fw-bold font-monospace mb-2 lead"># Practical</p>
+            <h2 class="mt-0">Simplify Package Creation</h2>
+            <p class="lead">Boxstarter composes an environment using <a href="https://chocolatey.org">Chocolatey</a> style <a href="https://nuget.org">NuGet</a> Packages. Boxstarter provides commands to make package authoring, testing, and publishing a snap.</p>
+            <div class="pt-3">
+                <a class="btn btn-lg btn-outline-theme-opposite" href="creatingpackages" role="button">
+                    Read More<i class="fas fa-angle-right ms-2"></i>
+                    <span class="visually-hidden">Read more about how Boxstarter simplifies package creationL.</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 py-md-7 bg-architect-factory-bottom-primary bg-img-cover">
+    <div class="container text-center">
+        <h2 class="text-transform-none display-3 fw-bold title mb-4">Let Boxstarter Do The Heavy Work</h1>
+        <a class="btn btn-primary btn-lg text-nowrap" href="whyboxstarter" role="button">Get Started Now<i class="fas fa-angle-right ms-2"></i></a>
+    </div>
+</section>
 
-      <footer>
-        <p>&copy; 2018 - 2022 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
-        <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39271380-1']);
-      _gaq.push(['_setDomainName', 'boxstarter.org']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </body>
+            </main>
+        <footer class="flex-shrink-0">
+            <div class="bg-theme-light border-top text-center p-3">
+                <span class="small">© 2018 - 2022 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
+                <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/7d63dbc0a54d273765906076dbb3403779e605f4">7d63dbc</a></span><br />
+                <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
+            </div>
+            <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
+                <p class="mb-0"><strong>boxstarter.org uses cookies to enhance the user experience of the site.</strong></p>
+                <button type="button" class="btn btn-theme btn-sm d-none d-md-inline-block" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+                <button type="button" class="btn btn-theme d-md-none" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Array.prototype.find,Number.parseFloat%2CNumber.parse%2CNodeList.prototype.forEach%2CNumber.parseInt"></script>
+        <script type="text/javascript" src='/assets/js/boxstarter.bundle.min.js'></script>
+    </body>
 </html>

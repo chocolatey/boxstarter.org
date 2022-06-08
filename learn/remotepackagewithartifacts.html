@@ -1,143 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-    <title>Boxstarter</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        .jumbotron {
-            background-color: #fafad2;
-            background-color: rgba(235, 214, 61, 0.24);
-            padding-bottom: 10px;
-        }
-
-        .btn-navbar {
-            margin-top: 8px;
-            margin-left:20px;
-        }
-
-        .twitter-follow-button {
-            margin-top: 8px;
-        }
-
-        .px-0 {
-            padding: 0;
-        }
-        
-    
-
-    </style>
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="/">Boxstarter</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/whyboxstarter">Docs</a></li>
-                <li class="active"><a href="/learn/weblauncher">Learn</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter/issues">Issues</a></li>
-                <li><a href="https://ch0.co/community">Discussion</a></li>
-                <li><a href="https://github.com/chocolatey/boxstarter">Source Code</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/license">License</a></li>
-            </ul>
-            <a class="btn btn-primary btn-navbar" role="button" href="/downloads/Boxstarter.2.13.0.zip"><span class="glyphicon glyphicon-cloud-download"></span> Download v2.13.0</a>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-    
-
-   <div class="container">
-       
-
-
-<div class="row">
-    <div class="col-sm-3" id="sidebar">
-        <div class="navbar" role="navigation">
-            <button type="button" class="btn btn-secondary center-block visible-xs" data-toggle="collapse" data-target=".navbar-left">
-                Table of Contents
-                <span class="caret"></span>
-            </button>
-            <div class="navbar-collapse navbar-left px-0 collapse">
-                <div class="list-group">
-                    <a href="/learn/weblauncher" class="list-group-item">Run with a Gist</a>
-                    <a href="/learn/simplepackage" class="list-group-item">Simple package creation</a>
-                    <a href="/learn/remotepackagewithartifacts" class="list-group-item active">Deploying a web application remotely</a>
-                </div>
-            </div><!-- /.nav-collapse -->
-        </div><!-- /.navbar -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:title" content="Boxstarter | Deploying A Web Application Remotely" />
+        <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
+        <meta property="og:site_name" content="Boxstarter" />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
+        <meta property="og:url" content="https://boxstarter.org/learn/remotepackagewithartifacts" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@chocolateynuget">
+        <meta name="twitter:creator" content="@chocolateynuget">
+        <meta property="product:brand" content="Boxstarter" />
+        <meta property="product:category" content="software" />
+        <link rel="shortcut icon" href="https://boxstarter.org/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://boxstarter.org/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://boxstarter.org/apple-touch-icon-180x180.png" />
+        <link rel="manifest" href="https://boxstarter.org/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href='/assets/css/boxstarter.bundle.min.css'>
+        <script type="text/javascript" src='/assets/js/boxstarter-head.bundle.min.js'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39271380-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-39271380-1');
+        </script>
+        <title>Boxstarter | Deploying A Web Application Remotely</title>
+    </head>
+    <body class="chocolatey-docs boxstarter-org">
+        <header>
+            
+            <nav class="navbar navbar-expand-lg bg-theme-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand link-theme" href="/">
+                        <img src='/assets/images/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
+                        Boxstarter
+                    </a>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="d-flex me-3 d-lg-none">
+                            <label class="mb-0" for="themeToggle">
+                                <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
     </div>
-    <div class="col-sm-9" role="main">
-        <div class="media">
-            <div class="media-body">
-                
-    <h1>Installing web services and deploying a web application to a remote server</h1>
-    <p class="lead">Sometimes a package may contain more than just a nuspec file and an install script. You may also want to install the package onto a remote machine.</p>
-    <p class="lead"><span class="text-primary">Boxstarter can create a template package targeting an existing directory and install the package on any machine open to WINRM or WMI remoting.</span></p>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                            </label>
+                        </div>
+                        <button class="navbar-toggler link-theme" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href='/whyboxstarter'>Docs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://github.com/chocolatey/boxstarter"><i class="fab fa-github me-2"></i>GitHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-theme px-lg-3" href="https://ch0.co/community"><i class="fab fa-discord me-2"></i>Discussion</a>
+                            </li>
+                            <li class="nav-item d-none d-lg-flex px-lg-3">
+                                <label class="mb-0" for="themeToggle">
+                                    <input id="themeToggle" class="toggle-checkbox theme-toggle" type="checkbox" aria-label="Toggle theme settings" />
+<div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+        <div class="sun-icon fas fa-sun"></div>
+    </div>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+        <div class="moon-icon fas fa-moon"></div>
+    </div>
+</div>
+                                </label>
+                            </li>
+                            <li class="nav-item pt-2 pt-lg-0 ps-lg-3">
+                                <a class="btn btn-primary d-block d-lg-inline-block" role="button" href='/downloads/Boxstarter.2.13.0.zip' download><i class="fas fa-download me-2"></i>Download v2.13.0</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-xl-2 p-0 bg-theme-light">
+                            <div id="leftSidebarNav" class="sticky-md-top collapse-y-height">
+                                <nav class="navbar navbar-expand-md p-0">
+                                    <div id="leftSidebar" class="collapse navbar-collapse">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                            </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/whyboxstarter">Why Boxstarter?</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/weblauncher">Launch from the Web</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/installboxstarter">Installing Boxstarter</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/usingboxstarter">Using Boxstarter Commands</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/understandingpackages">Understanding Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/creatingpackages">Creating Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/publishingpackages">Pushing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/installingpackages">Installing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/vmintegration">Installing Packages On A Virtual Machine</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/testingpackages">Testing Packages</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/winconfig">Boxstarter WinConfig Features</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/boxstarterresources">More Boxstarter Resources</a>
+                                                    </li>
+                                                    <li class="nav-item active">
+                                                        <div class="nav-link nav-link-collapse d-flex active">
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-18007c35-800b-4c7c-b8b2-78b8d50132ab" aria-label="collapse or expand navigation" href="#id-18007c35-800b-4c7c-b8b2-78b8d50132ab"></button>
+                                                            <a href="/learn">Guides</a>
+                                                        </div>
+                                                        <div class="collapse show" id="id-18007c35-800b-4c7c-b8b2-78b8d50132ab">
+                                                            <ul class="navbar-nav">
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5 active active-page" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5" href="/learn/simplepackage">Simple Package Creation</a>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                            <a class="nav-link ps-5" href="/learn/weblauncher">Run With A Gist</a>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link ps-c2" href="/license">License</a>
+                                                    </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
+                            <div class="ms-md-4 d-xl-none">
+                                	<h1 class="title">Deploying A Web Application Remotely</h1>                 
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
+				<li class="breadcrumb-item"><a href="/learn">Guides</a></li>
+			
+			<li class="breadcrumb-item active" aria-current="page">Deploying A Web Application Remotely</li>
+		</ol>
+	</nav>
 
-            </div>
-            <div class="media-right">
-                <img class="media-object" src="/assets/images/boxLogo_sm.png" />
-            </div>
-        </div>
-        
+                            </div>
+                            <div class="row">
+                                <div id="mainContent" class="col-xl-10 ps-md-5 order-2 order-xl-1">
+                                    <div class="d-none d-xl-block">
+                                        	<h1 class="title">Deploying A Web Application Remotely</h1>                 
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
+				<li class="breadcrumb-item"><a href="/learn">Guides</a></li>
+			
+			<li class="breadcrumb-item active" aria-current="page">Deploying A Web Application Remotely</li>
+		</ol>
+	</nav>
+
+                                    </div>
+                                    <h1 id="installing-web-services-and-deploying-a-web-application-to-a-remote-server">Installing web services and deploying a web application to a remote server</h1>
+<p>Sometimes a package may contain more than just a nuspec file and an install script. You may also want to install the package onto a remote machine.</p>
+<p>Boxstarter can create a template package targeting an existing directory and install the package on any machine open to WINRM or WMI remoting.</p>
 <p>This walk through will create a NuGet ODATA feed application and deploy it to a remote server after enabling web services on the server.</p>
-
-<h3>Step 1</h3>
-<h4><span class="text-primary">Create and Build the NuGet server</span></h4>
+<h2 id="step-1">Step 1</h2>
+<h3 id="create-and-build-the-nuget-server">Create and Build the NuGet server</h3>
 <p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>choco install VisualStudio2013ExpressWeb</code>.</p>
-<img class="img-responsive" src="/assets/images/NugetServer.png">
-
-<h3>Step 2</h3>
-<h4><span class="text-primary">Install Boxstarter</span></h4>
+<p><img src="/assets/images/NugetServer.png" alt="Manage Nuget packages from Visual Studio" /></p>
+<h2 id="step-2">Step 2</h2>
+<h3 id="install-boxstarter">Install Boxstarter</h3>
 <p>If you have Chocolatey:</p>
-<pre>choco install Boxstarter</pre>
+<pre><code class="language-powershell">choco install Boxstarter
+</code></pre>
 <p>Otherwise, click on the download link at the top of this page and run the Setup.bat file. See <a href="/installboxstarter">Installing Boxstarter</a> for details.</p>
-
-<h3>Step 3</h3>
-<h4><span class="text-primary">Invoke the Boxstarter shell</span></h4>
-<img class="img-responsive" src="/assets/images/shortcut.png">
+<h2 id="step-3">Step 3</h2>
+<h3 id="invoke-the-boxstarter-shell">Invoke the Boxstarter shell</h3>
+<p><img src="/assets/images/shortcut.png" alt="Boxstarter shortcut icon" /></p>
 <p>The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See <a href="/usingboxstarter">Using Boxstarter Commands</a> for information about running Boxstarter in your own shell.</p>
-
-<h3>Step 4</h3>
-<h4><span class="text-primary">Create the Package</span></h4>
+<h2 id="step-4">Step 4</h2>
+<h3 id="create-the-package">Create the Package</h3>
 <p>Lets assume that you saved the above Visual Studio project to c:\dev\NugetServer. You can now create a package with the artifacts of this project embedded in the package:</p>
-<pre>
-New-BoxstarterPackage -Name NugetServer
-Copy-Item c:\dev\NugetServer "$($Boxstarter.LocalRepo)\NugetServer" -Recurse -Force
-</pre>
+<pre><code class="language-powershell">New-BoxstarterPackage -Name NugetServer
+Copy-Item c:\dev\NugetServer &quot;$($Boxstarter.LocalRepo)\NugetServer&quot; -Recurse -Force
+</code></pre>
 <p>This creates a skeleton Chocolatey package with the contents of your NugetServer application embedded in the package. You will need to complete the ChocolateyInstall.ps1 file.</p>
-
-<h3>Step 5</h3>
-<h4><span class="text-primary">Add installation details to ChocolateyInstall.ps1</span></h4>
+<h2 id="step-5">Step 5</h2>
+<h3 id="add-installation-details-to-chocolateyinstall.ps1">Add installation details to ChocolateyInstall.ps1</h3>
 <p>Boxstarter has created a skeletal ChocolateyInstall.ps1 file at $($Boxstarter.LocalRepo)\NugetServer\tools\chocolateyInstall.ps1. Edit this file and replace its contents with the following script:</p>
-<pre>
-try {
+<pre><code class="language-powershell">try {
     choco install DotNet4.5
 
     #Enable Web Services
@@ -151,81 +239,97 @@ try {
     choco install IIS-ASPNet45 -source WindowsFeatures
 
     #Enable ASP.NET on win 7/2008R2
-    ."$env:windir\microsoft.net\framework\v4.0.30319\aspnet_regiis.exe" -i
+    .&quot;$env:windir\microsoft.net\framework\v4.0.30319\aspnet_regiis.exe&quot; -i
 
     #clean and create application
     Remove-Item c:\web\NugetServer -Recurse -Force -ErrorAction SilentlyContinue
     Mkdir c:\web\NugetServer -ErrorAction SilentlyContinue
-    Copy-Item "$(Join-Path (Get-PackageRoot $MyInvocation ) NugetServer)\*" c:\web\NugetServer -Recurse -Force
+    Copy-Item &quot;$(Join-Path (Get-PackageRoot $MyInvocation ) NugetServer)\*&quot; c:\web\NugetServer -Recurse -Force
     Import-Module WebAdministration
-    Remove-WebSite -Name "Default Web Site" -ErrorAction SilentlyContinue
+    Remove-WebSite -Name &quot;Default Web Site&quot; -ErrorAction SilentlyContinue
     Remove-WebSite -Name NugetServer -ErrorAction SilentlyContinue
     New-WebSite -ID 1 -Name NugetServer -Port 80 -PhysicalPath c:\web\NugetServer -Force
 
     #Client SKUs need to enable firewall
-    netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+    netsh advfirewall firewall add rule name=&quot;Open Port 80&quot; dir=in action=allow protocol=TCP localport=80
 
     Write-ChocolateySuccess 'NugetServer'
 } catch {
   Write-ChocolateyFailure 'NugetServer' $($_.Exception.ToString())
   throw
 }
-</pre>
+</code></pre>
 <p>This script enables the minimum IIS features for the application to run, copies the application to the computer installing the package, creates a web application in IIS to point to the application directory and allows http traffic through the firewall.</p>
-
-<h3>Step 6</h3>
-<h4><span class="text-primary">Build the package</span></h4>
+<h2 id="step-6">Step 6</h2>
+<h3 id="build-the-package">Build the package</h3>
 <p>We need to build our package script and application files into a single .nupkg file. Run:</p>
-<pre>Invoke-BoxstarterBuild -Name NugetServer</pre>
-
-<h3>Step 7</h3>
-<h4><span class="text-primary">Ensure PowerShell Remoting is enabled on the target machine</span></h4>
+<p>Invoke-BoxstarterBuild -Name NugetServer</p>
+<h2 id="step-7">Step 7</h2>
+<h3 id="ensure-powershell-remoting-is-enabled-on-the-target-machine">Ensure PowerShell Remoting is enabled on the target machine</h3>
 <p>In many cases this step is unnecessary. If you are using either the builtin administrator account or a domain account with admin privileges on a server operating system, remoting is on by default. Otherwise, run the following command on the machine with a user who has admin privileges:</p>
-<pre>Enable-PSRemoting -Force</pre>
-
-<h3>Step 8</h3>
-<h4><span class="text-primary">Install the package on the target</span></h4>
+<p>Enable-PSRemoting -Force</p>
+<h2 id="step-8">Step 8</h2>
+<h3 id="install-the-package-on-the-target">Install the package on the target</h3>
 <p>Now we are ready to enable IIS services and deploy the application. We will create a PSCredential object and invoke the install:</p>
-<pre>
-$Creds = Get-Credential administrator
+<pre><code class="language-powershell">$Creds = Get-Credential administrator
 Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Credential $creds -Force
-</pre>
-
-<h3>Step 9</h3>
-<h4><span class="text-primary">Run the application</span></h4>
+</code></pre>
+<h2 id="step-9">Step 9</h2>
+<h3 id="run-the-application">Run the application</h3>
 <p>Now we should be able to browse to our NuGet server application at http://MyServer</p>
-<img class="img-responsive" src="/assets/images/NugetServerWeb.png">
+<p><img src="/assets/images/NugetServerWeb.png" alt="Running instance of NuGet.Server" /></p>
 
-    </div>
-</div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2018 - 2022 <a href="https://chocolatey.org">Chocolatey Software, Inc</a></p>
-        <p>&copy; 2012 - 2018 <a href="https://www.hurryupandwait.io/">Matt Wrock</a></p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-39271380-1']);
-      _gaq.push(['_setDomainName', 'boxstarter.org']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-  </body>
+                                </div>
+                                        <div id="rightSidebarNav" class="col-xl-2 ps-md-5 ps-xl-3 order-1 order-xl-2">
+                                            <button class="btn btn-link btn-collapse fw-bold w-100 d-xl-none mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
+                                            <div id="rightSidebar" class="sticky-xl-top collapse collapse-lg">
+                                                <div class="card card-body py-0 px-xl-0 mb-3 border-0 shadow-none">
+                                                        <p class="fw-bold pt-3"><a href="https://github.com/chocolatey/boxstarter.org/edit/master/input/learn/remotepackagewithartifacts.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                        <hr class="m-0" />
+                                                    <p class="fw-bold pt-3 mb-2">On This Page</p>
+                                                    <ul class="nav nav-scrollspy flex-column pb-3">
+                                                            <li class="nav-item"><a class="nav-link d-none" href="#installing-web-services-and-deploying-a-web-application-to-a-remote-server">Installing web services and deploying a web application to a remote server</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-1">Step 1</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#create-and-build-the-nuget-server">Create and Build the NuGet server</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-2">Step 2</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#install-boxstarter">Install Boxstarter</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-3">Step 3</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#invoke-the-boxstarter-shell">Invoke the Boxstarter shell</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-4">Step 4</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#create-the-package">Create the Package</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-5">Step 5</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#add-installation-details-to-chocolateyinstall.ps1">Add installation details to ChocolateyInstall.ps1</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-6">Step 6</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#build-the-package">Build the package</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-7">Step 7</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#ensure-powershell-remoting-is-enabled-on-the-target-machine">Ensure PowerShell Remoting is enabled on the target machine</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-8">Step 8</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#install-the-package-on-the-target">Install the package on the target</a></li>
+                                                            <li class="nav-item"><a class="nav-link " href="#step-9">Step 9</a></li>
+                                                            <li class="nav-item"><a class="nav-link ps-4" href="#run-the-application">Run the application</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        <footer class="flex-shrink-0">
+            <div class="bg-theme-light border-top text-center p-3">
+                <span class="small">© 2018 - 2022 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
+                <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/7d63dbc0a54d273765906076dbb3403779e605f4">7d63dbc</a></span><br />
+                <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
+            </div>
+            <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
+                <p class="mb-0"><strong>boxstarter.org uses cookies to enhance the user experience of the site.</strong></p>
+                <button type="button" class="btn btn-theme btn-sm d-none d-md-inline-block" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+                <button type="button" class="btn btn-theme d-md-none" data-bs-dismiss="alert" aria-label="Close">I accept</button>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Array.prototype.find,Number.parseFloat%2CNumber.parse%2CNodeList.prototype.forEach%2CNumber.parseInt"></script>
+        <script type="text/javascript" src='/assets/js/boxstarter.bundle.min.js'></script>
+    </body>
 </html>
