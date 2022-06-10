@@ -2157,9 +2157,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001349":
-  version: 1.0.30001349
-  resolution: "caniuse-lite@npm:1.0.30001349"
-  checksum: 0095fcbb7ca4ef76227f5c3788c3cdbad3c52a25825c577371ffa73a44d74ff43fc5a849e5fa37c8b4c6237bb5272777085e1f674f9f86fde9aed85201d26f07
+  version: 1.0.30001352
+  resolution: "caniuse-lite@npm:1.0.30001352"
+  checksum: 575ad031349e56224471859decd100d0f90c804325bf1b543789b212d6126f6e18925766b325b1d96f75e48df0036e68f92af26d1fb175803fd6ad935bc807ac
   languageName: node
   linkType: hard
 
@@ -2214,7 +2214,7 @@ __metadata:
 
 "choco-theme@git+https://github.com/chocolatey/choco-theme.git":
   version: 0.1.0
-  resolution: "choco-theme@https://github.com/chocolatey/choco-theme.git#commit=2f92f314ef515a435b7a95107790f41c8ae6d137"
+  resolution: "choco-theme@https://github.com/chocolatey/choco-theme.git#commit=cefc32ae20849f8f376ee3763e43887ed196bb5d"
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/preset-env": ^7.12.1
@@ -2252,7 +2252,7 @@ __metadata:
     mousetrap: ^1.6.5
     node-sass: ^7.0.1
     nouislider: ^15.5.1
-  checksum: d81a050f4821f9c6a93994fe598b34ec25ad0f3ee418f8ff1af68f45efefeca2c7ca45e63091974254ed6e8774a4caf90ee5dc27b5703d2697ba52534f8e985d
+  checksum: 77f7953271fa0fbd20d2097404f0926a6732317cd05bcfc99010c8e4b5d8252592f67b7f328ae51efcdbe996909e43f44c9fa0e62edb2693e473cafa256aaf94
   languageName: node
   linkType: hard
 
@@ -2836,9 +2836,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.147":
-  version: 1.4.147
-  resolution: "electron-to-chromium@npm:1.4.147"
-  checksum: a714da8ac6842887e98886026b8eeaee0d2fd6d57f5707b0fc2a2916c1b9d026ca8deeef529fd3b069e96f719495a7467b01a508b881fd90d95aa204a7a92000
+  version: 1.4.151
+  resolution: "electron-to-chromium@npm:1.4.151"
+  checksum: 03be4f1f1f08da6962a2983ae7a092a61edc736010ed10e42c612ce3fa13d47e360313230ddc101bec71f5da5689546d7eee541ea5e1fe4082b09355b30311ec
   languageName: node
   linkType: hard
 
@@ -3419,13 +3419,13 @@ __metadata:
   linkType: hard
 
 "get-intrinsic@npm:^1.0.2, get-intrinsic@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "get-intrinsic@npm:1.1.1"
+  version: 1.1.2
+  resolution: "get-intrinsic@npm:1.1.2"
   dependencies:
     function-bind: ^1.1.1
     has: ^1.0.3
-    has-symbols: ^1.0.1
-  checksum: a9fe2ca8fa3f07f9b0d30fb202bcd01f3d9b9b6b732452e79c48e79f7d6d8d003af3f9e38514250e3553fdc83c61650851cb6870832ac89deaaceb08e3721a17
+    has-symbols: ^1.0.3
+  checksum: 252f45491f2ba88ebf5b38018020c7cc3279de54b1d67ffb70c0cdf1dfa8ab31cd56467b5d117a8b4275b7a4dde91f86766b163a17a850f036528a7b2faafb2b
   languageName: node
   linkType: hard
 
@@ -3816,7 +3816,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"has-symbols@npm:^1.0.1":
+"has-symbols@npm:^1.0.1, has-symbols@npm:^1.0.3":
   version: 1.0.3
   resolution: "has-symbols@npm:1.0.3"
   checksum: a054c40c631c0d5741a8285010a0777ea0c068f99ed43e5d6eb12972da223f8af553a455132fdb0801bdcfa0e0f443c0c03a68d8555aa529b3144b446c3f2410
@@ -4984,11 +4984,11 @@ __metadata:
   linkType: hard
 
 "minipass@npm:^3.0.0, minipass@npm:^3.1.0, minipass@npm:^3.1.1, minipass@npm:^3.1.3, minipass@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "minipass@npm:3.1.6"
+  version: 3.2.0
+  resolution: "minipass@npm:3.2.0"
   dependencies:
     yallist: ^4.0.0
-  checksum: 57a04041413a3531a65062452cb5175f93383ef245d6f4a2961d34386eb9aa8ac11ac7f16f791f5e8bbaf1dfb1ef01596870c88e8822215db57aa591a5bb0a77
+  checksum: acaa1d0d596300187a381d8e28bef2cd465285ff8032032a3da323a4a3c6997a7320d586f96cd42b317c758f48620382693ee76a543d2acb4f8ad549648445be
   languageName: node
   linkType: hard
 
