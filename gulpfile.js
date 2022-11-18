@@ -54,8 +54,9 @@ const copyTheme = () => {
     const copyFontAwesome = src(`${paths.node_modules}@fortawesome/fontawesome-free/webfonts/*.*`)
         .pipe(dest(`${paths.assets}fonts/fontawesome-free`));
 
-    const copyPartials = src(`${paths.theme}partials/ThemeToggle.txt`)
+    const copyPartials = src([`${paths.theme}partials/ThemeToggle.txt`, `${paths.theme}partials/TopAlertBanner.txt`])
         .pipe(injectstring.prepend(`@* ${editFilePartial} *@\n`))
+        .pipe(injectstring.replace(/topNoticeText = ""/, `topNoticeText = "${fs.readFileSync(`${paths.theme}partials/AlertText.txt`, 'utf8')}"`))
         .pipe(injectstring.replace(/<input id="themeToggle" \/>/, fs.readFileSync(`${paths.theme}partials/ThemeToggle.txt`)))
         .pipe(injectstring.replace(/﻿/, '')) // eslint-disable-line
         .pipe(rename({ prefix: '_', extname: '.cshtml' }))
