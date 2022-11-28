@@ -130,7 +130,9 @@ Finally, specify the name of the storage account you want to use. You can run `G
 Set-AzureSubscription -SubscriptionName MySubscription -CurrentStorageAccountName MyStorageAccount
 ```
 
-> Note: Boxstarter will attempt to set your Current Storage Account for you if it has not been specified. However, you will need to run the command yourself if you need to run other Windows Azure PowerShell commands prior to using Boxstarter.
+> :choco-info: **NOTE**
+>
+> Boxstarter will attempt to set your Current Storage Account for you if it has not been specified. However, you will need to run the command yourself if you need to run other Windows Azure PowerShell commands prior to using Boxstarter.
 
 That's it. You can now use the Windows Azure PowerShell and Boxstarter commands to provision VMs in Azure.
 
@@ -215,7 +217,9 @@ Enable-BoxstarterVHD -VHDPath "C:\Virtual hard disks\win81diff_F2AE6535-2532-455
 
 This will mount the VHD provided in the VHDPath, enable the WMI Firewall ports and enable LocalAccountTokenFilterPolicy in the Windows registry stored in the VHD.
 
-> NOTE: Although The parameter is explicitly referred to as `VHDPath`, any valid VHD file extension is accepted. The above example uses a differencing disk, but is valid since that is the primary hard drive of a guest VM.
+> :choco-info: **NOTE**
+>
+> Although The parameter is explicitly referred to as `VHDPath`, any valid VHD file extension is accepted. The above example uses a differencing disk, but is valid since that is the primary hard drive of a guest VM.
 
 ### Troubleshooting Boxstarter VM Installs
 

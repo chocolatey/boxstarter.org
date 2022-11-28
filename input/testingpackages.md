@@ -168,7 +168,9 @@ If you administer your own build server, there is some one time setup that you n
     
     ![Configuring a dedicated build server](/assets/images/tfs.png)
     
-    > NOTE: All of these MSBuild script parameters are optional for dedicated builds as long as the values were provided in steps 2 and 3 above which may be preferable over having plain text parameter values fed to your build.
+    > :choco-info: **NOTE**
+    >
+    > All of these MSBuild script parameters are optional for dedicated builds as long as the values were provided in steps 2 and 3 above which may be preferable over having plain text parameter values fed to your build.
     
 
 ## Configuring a Hosted or Shared Build Server
