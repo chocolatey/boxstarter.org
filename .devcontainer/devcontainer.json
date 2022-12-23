@@ -6,8 +6,8 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
-			"VARIANT": "3.1-focal",
-			"NODE_VERSION": "14"
+			"VARIANT": "6.0-focal",
+			"NODE_VERSION": "16"
 		}
 	},
 	"settings": {},
