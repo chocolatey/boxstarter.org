@@ -23,9 +23,9 @@ jobs:
         dotnet-version: '3.1.301' # SDK Version to use.
 
     - name: Statiq-Build
-      shell: bash
+      uses: cake-build/cake-action@v1
+      with:
+        target: Statiq-Build
+        cake-version: tool-manifest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        dotnet tool restore
-        dotnet cake --target=Statiq-Build
