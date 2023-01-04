@@ -7,7 +7,9 @@ Title: Understanding Packages
 
 Boxstarter installs are a "mash-up" of Chocolatey packages mixed with specific customizations and scripts to wire-up these packages to create a complete environment.
 
-> NOTE: If you are familiar with the basic objectives of NuGet and Chocolatey technologies. You can skip this page, but it is important to understand in order to comprehend how Boxstarter installs work.
+> :choco-info: **NOTE**
+>
+> If you are familiar with the basic objectives of NuGet and Chocolatey technologies. You can skip this page, but it is important to understand in order to comprehend how Boxstarter installs work.
 
 ## What's a package and why does that matter to Boxstarter?
 

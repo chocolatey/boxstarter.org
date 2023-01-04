@@ -142,7 +142,9 @@ Open a PowerShell window as administrator on the target machine and simply run:
 Enable-PSRemoting -Force
 ```
 
-> NOTE: If you are installing a Boxstarter install on a Hyper-V VM from a Hyper-V host machine, using the Boxstarter.HyperV module's `Enable-BoxstarterVM` command will configure the VM remote connectivity for you if needed. See [Installing packages on a Virtual Machine](vmintegration) for details.
+> :choco-info: **NOTE**
+>
+> If you are installing a Boxstarter install on a Hyper-V VM from a Hyper-V host machine, using the Boxstarter.HyperV module's `Enable-BoxstarterVM` command will configure the VM remote connectivity for you if needed. See [Installing packages on a Virtual Machine](vmintegration) for details.
 
 ### Invoking from the local machine
 

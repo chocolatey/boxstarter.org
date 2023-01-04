@@ -120,11 +120,18 @@ const purgeCss = () => {
                 '::-webkit-scrollbar',
                 '::-webkit-scrollbar-thumb',
                 'link-light',
-                'btn-github',
                 'btn-website',
                 'btn-facebook',
                 'btn-twitter',
-                'btn-linkedin'
+                'btn-linkedin',
+                'fa-check',
+                'fa-triangle-exclamation',
+                'fa-info',
+                'fa-xmark',
+                'text-bg-warning',
+                'text-bg-danger',
+                'text-bg-success',
+                'text-bg-info'
             ],
             keyframes: true,
             variables: true
