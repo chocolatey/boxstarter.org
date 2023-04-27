@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        @Html.Partial("global-partials/_GoogleTag")
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,13 +38,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href='@Context.GetLink("/assets/css/boxstarter.bundle.min.css")'>
         <script type="text/javascript" src='@Context.GetLink("/assets/js/boxstarter-head.bundle.min.js")'></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39271380-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-39271380-1');
-        </script>
         <title>@title</title>
     </head>
     <body class="chocolatey-docs boxstarter-org">
