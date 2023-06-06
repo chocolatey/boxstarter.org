@@ -17,7 +17,7 @@ namespace Docs
             .AddSetting(Constants.EditLink, ConfigureEditLink())
             .AddSetting(WebKeys.GatherHeadingsLevel, 5)
             .ConfigureSite("chocolatey", "boxstarter.org", "master")
-            .ConfigureTemplates(templates => ((RenderMarkdown)templates[MediaTypes.Markdown].Module).UseExtension(new Markdig.Extensions.Emoji.EmojiExtension(new Markdig.Extensions.Emoji.EmojiMapping(true))))
+            .ConfigureTemplates(templates => ((RenderMarkdown)templates[MediaTypes.Markdown].Module).UseExtension(new Markdig.Extensions.Emoji.EmojiExtension()))
             .AddShortcode("Children", typeof(ChildrenShortcode))
             .AddPipelines()
             .RunAsync();
