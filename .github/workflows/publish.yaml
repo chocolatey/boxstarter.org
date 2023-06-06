@@ -30,7 +30,6 @@ jobs:
       with:
         target: Publish-Documentation
         cake-version: tool-manifest
-        script-path: recipe.cake
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         STATIQ_GITHUB_TOKEN: ${{ secrets.STATIQ_GITHUB_TOKEN }}

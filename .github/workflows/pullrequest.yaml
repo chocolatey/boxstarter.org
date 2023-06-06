@@ -27,6 +27,5 @@ jobs:
       with:
         target: Statiq-Build
         cake-version: tool-manifest
-        script-path: recipe.cake
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
