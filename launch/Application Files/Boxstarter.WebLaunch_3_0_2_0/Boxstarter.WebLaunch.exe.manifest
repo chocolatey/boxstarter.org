@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Boxstarter.WebLaunch.exe" version="3.0.2.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="boxLogo_sm.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Boxstarter.WebLaunch" version="3.0.2.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Boxstarter.WebLaunch.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site" Unrestricted="true" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Boxstarter.WebLaunch.exe" size="95048">
+      <assemblyIdentity name="Boxstarter.WebLaunch" version="3.0.2.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>0nNDqNBwsEfDaKZO8GT2uGHronQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="boxLogo_sm.ico" size="80086">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Hx7dDIv6gx+OFwuU60Z23Q2U9tI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="BoxStarter.bat" size="172">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4HcFmR2Cw4LyTsRFKjCF56Mv/zM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Boxstarter.bootstrapper.psd1" size="1652">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WnEJugSig73DRWRDITiclQKwnQ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\BoxStarter.Bootstrapper.psm1" size="630">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DbINACqrhD4tt82WEunx7W0E+hc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Boxstarter.Bootstrapper.pssproj" size="2081">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6aTKXcc3jBsqXumkY8SOQ3A4KWk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Cleanup-Boxstarter.ps1" size="2900">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>czaVC5M8VZRdWbX+G6P1jsMVucQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Get-BoxstarterTempDir.ps1" size="322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dGrEfzRxZq8aDCJNK50JfMp09Wk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Get-PendingReboot.ps1" size="10074">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZZX6NnmoTRaWAxTAVgydhWMrNtk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Init-Settings.ps1" size="457">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PNiAghGEra7oaNg5pCwaGM1xyvg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Install-BoxstarterExtension.ps1" size="667">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/y0xsVyvHs3bSwKFhgS8hRuRTIM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Invoke-Boxstarter.ps1" size="8381">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8BURz+m/LWqu8+JgnUr8IawCwZU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Invoke-Reboot.ps1" size="2783">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0mMP/gAVdaKa7fsn4h6t69g/h3g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Set-SecureAutoLogon.ps1" size="13212">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>89sicwzm3Y+jYeBfpDNKOyoYhIc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Start-UpdateServices.ps1" size="900">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eFJodzbNZwscT2eLkuqWWG3wJXc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Stop-UpdateServices.ps1" size="1277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jc/A2MkzUNaFxBzNn4B8xIXD9cg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Bootstrapper\Test-PendingReboot.ps1" size="1124">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lXKOmjVZqAOUme/Cne8fcFRpccc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Boxstarter.Chocolatey.psd1" size="1692">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+O1p+RpamuFmB0yN7EQ8CNPKHl4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Boxstarter.Chocolatey.psm1" size="1553">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mZuEbu9S+qhKb4nDymhq6zpMpwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Boxstarter.Chocolatey.pssproj" size="3023">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iir/OjuEhxFNQJSERWo+n3errjo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Boxstarter.zip" size="4060346">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>i5Smtctg7/ePmP9Wli8PIN1kQ7s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\BoxstarterConnectionConfig.ps1" size="693">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q227eywtCYawir5Hj881MqLrfG0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Chocolatey.ps1" size="24274">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>S+YfpKJNPLkgfy/39hR/XRzwNro=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Chocolatey\chocolatey.1.1.0.nupkg" size="3968046">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8BBgxA+vwzzJ4xdoVG/TqStJ0zI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Enable-BoxstarterClientRemoting.ps1" size="3210">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VgNFrOCsrAdfDO37cXFHTaCCG5g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Enable-BoxstarterCredSSP.ps1" size="4020">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nsb8aEBg8wHrJi/rDlqxsW8iJ04=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Enable-RemotePsRemoting.ps1" size="4001">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GYp/ZPGlUued/PGEhii3G2tolMw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Get-BoxstarterConfig.ps1" size="979">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jCACgLn+ugCHDF/qlf0IIXPFTHQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Get-PackageRoot.ps1" size="1937">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IQV7rzeT7r8WFt6ZmVJjq1IzZr4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Init-Settings.ps1" size="378">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LR54D7SWSbij1RkBIFnMuh6NNmM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Install-BoxstarterPackage.ps1" size="46129">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3PQ+rIK4P10T/VyuVrRKvfHdNMQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Invoke-BoxstarterBuild.ps1" size="2833">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HEjf/yBmTwh0mFTIjNzX/Q0Q/7o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Invoke-BoxstarterFromTask.ps1" size="968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vdcMDYrlFf7IQgoMlJJKiW6GzKM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\invoke-chocolatey.ps1" size="4236">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>X4FLTD6pkzPIINEsSqr76M05/kY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Invoke-ChocolateyBoxstarter.ps1" size="9702">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DbG+blQT6+WWRyIJOhFLZnqeIhI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\New-BoxstarterPackage.ps1" size="3711">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5EeMO4xpN2CNyzVugFysKzvey2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\New-PackageFromScript.ps1" size="2870">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XEwqJWrQOvgoa1FcK7XqmB40dRQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Resolve-VMPlugin.ps1" size="1762">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uioF/eP/OWfSQN/dDNWRE3nglic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Send-File.ps1" size="2431">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cLo+IiKoougQW1IwGd+o2Yqdcwg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Set-BoxstarterConfig.ps1" size="1364">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8ul9M0Uzru8x+fwcW5Lh5E6/hRk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Chocolatey\Set-BoxstarterShare.ps1" size="2047">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xqUQu+Jdu3nnmK30lo9GuFSHzxY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\boxstarter.common.psd1" size="1550">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lGwhnvrohOE9+6igRFLc5aiq11g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Boxstarter.Common.psm1" size="969">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qrqWot0QgqbHnZWnW7wmPspp6ts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Boxstarter.Common.pssproj" size="2508">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VCGmFXqqiKnXd0ikAM5QfFjZnAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Confirm-Choice.ps1" size="1145">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nQo4+2fh6GmReSywDqFxmeZHCx0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Create-BoxstarterTask.ps1" size="2477">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/WD+XUIyvLKEUGX+Rd0Pi4XqvcQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Enter-DotNet4.ps1" size="2300">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tLHNW5ob58U375SgZvk4yuL6js4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Format-BoxStarterMessage.ps1" size="206">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Gc4uIRPXN2zh8IJ+76uWSwsm7Fo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Get-BoxstarterTaskContextTempDir.ps1" size="484">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qPihEBjTZNUCT7dRhHbg9XD6ogA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Get-CurrentUser.ps1" size="282">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fYcUobjlUBXgFfg5xgbO9I13hS8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Get-HttpResource.ps1" size="1906">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>prNUOXqJ59PXLMosJx8lQmexKtg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Get-IsMicrosoftUpdateEnabled.ps1" size="534">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DlEtxsHg5c2BFsud4k2Fiv2DeHE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Get-IsRemote.ps1" size="1353">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>B+7NVxGKyVuyEV4Y9UYHsKK0z0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Init-Settings.ps1" size="180">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IKY+b1IMh5FjshZsoZqd4pX15ko=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Invoke-FromTask.ps1" size="9745">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fEYyAYsZAzrWY7WJ0qgFmZJWq+k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Invoke-RetriableScript.ps1" size="912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TjZs3m9Br02XOTakMqyY5SdTouY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Log-BoxStarterMessage.ps1" size="1082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>shyN1YKmYmGsfbCp/J22HIXeopQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Out-BoxstarterLog.ps1" size="1724">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>S/oqT+wRnBQ1QSv3TUzIjxbyCFg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Remove-BoxstarterError.ps1" size="580">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GzEo/uBvZDQ18gApyXyU2fySU3I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Remove-BoxstarterTask.ps1" size="563">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0mtQCPoOIrlDbgw7p6v5ItcrODs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Start-TimedSection.ps1" size="2844">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vsWXSziLZEqx8plgrNB63CzEAgI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Stop-TimedSection.ps1" size="1843">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nvs2VjSqtvN23HDYxDWyuXkQP8g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Test-Admin.ps1" size="349">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IG86MPXCpHjHGNxexjRCO+DC6XE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Write-BoxstarterLogo.ps1" size="351">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0AHqrAMYXhmbxAqn++l3rh3c55E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.Common\Write-BoxstarterMessage.ps1" size="2319">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>j2GGvA0Bdu41pP9nElh352j42MA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="boxstarter.config" size="254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YH5q+7+D3krL8V5upPd5GvChY4g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WebLaunch.exe.config" size="236">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2IsMvbWsC/GEpIzyD6FhbYMI6xI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\boxstarter.WinConfig.psd1" size="1603">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OnXzlTNQIYC/3Po0dunzKtMXqdc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Boxstarter.WinConfig.psm1" size="545">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>686WKIlvVug0yObl/bURZGL2wKo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Boxstarter.WinConfig.pssproj" size="2639">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SKw6HpZlMbhM9+LPbCIaxizx3Tg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Disable-BingSearch.ps1" size="1589">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+5AqAfxp0hpDMeJw77wiz5n/ryQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Disable-GameBarTips.ps1" size="507">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bePR65w9s+d/J42xS9vSZHtT70A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Disable-InternetExplorerESC.ps1" size="827">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F6sJlq1RlY80haLUBV7W737d9J0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Disable-MicrosoftUpdate.ps1" size="1293">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BHoBL5P/wdZqC7otcRevhG1xtew=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Disable-UAC.ps1" size="295">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7Q55pH8iYGlsmnkB8uLKvRcNeGc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Enable-MicrosoftUpdate.ps1" size="757">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jhZjIMWla59Ggui2bBI4w3UfmhM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Enable-RemoteDesktop.ps1" size="1924">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dgbz9i7wGBbYrVEgCynPqha9gRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Enable-UAC.ps1" size="280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>un3QyIH0PtTAmNhew+o/Pm0HCqE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Get-LibraryNames.ps1" size="751">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aMDce3YLJHVyWD4RQ1NWrA3tOTo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Get-UAC.ps1" size="361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Dxj7YfzY84Sge8cG8dnOFZ9svn0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Install-WindowsUpdate.ps1" size="7891">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>g+XIByg2WX9Y7O4/7aKqnn4TaCk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Move-LibraryDirectory.ps1" size="2554">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YqLV4HdeNELxrVK4/jQK40oJQBs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Restart-Explorer.ps1" size="705">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zILTqKFHj/vua42gJ5fYgowRoy4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-BoxstarterPageFile.ps1" size="7361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aLqjQPGZpxieXzR3mEbZMioNE34=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-BoxstarterTaskbarOptions.ps1" size="7854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NMqG6dyLdUU+Cwe5oFFN9KqRqdQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-CornerNavigationOptions.ps1" size="2555">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wuBU4kE3l5fceNWt5LbxNkTO+tU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-ExplorerOptions.ps1" size="1163">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V8W9WWEpzij+65UoWZV/G2QK5JA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-StartScreenOptions.ps1" size="4023">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ff3EoPdudu0WAy3OVFQ1XFdBXVE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-TaskbarSmall.ps1" size="332">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8OIaA/tuNIpxPCNz3vOaUEeapNE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Set-WindowsExplorerOptions.ps1" size="7173">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>m+O194EwFAEh9ce46mnpc2Vtm8E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Boxstarter.WinConfig\Update-ExecutionPolicy.ps1" size="1192">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q4bQRIueXTvjrJmki+n3VeGm/+A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LICENSE.txt" size="10316">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MsBO3CzNccJh65UXyLLC97zTBpY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with.
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+    </application>
+  </compatibility>
+</asmv1:assembly>
