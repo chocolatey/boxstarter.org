@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-887c900c-278b-414b-ac76-a94021989a69" aria-label="collapse or expand navigation" href="#id-887c900c-278b-414b-ac76-a94021989a69"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-7ebdfc0d-18af-4c79-9d1f-fb56c841e086" aria-label="collapse or expand navigation" href="#id-7ebdfc0d-18af-4c79-9d1f-fb56c841e086"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-887c900c-278b-414b-ac76-a94021989a69">
+                                                        <div class="collapse" id="id-7ebdfc0d-18af-4c79-9d1f-fb56c841e086">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -171,8 +171,8 @@ gtag('config', 'G-0WDD29GGN2');
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
-                            <div class="ms-md-4 d-xl-none">
+                        <div class="col-md-9 col-xl-10 py-3 py-md-5 px-md-4 mx-auto">
+                            <div class="container d-xl-none">
                                 	<h1 class="title">Creating Packages</h1>                 
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
@@ -183,10 +183,11 @@ gtag('config', 'G-0WDD29GGN2');
 	</nav>
 
                             </div>
-                            <div class="row">
-                                <div id="mainContent" class="col-xl-10 ps-md-5 order-2 order-xl-1">
-                                    <div class="d-none d-xl-block">
-                                        	<h1 class="title">Creating Packages</h1>                 
+                            <div class="container">
+                                <div class="row">
+                                    <div id="mainContent" class="col-xl-10 order-2 order-xl-1">
+                                        <div class="d-none d-xl-block">
+                                            	<h1 class="title">Creating Packages</h1>                 
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="/">Boxstarter</a></li>
@@ -195,8 +196,8 @@ gtag('config', 'G-0WDD29GGN2');
 		</ol>
 	</nav>
 
-                                    </div>
-                                    <h1 id="creating-packages">Creating Packages</h1>
+                                        </div>
+                                        <h1 id="creating-packages">Creating Packages</h1>
 <p>Boxstarter includes some commands that can automate a lot of the &quot;grunt&quot; work involved with creating and packing NuGet packages.</p>
 <h2 id="do-you-really-need-to-create-a-package">Do you really need to create a package?</h2>
 <p>Maybe not. For simple &quot;One-Off&quot; packages or packages that do not need a home in a public NuGet feed and do not need any additional scripts or resources outside of the ChocolateyInstall.ps1 script, Boxstarter provides a means of creating &quot;on the fly&quot; packages from a single script file or URL. You may pass a file path or URL to the -PackageName parameter of <code>Install-BoxstarterPackage</code> and Boxstarter will generate a temporary package to install the script. If using a URL, the URL content must be plain text and not contain any markup.</p>
@@ -304,28 +305,29 @@ Install-WindowsUpdate -AcceptEula
 <h2 id="packing-your-package.nupkg">Packing your Package .nupkg</h2>
 <p>Once you are finished composing your package contents, you can call the <code>Invoke-BoxstarterBuild MyPackage</code> command to generate the *.nupkg file for MyPackage. Boxstarter saves these files in the root of <code>$Boxstarter.LocalRepo</code>. If you have several packages in the local repository that you want to build all at once, omit the package name from the command to build all packages in the repository.</p>
 
-                                </div>
-                                        <div id="rightSidebarNav" class="col-xl-2 ps-md-5 ps-xl-3 order-1 order-xl-2">
-                                            <button class="btn btn-link btn-collapse fw-bold w-100 d-xl-none mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
-                                            <div id="rightSidebar" class="sticky-xl-top collapse collapse-lg">
-                                                <div class="card card-body py-0 px-xl-0 mb-3 border-0">
-                                                        <p class="fw-bold pt-3"><a href="https://github.com/chocolatey/boxstarter.org/edit/master/input/creatingpackages.md"><i class="fa-solid fa-pencil" aria-hidden="true"></i> Edit This Page</a></p>
-                                                        <hr class="m-0" />
-                                                    <p class="fw-bold pt-3 mb-2">On This Page</p>
-                                                    <ul class="nav nav-scrollspy flex-column pb-3">
-                                                            <li class="nav-item"><a class="nav-link d-none" href="#creating-packages">Creating Packages</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#do-you-really-need-to-create-a-package">Do you really need to create a package?</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#new-packagefromscript">New-PackageFromScript</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#new-boxstarterpackage">New-BoxstarterPackage</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#the-boxstarter-local-repository">The Boxstarter Local Repository</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#editing-and-adding-resources-to-your-package">Editing and adding resources to your package</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#composing-the-chocolateyinstall-script">Composing the ChocolateyInstall Script</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#boxstarter-chocolateyinstall-considerations">Boxstarter ChocolateyInstall Considerations</a></li>
-                                                            <li class="nav-item"><a class="nav-link " href="#packing-your-package.nupkg">Packing your Package .nupkg</a></li>
-                                                    </ul>
+                                    </div>
+                                            <div id="rightSidebarNav" class="col-xl-2 ps-xl-3 order-1 order-xl-2">
+                                                <button class="btn btn-link btn-collapse fw-bold w-100 d-xl-none mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
+                                                <div id="rightSidebar" class="sticky-xl-top collapse collapse-lg">
+                                                    <div class="card card-body py-0 px-xl-0 mb-3 border-0">
+                                                            <p class="fw-bold pt-3"><a href="https://github.com/chocolatey/boxstarter.org/edit/master/input/creatingpackages.md"><i class="fa-solid fa-pencil" aria-hidden="true"></i> Edit This Page</a></p>
+                                                            <hr class="m-0" />
+                                                        <p class="fw-bold pt-3 mb-2">On This Page</p>
+                                                        <ul class="nav nav-scrollspy flex-column pb-3">
+                                                                <li class="nav-item"><a class="nav-link d-none" href="#creating-packages">Creating Packages</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#do-you-really-need-to-create-a-package">Do you really need to create a package?</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#new-packagefromscript">New-PackageFromScript</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#new-boxstarterpackage">New-BoxstarterPackage</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#the-boxstarter-local-repository">The Boxstarter Local Repository</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#editing-and-adding-resources-to-your-package">Editing and adding resources to your package</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#composing-the-chocolateyinstall-script">Composing the ChocolateyInstall Script</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#boxstarter-chocolateyinstall-considerations">Boxstarter ChocolateyInstall Considerations</a></li>
+                                                                <li class="nav-item"><a class="nav-link " href="#packing-your-package.nupkg">Packing your Package .nupkg</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -335,7 +337,7 @@ Install-WindowsUpdate -AcceptEula
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/81331e1405f235e836f4d8306f58c3b5250dbc73">81331e1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/17288a42c73427a1eed97434a9c9513059d2cd18">17288a4</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
