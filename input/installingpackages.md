@@ -16,7 +16,7 @@ $cred=Get-Credential domain\username
 Install-BoxstarterPackage -PackageName "MyPackage1","MyPackage2" -Credential $cred
 ```
 
-This will install the MyPackage1 and MyPackage2 packages locally and use the credentials given for any auto login needed after a reboot.
+This will install the MyPackage1 and MyPackage2 packages locally and use the credentials given for any auto login needed after a reboot. Note that you cannot use auto login from a [32-bit PowerShell session on a 64-bit operating system](https://github.com/chocolatey/boxstarter/issues/1).
 
 There may be times when you either know that no reboot will be needed or you want to ensure that none take place. To tell Boxstarter not to perform any reboots, even if a pending reboot is detected, use the `-DisableReboots` argument.
 
