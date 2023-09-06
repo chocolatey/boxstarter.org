@@ -21,17 +21,18 @@ jobs:
         fetch-depth: 0
 
     - name: Setup dotnet
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '3.1.301' # SDK Version to use.
+        global-json-file: global.json
 
     - name: Publish-Documentation
-      shell: bash
+      uses: cake-build/cake-action@v1
+      with:
+        script-path: recipe.cake
+        target: Publish-Documentation
+        cake-version: tool-manifest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         STATIQ_GITHUB_TOKEN: ${{ secrets.STATIQ_GITHUB_TOKEN }}
         STATIQ_DEPLOY_BRANCH: ${{ secrets.STATIQ_DEPLOY_BRANCH }}
         STATIQ_DEPLOY_REMOTE: ${{ secrets.STATIQ_DEPLOY_REMOTE }}
-      run: |
-        dotnet tool restore
-        dotnet cake --target=Publish-Documentation
