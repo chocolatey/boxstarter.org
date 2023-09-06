@@ -17,6 +17,6 @@ Catch
 }
 
 Write-Host "Installing base line applications for Chocolatey docs..."
-choco upgrade dotnetcore-sdk -y --version 3.1.404 --no-progress
+choco upgrade dotnet-6.0-sdk -y --no-progress
 choco upgrade nodejs-lts -y --no-progress
 choco upgrade yarn -y --no-progress
