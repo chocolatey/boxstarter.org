@@ -1,0 +1,54 @@
+name: Linting
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  misspell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: haya14busa/action-cond@v1
+        id: reporter
+        with:
+          cond: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_target' }}
+          if_true: "github-pr-review"
+          if_false: "github-check"
+      - name: Setup ReviewDog
+        uses: reviewdog/action-setup@v1.0.6
+      - name: Run misspell with reviewdog
+        uses: reviewdog/action-misspell@v1.14.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: ${{ steps.reporter.outputs.value }}
+          level: warning
+          locale: "US"
+          path: |
+            input
+            src
+  languagetool:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: haya14busa/action-cond@v1
+        id: reporter
+        with:
+          cond: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_target' }}
+          if_true: "github-pr-review"
+          if_false: "github-check"
+      - name: Setup ReviewDog
+        uses: reviewdog/action-setup@v1.0.6
+      - name: Run LanguageTool with reviewdog
+        uses: reviewdog/action-languagetool@v1.12.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: ${{ steps.reporter.outputs.value }}
+          level: warning # Only valid if running on a commit, ie through push to master branch
+          language: en-US

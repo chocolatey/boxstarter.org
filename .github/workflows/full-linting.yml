@@ -1,0 +1,35 @@
+name: Full Linting
+on:
+  workflow_dispatch:
+
+jobs:
+  misspell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup ReviewDog
+        uses: reviewdog/action-setup@v1.0.6
+      - name: Run misspell with reviewdog
+        uses: reviewdog/action-misspell@v1.14.0
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: 'github-check'
+          level: warning
+          locale: "US"
+          path: |
+            input
+            src
+          filter_mode: nofilter
+  languagetool:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup ReviewDog
+        uses: reviewdog/action-setup@v1.0.6
+      - name: Run LanguageTool with reviewdog
+        uses: reviewdog/action-languagetool@v1.12.0
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: 'github-check'
+          level: warning # Only valid if running on a commit, ie through push to master branch
+          language: en-US
