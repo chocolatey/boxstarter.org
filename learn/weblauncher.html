@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green active">
                                                         <div class="nav-link nav-link-collapse d-flex active">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse show" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse show" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -200,7 +200,7 @@ gtag('config', 'G-0WDD29GGN2');
 
                                         </div>
                                         <h1 id="quickly-setup-any-machine-with-just-a-gist-no-preinstalled-software-required">Quickly setup any machine with just a Gist - No Preinstalled software required</h1>
-<p>Want to setup your box without downloading any software or fussing with package authoring or publishing?</p>
+<p>Want to set up your box without downloading any software or fussing with package authoring or publishing?</p>
 <p>Well buckle up! Boxstarter makes this a snap!</p>
 <h2 id="step-1">Step 1</h2>
 <h3 id="compose-the-installation-script">Compose the installation script.</h3>
@@ -237,7 +237,7 @@ choco install IIS-WebServerRole -source windowsfeatures
 <p><img src="/assets/images/gist3.png" alt="Copy the raw URL for the Boxstarter GitHub Gist" /></p>
 <h2 id="step-3">Step 3</h2>
 <h3 id="install-the-boxstarter-modules">Install the Boxstarter Modules</h3>
-<p>You can download the Boxstarter module installer from this web site or you can use Chocolatey to install the Boxstarter. Alternatively, you may invoke the module installer over the web using PowerShell.</p>
+<p>You can download the Boxstarter module installer from this website, or you can use Chocolatey to install the Boxstarter. Alternatively, you may invoke the module installer over the web using PowerShell.</p>
 <p>If you are running PowerShell v3 or higher:</p>
 <pre><code class="language-powershell">. { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force
 
@@ -248,7 +248,7 @@ choco install IIS-WebServerRole -source windowsfeatures
 <p>This will install Chocolatey if necessary and then install the necessary boxstarter modules.</p>
 <h2 id="step-4">Step 4</h2>
 <h3 id="run-the-script">Run the script</h3>
-<p>Invoke the the Install-BoxstarterPackage command pointing to your gist created above:</p>
+<p>Invoke the Install-BoxstarterPackage command pointing to your gist created above:</p>
 <pre><code class="language-powershell">Install-BoxstarterPackage -PackageName https://gist.github.com/mwrock/7382880/raw/f6525387b4b524b8eccef6ed4d5ec219c82c0ac7/gistfile1.txt -DisableReboots
 </code></pre>
 <p>While you can use the -PackageName argument to point to any public Chocolatey package, you can also point to any URL that resolves to a plain text script like the gist we created. Note that we use the -DisableReboots argument to suppress automatic reboots.</p>
@@ -286,7 +286,7 @@ choco install IIS-WebServerRole -source windowsfeatures
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

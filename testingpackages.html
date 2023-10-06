@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -199,7 +199,7 @@ gtag('config', 'G-0WDD29GGN2');
                                         </div>
                                         <h1 id="testing-packages">Testing Packages</h1>
 <p>Boxstarter can detect which packages have changed and test their installations on one or more deployment targets. Boxstarter can automate publishing successful packages to their feed.</p>
-<p>The Boxstarter TestRunner module can test <a href="https://chocolatey.org/">Chocolatey</a> package installs on one or more deployment targets and evaluate whether the installation was successful. The TestRunner module can also be used to automate the publishing of Chocolatey packages to a <a href="https://nuget.org/">NuGet</a> feed. That may be the public Chocolatey community feed or a private feed.</p>
+<p>The Boxstarter TestRunner module can test <a href="https://chocolatey.org/">Chocolatey</a> package installations on one or more deployment targets and evaluate whether the installation was successful. The TestRunner module can also be used to automate the publishing of Chocolatey packages to a <a href="https://nuget.org/">NuGet</a> feed. That may be the public Chocolatey Community Repository, or a private feed.</p>
 <p>The TestRunner module can be downloaded and installed via Chocolatey by running:</p>
 <pre><code class="language-powershell">choco install Boxstarter.TestRunner
 </code></pre>
@@ -224,7 +224,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
   -DefaultFeedAPIKey 5cbc38d9-1a94-430d-8361-685a9080a6b8
 </code></pre>
 <p>This configures package deployments for Azure VMs testVM1 and testVM2 hosted in the ServiceName cloud service using the Admin credential. Prior to testing a package install, the VM will be restored to the clean checkpoint. If packages are published using <code>Publish-BoxstarterPackage</code> and are not associated with a NuGet feed, they will publish to the mywackyfeed on <a href="https://myget.org/">myget.org</a> using API Key 5cbc38d9-1a94-430d-8361-685a9080a6b8.</p>
-<p>Currently the available Boxstarter VM providers are Azure and HyperV. Any VM regardless of hypervisor implementation can be used by passing in the names of the computers as the deployment targets. However, use of Boxstarter VM providers are necessary in order to take advantage of checkpoints.</p>
+<p>Currently, the available Boxstarter VM providers are Azure and HyperV. Any VM regardless of hypervisor implementation can be used by passing in the names of the computers as the deployment targets. However, use of Boxstarter VM providers are necessary in order to take advantage of checkpoints.</p>
 <p>The default deployment options deploy locally using the credentials of the current user and publish to the public Chocolatey community feed.</p>
 <p>Individual packages in a Boxstarter repository can be published to different feeds. The NuGet feed and API Key configured using <code>Set-BoxstarterDeploymentOptions</code> are default settings used if a package has not been individually assigned to its own feed.</p>
 <p>To assign a package to an individual feed, use <code>Set-BoxstarterPackageNugetFeed</code>.</p>
@@ -237,10 +237,10 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
 <p><code>Test-BoxstarterPackage</code> can be called with an array of packages.</p>
 <pre><code class="language-powershell">Test-BoxstarterPackage -PackageName &quot;MyPackage1&quot;,&quot;MyPackage2&quot;
 </code></pre>
-<p>Boxstarter will build their .nupkg files and attempt to install them on the deployment targets specified with <code>Set-BoxstarterDeploymentOptions</code>. Boxstarter will use the credentials provided in the deployment options. You can provide several targets to <code>Set-BoxstarterDeploymentOptions</code>. One may wish to supply different machines running different versions of windows. If a package install runs to completion with no exceptions or returned error codes, Boxstarter considers the install a PASSED test. If <code>Test-BoxstarterPackage</code> is called with no packages specified, Boxstarter will iterate over each package in its local repository. It will build the nupkg and compare its version to the version on the package published feed. If the version in the repo is greater than the published version, Boxstarter will initiate a test on the deployment targets otherwise the package test will be skipped.</p>
+<p>Boxstarter will build their .nupkg files and attempt to install them on the deployment targets specified with <code>Set-BoxstarterDeploymentOptions</code>. Boxstarter will use the credentials provided in the deployment options. You can provide several targets to <code>Set-BoxstarterDeploymentOptions</code>. One may wish to supply different machines running different versions of windows. If a package installation runs to completion with no exceptions or returned error codes, Boxstarter considers the installation a PASSED test. If <code>Test-BoxstarterPackage</code> is called with no packages specified, Boxstarter will iterate over each package in its local repository. It will build the nupkg and compare its version to the version on the package published feed. If the version in the repo is greater than the published version, Boxstarter will initiate a test on the deployment targets otherwise the package test will be skipped.</p>
 <p><img src="/assets/images/CI.png" alt="Testing Chocolatey packages console output" /></p>
 <h2 id="publishing-successful-packages">Publishing Successful Packages</h2>
-<p><code>Test-BoxstarterPackage</code> will return a set of test results. One can then use <code>Select-BoxstarterResultsToPublish</code> to consume these results and return the package IDs of the packages who had all deployment targets pass the package install. These IDs can then be passed to <code>Publish-BoxstarterPackage</code> to publish those packages to their associated feeds.</p>
+<p><code>Test-BoxstarterPackage</code> will return a set of test results. One can then use <code>Select-BoxstarterResultsToPublish</code> to consume these results and return the package IDs of the packages who had all deployment targets pass the package installation. These IDs can then be passed to <code>Publish-BoxstarterPackage</code> to publish those packages to their associated feeds.</p>
 <pre><code class="language-powershell">Test-BoxstarterPackage | Select-BoxstarterResultsToPublish | Publish-BoxstarterPackage
 </code></pre>
 <h2 id="conserving-cloud-resources">Conserving Cloud Resources</h2>
@@ -270,7 +270,7 @@ Mode                LastWriteTime     Length Name
 <h3 id="dedicated-build-server">Dedicated Build Server</h3>
 <p>Here, tests are run in a build environment on a server that is under your direct ownership and full control. The key differentiator here is that you can set your deployment options on this machine and be confident that they will remain on every build from build to build.</p>
 <h3 id="hosted-or-shared-build-server">Hosted or Shared Build Server</h3>
-<p>This is often a build server that you do not own or control outside of your individual builds. If you set your deployment options on the server, they may likely be gone on your next build. The Visual Studio Online build services would land in this category.</p>
+<p>This is often a build server that you do not own or control. If you set your deployment options on the server, they may likely be gone on your next build. The Visual Studio Online build services would land in this category.</p>
 <h2 id="configuring-a-dedicated-build-server">Configuring a Dedicated Build Server</h2>
 <p>If you administer your own build server, there is some one time setup that you need to perform to integrate Boxstarter TestRunner tests and automatic package publishing. This must be performed on the build machine that will run the builds (a remote PowerShell session is acceptable). In many build systems, this may be a different machine from the central server, in TFS it would be the build &quot;controller&quot; or in TeamCity the build &quot;agent.&quot; Also, these steps must be performed using the credentials of the SAME USER ACCOUNT that your build server runs under.</p>
 <ol>
@@ -308,7 +308,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
 </li>
 </ol>
 <h2 id="configuring-a-hosted-or-shared-build-server">Configuring a Hosted or Shared Build Server</h2>
-<p>If your build server environment is shared and may be built from scratch on every build then you cannot preinstall the TestRunner and configure necessary settings up front. Instead the runner must be installed during the build process and the settings passed via MSBuild parameters. When you run <code>Install-BoxstarterScripts</code> on your Chocolatey repository, a bootstrapper is added to your repo that can take care of installing the Test Runner and its dependencies. Additionally, you can pass the following MSBuild parameters to the BoxstarterBuild.proj script:</p>
+<p>If your build server environment is shared and may be built from scratch on every build then you cannot preinstall the TestRunner and configure necessary settings up front. Instead, the runner must be installed during the build process and the settings passed via MSBuild parameters. When you run <code>Install-BoxstarterScripts</code> on your Chocolatey repository, a bootstrapper is added to your repo that can take care of installing the Test Runner and its dependencies. Additionally, you can pass the following MSBuild parameters to the BoxstarterBuild.proj script:</p>
 <ul>
 <li><code>PublishSuccesfulPackages</code> - Set this to true if you would like successful packages published.</li>
 <li><code>DeploymentTargetUserName</code> - Username to use when initiating connections to the deployment targets.</li>
@@ -352,7 +352,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -207,7 +207,7 @@ gtag('config', 'G-0WDD29GGN2');
 <p>The simplest way to create a NuGet package is using the <code>New-PackageFromScript</code> command.</p>
 <pre><code class="language-powershell">New-PackageFromScript MyScript.ps1 MyPackage
 </code></pre>
-<p>This command takes either a file or http URL (like a <a href="https://gist.github.com/">GitHub Gist</a>) that represents the installation script. The <code>New-PackageFromScript</code> command will create a Chocolatey NuGet package with the contents of the script moved to the ChocolateyInstall.ps1 file. While this is an incredibly simple way to create a package for your Boxstarter installations, it does not provide much flexibility in customizing the nuspec manifest or adding other files to your install package.</p>
+<p>This command takes either a file or http URL (like a <a href="https://gist.github.com/">GitHub Gist</a>) that represents the installation script. The <code>New-PackageFromScript</code> command will create a Chocolatey NuGet package with the contents of the script moved to the ChocolateyInstall.ps1 file. While this is an incredibly simple way to create a package for your Boxstarter installations, it does not provide much flexibility in customizing the nuspec manifest or adding other files to your installation package.</p>
 <h2 id="new-boxstarterpackage">New-BoxstarterPackage</h2>
 <p>The New-BoxstarterPackage command creates a skeletal package with a minimal *.nuspec file and ChocolateyInstall.ps1 file.</p>
 <pre><code class="language-powershell">New-BoxstarterPackage -Name MyPackage -Description &quot;I hope you enjoy MyPackage&quot;
@@ -234,7 +234,7 @@ gtag('config', 'G-0WDD29GGN2');
 }
 </code></pre>
 <h2 id="the-boxstarter-local-repository">The Boxstarter Local Repository</h2>
-<p>These files are saved to your local Boxstarter Repository. This is where Boxstarter will store your local packages and running the Install-BoxstarterPackage command will look here first before any external feed. The repository is located in your AppData directory but you can always find out exactly where by inspecting the global Boxstarter variable <code>$Boxstarter.LocalRepo</code>.</p>
+<p>These files are saved to your local Boxstarter Repository. This is where Boxstarter will store your local packages and running the Install-BoxstarterPackage command will look here first before any external feed. The repository is located in your AppData directory, but you can always find out exactly where by inspecting the global Boxstarter variable <code>$Boxstarter.LocalRepo</code>.</p>
 <p><img src="/assets/images/global.png" alt="Windows Powershell output from inspecting the global Boxstarter variable $Boxstarter.LocalRepo" /></p>
 <p>You can change the location by using the Set-BoxstarterConfig command:</p>
 <pre><code class="language-powershell">Set-BoxstarterConfig -LocalRepo &quot;c:\some\other\location&quot;
@@ -243,7 +243,7 @@ gtag('config', 'G-0WDD29GGN2');
 <p>Optionally, you can call the New-BoxstarterPackage command with a path argument and supply a directory that contains files you want to be included in the package:</p>
 <pre><code class="language-powershell">New-BoxstarterPackage -Name MyPackage -Description &quot;I hope you enjoy MyPackage&quot; -Path &quot;c:\somePath&quot;
 </code></pre>
-<p>Boxstarter will copy all files at, and below, c:\somepath and you can refer to these files in your ChocolateyInstall.ps1 using <code>Get-PackageRoot</code>.</p>
+<p>Boxstarter will copy all files at, and below, c:\somepath, and you can refer to these files in your ChocolateyInstall.ps1 using <code>Get-PackageRoot</code>.</p>
 <pre><code class="language-powershell">Copy-Item (Join-Path -Path (Get-PackageRoot($MyInvocation)) -ChildPath 'console.xml') -Force $env:appdata\console\console.xml
 </code></pre>
 <p>Assuming you have a console.xml file at the root of the path you provided to <code>New-BoxstarterPackage</code>, you can access that file from your ChocolateyInstall.ps1 script.</p>
@@ -293,14 +293,14 @@ Install-WindowsUpdate -AcceptEula
 <li>Create some shortcuts in the taskbar for common applications</li>
 <li>Copy your console configuration file with your favorite settings</li>
 <li>Install some Visual Studio extensions from the Visual Studio gallery</li>
-<li>Install all critical windows updates</li>
+<li>Install all critical Windows Updates</li>
 </ul>
 <h2 id="boxstarter-chocolateyinstall-considerations">Boxstarter ChocolateyInstall Considerations</h2>
 <p>Boxstarter can run any Chocolatey package and any valid PowerShell inside that package. However, there are a few things to consider that may make a Boxstarter Chocolatey package a better installation experience.</p>
 <ul>
 <li>Boxstarter Chocolatey packages should be repeatable. This is especially true if you anticipate the need to reboot. When Boxstarter reboots, it starts running the package from the beginning. So ensure that there is nothing that would cause the package to break if run twice.</li>
-<li>If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call choco install directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies so those packages will not have any reboot protections.</li>
-<li>Do not use <code>Restart-Computer</code> or any other command that will reboot the computer. Instead use <code>Invoke-Reboot</code>. This will allow Boxstarter to get things in order first so that after the machine recovers from the reboot, Boxstarter can log the user back in and restart the install script.</li>
+<li>If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call choco install directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies, so those packages will not have any reboot protections.</li>
+<li>Do not use <code>Restart-Computer</code> or any other command that will reboot the computer. Instead, use <code>Invoke-Reboot</code>. This will allow Boxstarter to get things in order first so that after the machine recovers from the reboot, Boxstarter can log the user back in and restart the installation script.</li>
 </ul>
 <h2 id="packing-your-package.nupkg">Packing your Package .nupkg</h2>
 <p>Once you are finished composing your package contents, you can call the <code>Invoke-BoxstarterBuild MyPackage</code> command to generate the *.nupkg file for MyPackage. Boxstarter saves these files in the root of <code>$Boxstarter.LocalRepo</code>. If you have several packages in the local repository that you want to build all at once, omit the package name from the command to build all packages in the repository.</p>
@@ -337,7 +337,7 @@ Install-WindowsUpdate -AcceptEula
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

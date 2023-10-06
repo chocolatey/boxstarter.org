@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -216,11 +216,11 @@ gtag('config', 'G-0WDD29GGN2');
 <p><img src="/assets/images/installed.png" alt="Boxstarter Windows PowerShell install output" /></p>
 <p>This will download and install the Boxstarter modules to your PSModulePath.</p>
 <h2 id="downloading-the-zip-file">Downloading the zip file</h2>
-<p>The zip file contains a Setup.Bat file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: Setup.bat accepts a <code>-Force</code> argument to suppress this prompt.</p>
+<p>The zip file contains a <code>Setup.Bat</code> file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: <code>Setup.bat</code> accepts a <code>-Force</code> argument to suppress this prompt.</p>
 <p><img src="/assets/images/setup.png" alt="Boxstarter Module installer" /></p>
 <p>Boxstarter is now installed in your modules path!</p>
 <p>Both the Chocolatey Boxstarter package and the downloaded zip file available on this website install all Boxstarter modules except the Boxstarter.Azure module which provides integration with Windows Azure VMs. You can install the Azure module by running <code>choco install Boxstarter.Azure</code>. In addition to the Boxstarter.Azure module, it also installs the Windows Azure PowerShell toolkit, the Azure SDK for .Net Libraries and .Net 4.5. It requires PowerShell 3 or higher (the version installed with Windows 8/server 2012 and higher but also <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40855">freely available for download</a> on older versions) to install successfully.</p>
-<p>After Boxstarter is installed, a new PowerShell console must be opened before you can load the modules and run its commands. For convenience you can use the <a href="usingboxstarter">Boxstarter Shell</a> for running Boxstarter commands which is the easiest way to ensure that all Boxstarter modules are properly loaded regardless of the version of Windows and PowerShell you are running.</p>
+<p>After Boxstarter is installed, a new PowerShell console must be opened before you can load the modules and run its commands. For convenience, you can use the <a href="usingboxstarter">Boxstarter Shell</a> for running Boxstarter commands which is the easiest way to ensure that all Boxstarter modules are properly loaded regardless of the version of Windows and PowerShell you are running.</p>
 <h2 id="installing-from-the-web">Installing from the web</h2>
 <p>Run the following command from PowerShell:</p>
 <pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force
@@ -273,7 +273,7 @@ $env:PSModulePath = ($env:PSModulePath -split ';' | Where-Object { $_ -notlike '
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

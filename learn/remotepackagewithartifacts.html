@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green active">
                                                         <div class="nav-link nav-link-collapse d-flex active">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse show" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse show" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5 active active-page" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -200,12 +200,12 @@ gtag('config', 'G-0WDD29GGN2');
 
                                         </div>
                                         <h1 id="installing-web-services-and-deploying-a-web-application-to-a-remote-server">Installing web services and deploying a web application to a remote server</h1>
-<p>Sometimes a package may contain more than just a nuspec file and an install script. You may also want to install the package onto a remote machine.</p>
+<p>Sometimes a package may contain more than just a nuspec file and an installation script. You may also want to install the package onto a remote machine.</p>
 <p>Boxstarter can create a template package targeting an existing directory and install the package on any machine open to WINRM or WMI remoting.</p>
 <p>This walk through will create a NuGet ODATA feed application and deploy it to a remote server after enabling web services on the server.</p>
 <h2 id="step-1">Step 1</h2>
 <h3 id="create-and-build-the-nuget-server">Create and Build the NuGet server</h3>
-<p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>choco install VisualStudio2013ExpressWeb</code>.</p>
+<p>Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package installation completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - <code>choco install VisualStudio2013ExpressWeb</code>.</p>
 <p><img src="/assets/images/NugetServer.png" alt="Manage Nuget packages from Visual Studio" /></p>
 <h2 id="step-2">Step 2</h2>
 <h3 id="install-boxstarter">Install Boxstarter</h3>
@@ -272,7 +272,7 @@ Copy-Item c:\dev\NugetServer &quot;$($Boxstarter.LocalRepo)\NugetServer&quot; -R
 <p>Enable-PSRemoting -Force</p>
 <h2 id="step-8">Step 8</h2>
 <h3 id="install-the-package-on-the-target">Install the package on the target</h3>
-<p>Now we are ready to enable IIS services and deploy the application. We will create a PSCredential object and invoke the install:</p>
+<p>Now we are ready to enable IIS services and deploy the application. We will create a PSCredential object and invoke the installation:</p>
 <pre><code class="language-powershell">$Creds = Get-Credential administrator
 Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Credential $creds -Force
 </code></pre>
@@ -323,7 +323,7 @@ Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Cred
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

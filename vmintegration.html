@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-886ab569-0d3b-4e68-9901-8146efcff389" aria-label="collapse or expand navigation" href="#id-886ab569-0d3b-4e68-9901-8146efcff389"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-886ab569-0d3b-4e68-9901-8146efcff389">
+                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -198,7 +198,7 @@ gtag('config', 'G-0WDD29GGN2');
 
                                         </div>
                                         <h1 id="installing-packages-on-a-virtual-machine">Installing packages on a Virtual Machine</h1>
-<p>Boxstarter provides convenient integration with both <a href="vmintegration#HyperV">Hyper-V</a> and <a href="vmintegration#azure">Windows Azure</a> Virtual Machines with support for auto configuration of remote connectivity as well as setting and restoring checkpoints. Of course Boxstarter can run on any VM guest as long as PowerShell remoting is enabled.</p>
+<p>Boxstarter provides convenient integration with both <a href="vmintegration#HyperV">Hyper-V</a> and <a href="vmintegration#azure">Windows Azure</a> Virtual Machines with support for autoconfiguration of remote connectivity as well as setting and restoring checkpoints. Of course Boxstarter can run on any VM guest as long as PowerShell remoting is enabled.</p>
 <h2 id="hyper-v">Hyper-V</h2>
 <h3 id="limitations-and-prerequisites">Limitations and Prerequisites</h3>
 <p>Boxstarter's Hyper-V support is limited to:</p>
@@ -221,7 +221,7 @@ Enable-BoxstarterVM -VMName myVM -Credential $cred
   Enable-BoxstarterVM -Credential $cred |
     Install-BoxstarterPackage -PackageName myPackage
 </code></pre>
-<p>This installs myPackage on myVM1 and myVM2 after ensuring that both are properly configured for a remote install.</p>
+<p>This installs myPackage on myVM1 and myVM2 after ensuring that both are properly configured for a remote installation.</p>
 <h3 id="checkpoints">Checkpoints</h3>
 <p>The <code>Enable-BoxstarterVM</code> command can take a CheckpointName parameter. If this checkpoint exists, Boxstarter will restore the VM to this checkpoint before performing any action. If the checkpoint does not exist, Boxstarter will create a new Checkpoint after any configurations have been made.</p>
 <p>This is particularly useful when you want to restore a machine to a known state before performing an installation.</p>
@@ -231,7 +231,7 @@ Enable-BoxstarterVM -VMName myVM1 -Credential $cred -CheckPointName BareOS |
 </code></pre>
 <p>This resets the VM to its BareOS state before Installing the myPackage package.</p>
 <h3 id="what-about-creating-new-vms-with-boxstarter">What about creating New VMs with Boxstarter?</h3>
-<p>I considered adding a New-BoxstarterVM command but the fact is that Microsoft's own Hyper-V PowerShell module does a fine job of making this easy. This is typically a task that is not done nearly as frequently as tearing down and resetting an existing VM so it did not seem like a feature much worth the effort. To demonstrate how you would setup a New Hyper-V VM. You could use a script like this:</p>
+<p>I considered adding a New-BoxstarterVM command, but the fact is that Microsoft's own Hyper-V PowerShell module does a fine job of making this easy. This is typically a task that is not done nearly as frequently as tearing down and resetting an existing VM, so it did not seem like a feature much worth the effort. To demonstrate how you would set up a New Hyper-V VM. You could use a script like this:</p>
 <pre><code class="language-powershell">New-VMSwitch -NetAdapterInterfaceDescription &quot;Intel(R) Centrino(R) Advanced-N 6205&quot; -Name MySwitch
 New-VM -Name &quot;myVM&quot; -MemoryStartupBytes 1GB -SwitchName MySwitch -VHDPath &quot;C:\Users\Matt\Downloads\Windows Server 2008 R2 Enterprise Evaluation (Full Edition).vhd&quot;
 Start-VM &quot;myVM&quot;
@@ -243,7 +243,7 @@ Start-VM &quot;myVM&quot;
 <pre><code class="language-powershell">Install-WindowsFeature -name hyper-v -IncludeManagementTools
 </code></pre>
 <h3 id="download-a-free-evaluation-edition-windows-vhd">Download a free evaluation edition Windows VHD</h3>
-<p>You don't need a purchased copy of Windows or a fancy shmancy MSDN subscription to test out Boxstarter Installs on a VM. Microsoft provides evaluation copies of many of its OS versions on VHD that can be used for a limited number of days (usually 90). You can legally reinstall a new copy when the evaluation expires. While this is unfit for a production environment, its a great way to test your Boxstarter or Chocolatey installs.</p>
+<p>You don't need a purchased copy of Windows or a fancy-shmancy MSDN subscription to test out Boxstarter Installs on a VM. Microsoft provides evaluation copies of many of its OS versions on VHD that can be used for a limited number of days (usually 90). You can legally reinstall a new copy when the evaluation expires. While this is unfit for a production environment, its a great way to test your Boxstarter or Chocolatey installs.</p>
 <p>Here are links to free Windows evaluation VHDs:</p>
 <ul>
 <li><a href="https://technet.microsoft.com/en-US/evalcenter/evaluate-windows-8-1-enterprise">Windows 8.1</a></li>
@@ -255,7 +255,7 @@ Start-VM &quot;myVM&quot;
 <p>Boxstarter's Windows Azure VM support is limited to:</p>
 <ul>
 <li>PowerShell Version 3 or above. Boxstarter leverages the Windows Azure PowerShell toolkit which requires at least PowerShell version 3. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows 7 and Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
-<li>The default PowerShell remoting and endpoints that Azure creates on new VMs mus be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.</li>
+<li>The default PowerShell remoting, and endpoints that Azure creates on new VMs, muts be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.</li>
 </ul>
 <h3 id="installing-the-boxstarter.azure-module">Installing the Boxstarter.Azure module</h3>
 <p>The Boxstarter.Azure module does not automatically install with the main Boxstarter install package, but just a single Chocolatey command can accomplish this.</p>
@@ -280,18 +280,18 @@ Start-VM &quot;myVM&quot;
 </blockquote>
 <p>That's it. You can now use the Windows Azure PowerShell and Boxstarter commands to provision VMs in Azure.</p>
 <h3 id="creating-an-azure-vm">Creating an Azure VM</h3>
-<p>Creating Azure VMs is simple. You can either use the Azure portal or PowerShell. Since the Boxstarter.Azure module also loads the Windows Azure PowerShell module, all of the Azure PowerShell commands are available in the Boxstarter Shell. The easiest way to create new VMs using PowerShell is with the <code>New-AzureQuickVM</code> command:</p>
+<p>Creating Azure VMs is simple. You can either use the Azure portal or PowerShell. Since the Boxstarter.Azure module also loads the Windows Azure PowerShell module, all the Azure PowerShell commands are available in the Boxstarter Shell. The easiest way to create new VMs using PowerShell is with the <code>New-AzureQuickVM</code> command:</p>
 <pre><code class="language-powershell">$cred=Get-Credential AzureAdmin
 New-AzureQuickVM -ServiceName MyService -Windows -Name MyVM `
   -ImageName 3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20131217-enus `
   -Password $cred.GetNetworkCredential().Password -AdminUsername $cred.UserName `
   -Location &quot;West US&quot; -WaitForBoot
 </code></pre>
-<p>This creates a small Windows Server 2012 R2 VM located in the West US region and will wait for the VM to complete its boot sequence. Note: If the Service Name already exists, do not include the <code>-Location</code> argument since the VM will be created in the location that service is configured for. To find out what all of the Location options are, use the <code>Get-AzureLocation</code> command.</p>
-<p>While this example uses a Windows Server 2012 R2 image, you can use any of the images in the Azure gallery or even images you have created yourself. Use <code>Get-AzureVMImage</code> for information on all of the images available.</p>
+<p>This creates a small Windows Server 2012 R2 VM located in the West US region and will wait for the VM to complete its boot sequence. Note: If the Service Name already exists, do not include the <code>-Location</code> argument since the VM will be created in the location that service is configured for. To find out what all the Location options are, use the <code>Get-AzureLocation</code> command.</p>
+<p>While this example uses a Windows Server 2012 R2 image, you can use any of the images in the Azure gallery or even images you have created yourself. Use <code>Get-AzureVMImage</code> for information on all the images available.</p>
 <p>The Azure PowerShell commands are very useful. Use <code>Get-Command -Module Azure</code> to find all commands available in the Windows Azure PowerShell module. All commands include the customary PowerShell command line help. Simply run <code>Get-Help [Command Name] -Full</code> to view the full documentation of a command.</p>
 <h3 id="provisioning-your-windows-azure-vm">Provisioning your Windows Azure VM</h3>
-<p>Boxstarter will locate the VMs PowerShell remoting Connection URI and install the VMs certificate on the local machine which will enable a SSL connection to be established so that Boxstarter can install your package on the VM. Here is an example:</p>
+<p>Boxstarter will locate the VMs PowerShell remoting Connection URI and install the VMs certificate on the local machine which will enable an SSL connection to be established so that Boxstarter can install your package on the VM. Here is an example:</p>
 <pre><code class="language-powershell">$cred=Get-Credential AzureAdmin
 &quot;myVM1&quot;,&quot;myVM2&quot; |
   Enable-BoxstarterVM -provider Azure -CloudServiceName MyService -Credential $cred |
@@ -325,7 +325,7 @@ Set-AzureVMCheckpoint -VM $vm -CheckpointName BareOS
 Get-AzureVMCheckpoint -VM $vm
 </code></pre>
 <h2 id="working-with-other-virtualization-technologies">Working with other virtualization technologies</h2>
-<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled and the VM's DNS name is accessible on the network. For &quot;On Premise&quot; VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
+<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled, and the VM's DNS name is accessible on the network. For &quot;On Premise&quot; VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
 <pre><code class="language-powershell">Enable-BoxstarterVHD -VHDPath &quot;C:\Virtual hard disks\win81diff_F2AE6535-2532-455F-8E5A-0211595221F8.avhdx&quot;
 </code></pre>
 <p>This will mount the VHD provided in the VHDPath, enable the WMI Firewall ports and enable LocalAccountTokenFilterPolicy in the Windows registry stored in the VHD.</p>
@@ -341,7 +341,7 @@ Get-AzureVMCheckpoint -VM $vm
 </code></pre>
 <p>on the VM. This will most often put the machine in a state where it can accept remote sessions from Boxstarter.</p>
 <h4 id="have-you-lost-your-domain-trust-relationship">Have you lost your domain trust relationship?</h4>
-<p>In a domain environment, it is possible that over time a VM may lose its trust relationship with the Domain Controller especially if you revert to a snapshot that has an expired machine password. When this happens things stop authenticating correctly and often remote communication sessions are denied. It is not always obvious that this is the problem. Usually you can tell by examining the Network Adapter on the VM and it states that it is Unauthenticated. The most reliable fix for this is to unjoin the domain and then rejoin.</p>
+<p>In a domain environment, it is possible that over time a VM may lose its trust relationship with the Domain Controller especially if you revert to a snapshot that has an expired machine password. When this happens things stop authenticating correctly and often remote communication sessions are denied. It is not always obvious that this is the problem. Usually you can tell by examining the Network Adapter on the VM, and it states that it is Unauthenticated. The most reliable fix for this is to unjoin the domain and then rejoin.</p>
 
                                     </div>
                                             <div id="rightSidebarNav" class="col-xl-2 ps-xl-3 order-1 order-xl-2">
@@ -384,7 +384,7 @@ Get-AzureVMCheckpoint -VM $vm
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/f7106a1f06191a14dac97c64422e35f61152469f">f7106a1</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
