@@ -44,9 +44,9 @@ You have lots of options here. Boxstarter supports:
 
 - Saving to as a package on any NuGet feed.
 - Saving a package to a Network share or any local media such as a thumb drive.
-- Saving to a single text file or any text based HTTP resource (like a [Github Gist](https://gist.github.com/))
+- Saving to a single text file or any text based HTTP resource (like a [GitHub Gist](https://gist.github.com/))
 
-We'll stay simple here and save to a Github Gist.
+We'll stay simple here and save to a GitHub Gist.
 
 ![Boxstarter GitHub Gist](/assets/images/gist1.png)
 

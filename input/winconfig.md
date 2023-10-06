@@ -43,7 +43,7 @@ Enables UAC.
 
 ## Install-WindowsUpdate
 
-Finds, downloads and installs all Windows Updates. By default, only critical updates will be searched. However the command takes a `-Criteria` argument allowing one to pass a custom Windows Update query.
+Finds, downloads and installs all Windows Updates. By default, only critical updates will be searched. However, the command takes a `-Criteria` argument allowing one to pass a custom Windows Update query.
 
 For details about the `Install-WindowsUpdate` command, run:
 

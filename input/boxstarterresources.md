@@ -7,7 +7,7 @@ Title: More Boxstarter Resources
 
 ## Reporting Bugs
 
-Please report any bugs you experience on the [Boxstarter issues page](https://github.com/chocolatey/boxstarter/issues). Please provide a copy of $env:localappdata\boxstarter\boxstarter.log. If the install was run on a remote instance, the logs on both the remote computer and the computer from where the install was run should be sent. The install logs of any specific application causing problems is also helpful.
+Please report any bugs you experience on the [Boxstarter issues page](https://github.com/chocolatey/boxstarter/issues). Please provide a copy of $env:localappdata\boxstarter\boxstarter.log. If the installation was run on a remote instance, the logs on both the remote computer and the computer from where the installation was run should be sent. The installation logs of any specific application causing problems is also helpful.
 
 ## Discussing Features
 
@@ -15,7 +15,7 @@ General discussions regarding either upcoming or existing Boxstarter features ca
 
 ## Source Code
 
-Boxstarter is fully Open Source licensed under the [Apache 2 license](license). Source code can be [viewed from Github](https://github.com/chocolatey/boxstarter), or one may prefer to clone the repository using git.
+Boxstarter is fully Open Source licensed under the [Apache 2 license](license). Source code can be [viewed from GitHub](https://github.com/chocolatey/boxstarter), or one may prefer to clone the repository using git.
 
 ```powershell
 git clone https://github.com/chocolatey/boxstarter

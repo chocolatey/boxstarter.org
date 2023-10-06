@@ -9,13 +9,13 @@ Boxstarter leverages [Chocolatey](https://chocolatey.org) packages to automate t
 
 ## Reboot Resiliency
 
-Anyone who has installed much software in a Windows environment understands that, like it or not, reboots are often required to complete an installation. Sometimes an install will simply fail with an obscure error if a reboot is pending or other times, the installation will not be complete, until a reboot is performed. The primary objective of a Boxstarter installation, is to launch an environment installation no matter how complex, with no interruption. To achieve this, Boxstarter intercepts all Chocolatey install commands and checks for pending reboots. If a pending reboot is detected, Boxstarter will reboot the machine and automatically log the user back on and resume the installation. Boxstarter will even suspend Bitlocker, if enabled, to avoid prompts for the Bitlocker key upon reboot.
+Anyone who has installed much software in a Windows environment understands that, like it or not, reboots are often required to complete an installation. Sometimes an installation will simply fail with an obscure error if a reboot is pending or other times, the installation will not be complete, until a reboot is performed. The primary objective of a Boxstarter installation, is to launch an environment installation no matter how complex, with no interruption. To achieve this, Boxstarter intercepts all Chocolatey install commands and checks for pending reboots. If a pending reboot is detected, Boxstarter will reboot the machine and automatically log the user back on and resume the installation. Boxstarter will even suspend Bitlocker, if enabled, to avoid prompts for the Bitlocker key upon reboot.
 
 ## Remote Installations
 
-All of the features discussed here can be performed either locally or on a Remote machine. Whether it be a Virtual Machine or bare metal, Boxstarter uses a combination of PowerShell Remoting and Scheduled Tasks to allow one to fully configure a Windows environment on another machine. This is ideal for needing to repeatedly tear down and rebuild boxes with the same configuration.
+All the features discussed here can be performed either locally or on a Remote machine. Whether it be a Virtual Machine or bare metal, Boxstarter uses a combination of PowerShell Remoting and Scheduled Tasks to allow one to fully configure a Windows environment on another machine. This is ideal for needing to repeatedly tear down and rebuild boxes with the same configuration.
 
-While using Chocolatey in a PowerShell Remoting session will most often succeed, many installs leverage the Windows Update service under the hood for certain installation steps. These will fail in a remote PowerShell session. Boxstarter intercepts all calls to MSIEXEC, DISM and its own Windows Update command and wraps then in a scheduled task that an run with a local administrative token leading to a successful install.
+While using Chocolatey in a PowerShell Remoting session will most often succeed, many installs leverage the Windows Update service under the hood for certain installation steps. These will fail in a remote PowerShell session. Boxstarter intercepts all calls to MSIEXEC, DISM and its own Windows Update command, and wraps then in a scheduled task that can run with a local administrative token leading to a successful installation.
 
 ## Integrates with Hyper-V and Windows Azure VMs
 
@@ -23,7 +23,7 @@ Boxstarter can run on a Hyper-V host and setup a Guest VM with no pre-configurat
 
 ## Runs with Administrative Privileges
 
-Many applications require administrative privileges to install. Chocolatey, for good reason, allows non administrative users to perform installs and will request administrative privileges throughout the installation whenever they are required. Since a Boxstarter installation must not interrupt the session once it begins, Boxstarter runs with administrative privileges the whole way through to avoid these interactive prompts.
+Many applications require administrative privileges to install. Chocolatey, for good reason, allows non-administrative users to perform installs and will request administrative privileges throughout the installation whenever they are required. Since a Boxstarter installation must not interrupt the session once it begins, Boxstarter runs with administrative privileges the whole way through to avoid these interactive prompts.
 
 ## Reduce Installation Conflicts
 
@@ -57,8 +57,8 @@ Almost any environment install will want to include the installation of Windows 
 
 ## Convenience commands to automate NuGet Package Creation
 
-Boxstarter provides commands that can auto generate both the \*.nuspec file and provide a skeletal ChocolateyInstall.ps1 file. You can even point Boxstarter to a single script file and it will generate a \*.nupkg file that will execute that script.
+Boxstarter provides commands that can auto generate both the \*.nuspec file, and provide a skeletal ChocolateyInstall.ps1 file. You can even point Boxstarter to a single script file and it will generate a \*.nupkg file that will execute that script.
 
 ## Testing Packages and Build Server Integration
 
-Boxstarter can test [Chocolatey](https://chocolatey.org) package installs on one or more deployment targets and evaluate whether the installation was successful. It can also automate the publishing of packages to its [NuGet](https://nuget.org) feed. This functionality can be plugged into a Continuous Integration server so that packages can be tested and published when committed to version control.
+Boxstarter can test [Chocolatey](https://chocolatey.org) package installations on one or more deployment targets and evaluate whether the installation was successful. It can also automate the publishing of packages to its [NuGet](https://nuget.org) feed. This functionality can be plugged into a Continuous Integration server so that packages can be tested and published when committed to version control.
