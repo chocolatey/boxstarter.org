@@ -23,7 +23,7 @@ The simplest way to create a NuGet package is using the `New-PackageFromScript` 
 New-PackageFromScript MyScript.ps1 MyPackage
 ```
 
-This command takes either a file or http URL (like a [GitHub Gist](https://gist.github.com)) that represents the installation script. The `New-PackageFromScript` command will create a Chocolatey NuGet package with the contents of the script moved to the ChocolateyInstall.ps1 file. While this is an incredibly simple way to create a package for your Boxstarter installations, it does not provide much flexibility in customizing the nuspec manifest or adding other files to your install package.
+This command takes either a file or http URL (like a [GitHub Gist](https://gist.github.com)) that represents the installation script. The `New-PackageFromScript` command will create a Chocolatey NuGet package with the contents of the script moved to the ChocolateyInstall.ps1 file. While this is an incredibly simple way to create a package for your Boxstarter installations, it does not provide much flexibility in customizing the nuspec manifest or adding other files to your installation package.
 
 ## New-BoxstarterPackage
 
@@ -62,7 +62,7 @@ try {
 
 ## The Boxstarter Local Repository
 
-These files are saved to your local Boxstarter Repository. This is where Boxstarter will store your local packages and running the Install-BoxstarterPackage command will look here first before any external feed. The repository is located in your AppData directory but you can always find out exactly where by inspecting the global Boxstarter variable `$Boxstarter.LocalRepo`.
+These files are saved to your local Boxstarter Repository. This is where Boxstarter will store your local packages and running the Install-BoxstarterPackage command will look here first before any external feed. The repository is located in your AppData directory, but you can always find out exactly where by inspecting the global Boxstarter variable `$Boxstarter.LocalRepo`.
 
 ![Windows Powershell output from inspecting the global Boxstarter variable $Boxstarter.LocalRepo](/assets/images/global.png)
 
@@ -80,7 +80,7 @@ Optionally, you can call the New-BoxstarterPackage command with a path argument 
 New-BoxstarterPackage -Name MyPackage -Description "I hope you enjoy MyPackage" -Path "c:\somePath"
 ```
 
-Boxstarter will copy all files at, and below, c:\somepath and you can refer to these files in your ChocolateyInstall.ps1 using `Get-PackageRoot`.
+Boxstarter will copy all files at, and below, c:\somepath, and you can refer to these files in your ChocolateyInstall.ps1 using `Get-PackageRoot`.
 
 ```powershell
 Copy-Item (Join-Path -Path (Get-PackageRoot($MyInvocation)) -ChildPath 'console.xml') -Force $env:appdata\console\console.xml
@@ -142,15 +142,15 @@ This script does several things and leverage's both Chocolatey and Boxstarter co
 - Create some shortcuts in the taskbar for common applications
 - Copy your console configuration file with your favorite settings
 - Install some Visual Studio extensions from the Visual Studio gallery
-- Install all critical windows updates
+- Install all critical Windows Updates
 
 ## Boxstarter ChocolateyInstall Considerations
 
 Boxstarter can run any Chocolatey package and any valid PowerShell inside that package. However, there are a few things to consider that may make a Boxstarter Chocolatey package a better installation experience.
 
 - Boxstarter Chocolatey packages should be repeatable. This is especially true if you anticipate the need to reboot. When Boxstarter reboots, it starts running the package from the beginning. So ensure that there is nothing that would cause the package to break if run twice.
-- If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call choco install directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies so those packages will not have any reboot protections.
-- Do not use `Restart-Computer` or any other command that will reboot the computer. Instead use `Invoke-Reboot`. This will allow Boxstarter to get things in order first so that after the machine recovers from the reboot, Boxstarter can log the user back in and restart the install script.
+- If you have several Chocolatey packages that you want to install during the Boxstarter session, it is preferable to call choco install directly from inside your ChocolateyInstall instead of declaring them as dependencies. This is because Boxstarter cannot intercept Chocolatey dependencies, so those packages will not have any reboot protections.
+- Do not use `Restart-Computer` or any other command that will reboot the computer. Instead, use `Invoke-Reboot`. This will allow Boxstarter to get things in order first so that after the machine recovers from the reboot, Boxstarter can log the user back in and restart the installation script.
 
 ## Packing your Package .nupkg
 

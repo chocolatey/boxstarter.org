@@ -57,7 +57,7 @@ Almost any environment install will want to include the installation of Windows 
 
 ## Convenience commands to automate NuGet Package Creation
 
-Boxstarter provides commands that can auto generate both the \*.nuspec file, and provide a skeletal ChocolateyInstall.ps1 file. You can even point Boxstarter to a single script file and it will generate a \*.nupkg file that will execute that script.
+Boxstarter provides commands that can auto generate both the \*.nuspec file, and provide a skeletal ChocolateyInstall.ps1 file. You can even point Boxstarter to a single script file, and it will generate a \*.nupkg file that will execute that script.
 
 ## Testing Packages and Build Server Integration
 

@@ -143,7 +143,7 @@ DESCRIPTION
      - Installs Chocolatey if it is not already installed
      - Installs the .net 4.5 framework if it is not installed which is a
     Chocolatey requirement
-     - Disables windows update service during installation to prevent
+     - Disables the Windows Update service during installation to prevent
     installation conflicts and minimize the need for reboots
      - Imports the Boxstarter.WinConfig module that provides functions for
     customizing windows

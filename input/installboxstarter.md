@@ -31,7 +31,7 @@ This will download and install the Boxstarter modules to your PSModulePath.
 
 ## Downloading the zip file
 
-The zip file contains a Setup.Bat file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: Setup.bat accepts a `-Force` argument to suppress this prompt.
+The zip file contains a `Setup.Bat` file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: `Setup.bat` accepts a `-Force` argument to suppress this prompt.
 
 ![Boxstarter Module installer](/assets/images/setup.png)
 
@@ -39,7 +39,7 @@ Boxstarter is now installed in your modules path!
 
 Both the Chocolatey Boxstarter package and the downloaded zip file available on this website install all Boxstarter modules except the Boxstarter.Azure module which provides integration with Windows Azure VMs. You can install the Azure module by running `choco install Boxstarter.Azure`. In addition to the Boxstarter.Azure module, it also installs the Windows Azure PowerShell toolkit, the Azure SDK for .Net Libraries and .Net 4.5. It requires PowerShell 3 or higher (the version installed with Windows 8/server 2012 and higher but also [freely available for download](https://www.microsoft.com/en-us/download/details.aspx?id=40855) on older versions) to install successfully.
 
-After Boxstarter is installed, a new PowerShell console must be opened before you can load the modules and run its commands. For convenience you can use the [Boxstarter Shell](usingboxstarter) for running Boxstarter commands which is the easiest way to ensure that all Boxstarter modules are properly loaded regardless of the version of Windows and PowerShell you are running.
+After Boxstarter is installed, a new PowerShell console must be opened before you can load the modules and run its commands. For convenience, you can use the [Boxstarter Shell](usingboxstarter) for running Boxstarter commands which is the easiest way to ensure that all Boxstarter modules are properly loaded regardless of the version of Windows and PowerShell you are running.
 
 ## Installing from the web
 

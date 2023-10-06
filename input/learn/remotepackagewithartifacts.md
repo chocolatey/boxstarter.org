@@ -6,7 +6,7 @@ Description: Learn how to install web services and deploy a web application to a
 
 # Installing web services and deploying a web application to a remote server
 
-Sometimes a package may contain more than just a nuspec file and an install script. You may also want to install the package onto a remote machine.
+Sometimes a package may contain more than just a nuspec file and an installation script. You may also want to install the package onto a remote machine.
 
 Boxstarter can create a template package targeting an existing directory and install the package on any machine open to WINRM or WMI remoting.
 
@@ -16,7 +16,7 @@ This walk through will create a NuGet ODATA feed application and deploy it to a 
 
 ### Create and Build the NuGet server
 
-Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package install completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - `choco install VisualStudio2013ExpressWeb`.
+Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package installation completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - `choco install VisualStudio2013ExpressWeb`.
 
 ![Manage Nuget packages from Visual Studio](/assets/images/NugetServer.png)
 
@@ -117,7 +117,7 @@ Enable-PSRemoting -Force
 
 ### Install the package on the target
 
-Now we are ready to enable IIS services and deploy the application. We will create a PSCredential object and invoke the install:
+Now we are ready to enable IIS services and deploy the application. We will create a PSCredential object and invoke the installation:
 
 ```powershell
 $Creds = Get-Credential administrator

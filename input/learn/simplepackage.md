@@ -55,7 +55,7 @@ The Boxstarter install creates a shortcut to a shell that provides the easiest w
 
 ### Convert your Script to a Package
 
-Lets assume the script was saved to c:\dev\script.ps1 and I wanted to name my package mwrock.DefaultInstall. Run this command:
+Lets assume the script was saved to c:\dev\script.ps1, and I wanted to name my package mwrock.DefaultInstall. Run this command:
 
 ```powershell
 New-PackageFromScript -Source c:\dev\script.ps1 -PackageName mwrock.DefaultInstall
@@ -85,6 +85,6 @@ Using IE (or any other browser that has a click-once extension installed) or fro
 
 START https://boxstarter.org/package/mwrock.DefaultInstall
 
-Accept the prompts for installing the Boxstarter installer and running with administrative privileges. When the install begins, Boxstarter will ask for a password do that it can resume the installer in the event it needs to reboot.
+Accept the prompts for installing the Boxstarter installer and running with administrative privileges. When the installation begins, Boxstarter will ask for a password do that it can resume the installer in the event it needs to reboot.
 
 There are other ways to install the package as well. You can even [install to a remote machine](/installingpackages#RemoteInstallations) or to an [Azure or Hyper-V VM with checkpointing support](/vmintegration).

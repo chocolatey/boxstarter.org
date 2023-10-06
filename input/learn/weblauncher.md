@@ -6,7 +6,7 @@ Description: Learn how to quickly setup and machine with just a Gist.
 
 # Quickly setup any machine with just a Gist - No Preinstalled software required
 
-Want to setup your box without downloading any software or fussing with package authoring or publishing?
+Want to set up your box without downloading any software or fussing with package authoring or publishing?
 
 Well buckle up! Boxstarter makes this a snap!
 
@@ -62,7 +62,7 @@ Now we will copy the raw URL:
 
 ### Install the Boxstarter Modules
 
-You can download the Boxstarter module installer from this web site or you can use Chocolatey to install the Boxstarter. Alternatively, you may invoke the module installer over the web using PowerShell.
+You can download the Boxstarter module installer from this website, or you can use Chocolatey to install the Boxstarter. Alternatively, you may invoke the module installer over the web using PowerShell.
 
 If you are running PowerShell v3 or higher:
 
@@ -83,7 +83,7 @@ This will install Chocolatey if necessary and then install the necessary boxstar
 
 ### Run the script
 
-Invoke the the Install-BoxstarterPackage command pointing to your gist created above:
+Invoke the Install-BoxstarterPackage command pointing to your gist created above:
 
 ```powershell
 Install-BoxstarterPackage -PackageName https://gist.github.com/mwrock/7382880/raw/f6525387b4b524b8eccef6ed4d5ec219c82c0ac7/gistfile1.txt -DisableReboots

@@ -17,7 +17,7 @@ While often install scripts may be complex and the information on this page will
 https://boxstarter.org/package/sysinternals,fiddler4,itunes
 ```
 
-Launch this from your browser, that has ClickOnce support, and the Boxstarter launcher should install and run. The following browser are supported:
+Launch this from your browser, that has ClickOnce support, and the Boxstarter launcher should install and run. The following browsers are supported:
 
 - Internet Explorer has native support.
 - Microsoft Edge has [native support](https://docs.microsoft.com/en-us/deployedge/edge-learn-more-co-di).
@@ -109,5 +109,5 @@ If not already installed, this will install the Chocolatey CLI and any of its pr
 
 #### Other facts about the Boxstarter web installer:
 
-- You can also install any package from the public [Chocolatey Community Repository](https://community.chocolatey.org/packages) feed. To install these packages, use the package name instead of URL. So if you wanted to install FireFox, you would use https://boxstarter.org/package/nr/firefox.
+- You can also install any package from the public [Chocolatey Community Repository](https://community.chocolatey.org/packages) feed. To install these packages, use the package name instead of URL. For example, if you wanted to install FireFox, you would use https://boxstarter.org/package/nr/firefox.
 - As [noted above](#installing-several-packages), you need to install a ClickOnce extension for some browsers.
