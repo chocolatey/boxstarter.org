@@ -98,7 +98,7 @@ Boxstarter always logs verbose output to `$Boxstarter.Log` which is usually loca
 
 ## Running an installation from a network share or external media
 
-You may want to place the Boxstarter modules and local repo on a network share, so that others on your network can invoke Boxstarter installs with nothing installed. Or you may want to save them on a thumb drive, SD, or Micro SD card so you can always have Boxstarter and your packages handy. Boxstarter provides a batch file wrapper that can be called to facilitate these scenarios.
+You may want to place the Boxstarter modules and local repo on a network share, so that others on your network can invoke Boxstarter installs with nothing installed. Or you may want to save them on a thumb drive, SD, or Micro SD card, so you can always have Boxstarter and your packages handy. Boxstarter provides a batch file wrapper that can be called to facilitate these scenarios.
 
 ```powershell
 Copy-Item $Boxstarter.BaseDir E:\ -Recurse
@@ -155,9 +155,9 @@ $cred=Get-Credential 'MyTargetMachine\myusername'
 Install-BoxstarterPackage -ComputerName MyTargetMachine -PackageName MyPackage -Credential $cred
 ```
 
-Boxstarter will use the credential to connect to MyTargetMachine, and will copy the Boxstarter modules and your Local Repository packages to its local storage. It will then run the package on that machine. Boxstarter will configure your local machine to be able to connect to the remote machine and it may prompt you for permission to change settings. You can always provide the -Force parameter to silence the prompts and allow boxstarter to freely enable remoting if it is not already enabled.
+Boxstarter will use the credential to connect to MyTargetMachine, and will copy the Boxstarter modules and your Local Repository packages to its local storage. It will then run the package on that machine. Boxstarter will configure your local machine to be able to connect to the remote machine, and it may prompt you for permission to change settings. You can always provide the -Force parameter to silence the prompts and allow boxstarter to freely enable remoting if it is not already enabled.
 
-Here is a screen shot of Boxstarter installing a Minecraft Server (bukkit) on a AWS EC2 instance:
+Here is a screenshot of Boxstarter installing a Minecraft Server (bukkit) on a AWS EC2 instance:
 
 ![Screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance](/assets/images/amazon.png)
 

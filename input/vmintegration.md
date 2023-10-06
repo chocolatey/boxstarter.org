@@ -94,7 +94,7 @@ Here are links to free Windows evaluation VHDs:
 Boxstarter's Windows Azure VM support is limited to:
 
 - PowerShell Version 3 or above. Boxstarter leverages the Windows Azure PowerShell toolkit which requires at least PowerShell version 3. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows 7 and Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the [Windows Management Framework](https://www.microsoft.com/en-us/download/details.aspx?id=34595).
-- The default PowerShell remoting, and endpoints that Azure creates on new VMs, muts be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.
+- The default PowerShell remoting, and endpoints that Azure creates on new VMs, must be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs, and it creates an endpoint that maps to the WINRM secure port.
 
 ### Installing the Boxstarter.Azure module
 
@@ -209,7 +209,7 @@ Get-AzureVMCheckpoint -VM $vm
 
 ## Working with other virtualization technologies
 
-Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled, and the VM's DNS name is accessible on the network. For "On Premise" VM providers, if they support the VHD file format, you can use the `Enable-BoxstarterVHD` command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.
+Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled, and the VM's DNS name is accessible on the network. For "On Premise" VM providers, if they support the VHD file format, you can use the `Enable-BoxstarterVHD` command to enable WMI, LocalAccountTokenFilterPolicy, and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command, and it must contain the system volume (the drive with the Windows folder) of the VM.
 
 ```powershell
 Enable-BoxstarterVHD -VHDPath "C:\Virtual hard disks\win81diff_F2AE6535-2532-455F-8E5A-0211595221F8.avhdx"

@@ -11,7 +11,7 @@ Boxstarter installs are a "mash-up" of Chocolatey packages mixed with specific c
 >
 > If you are familiar with the basic objectives of NuGet and Chocolatey technologies. You can skip this page, but it is important to understand in order to comprehend how Boxstarter installs work.
 
-## What's a package and why does that matter to Boxstarter?
+## What's a package, and why does that matter to Boxstarter?
 
 Boxstarter leverage's [Chocolatey](https://chocolatey.org) packages to compose the applications, components and features that make up the Windows environment you aim to create. Chocolatey is based on [NuGet](https://nuget.org) packages. NuGet provides a standardized way of describing a reusable piece of software. Every NuGet package includes a \*.nuspec file which is a manifest that declares the package's version, its dependencies and other descriptive information that assists package consumers to easily discover packages they are looking for. It includes a set of conventions for structuring the files contained inside of a package, and naming them to assist third party software to consume these packages, and know what to install based on the environment that wants to install the package.
 

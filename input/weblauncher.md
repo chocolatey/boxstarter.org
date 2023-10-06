@@ -105,7 +105,7 @@ This invokes a Boxstarter installer that will install everything according to yo
 
 ![Boxstarter installer prompt](/assets/images/install.png)
 
-If not already installed, this will install the Chocolatey CLI and any of its prerequisites. If you did not include /nr/ in the Boxstarter URL, it will manage reboots and automatically log the machine back in so you do not have to attend to it throughout the installation.
+If not already installed, this will install the Chocolatey CLI and any of its prerequisites. If you did not include /nr/ in the Boxstarter URL, it will manage reboots and automatically log the machine back in, so you do not have to attend to it throughout the installation.
 
 #### Other facts about the Boxstarter web installer:
 
