@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-3856db90-e202-48b5-80a4-5dc82d080fd5" aria-label="collapse or expand navigation" href="#id-3856db90-e202-48b5-80a4-5dc82d080fd5"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
+                                                        <div class="collapse" id="id-3856db90-e202-48b5-80a4-5dc82d080fd5">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -254,7 +254,7 @@ StartTime    : 11/30/2013 1:56:20 AM
 <h3 id="boxstarter-log-file">Boxstarter Log File</h3>
 <p>Boxstarter always logs verbose output to <code>$Boxstarter.Log</code> which is usually located at $env:LocalAppData\Boxstarter\Boxstarter.log. Installations on remote machines will produce a log file at this location on the remote machine and the local log file will contain just the messages that ran locally.</p>
 <h2 id="running-an-installation-from-a-network-share-or-external-media">Running an installation from a network share or external media</h2>
-<p>You may want to place the Boxstarter modules and local repo on a network share, so that others on your network can invoke Boxstarter installs with nothing installed. Or you may want to save them on a thumb drive, SD, or Micro SD card so you can always have Boxstarter and your packages handy. Boxstarter provides a batch file wrapper that can be called to facilitate these scenarios.</p>
+<p>You may want to place the Boxstarter modules and local repo on a network share, so that others on your network can invoke Boxstarter installs with nothing installed. Or you may want to save them on a thumb drive, SD, or Micro SD card, so you can always have Boxstarter and your packages handy. Boxstarter provides a batch file wrapper that can be called to facilitate these scenarios.</p>
 <pre><code class="language-powershell">Copy-Item $Boxstarter.BaseDir E:\ -Recurse
 E:\BoxstarterDir\Boxstarter example
 </code></pre>
@@ -289,8 +289,8 @@ E:\BoxstarterDir\Boxstarter example
 <pre><code class="language-powershell">$cred=Get-Credential 'MyTargetMachine\myusername'
 Install-BoxstarterPackage -ComputerName MyTargetMachine -PackageName MyPackage -Credential $cred
 </code></pre>
-<p>Boxstarter will use the credential to connect to MyTargetMachine, and will copy the Boxstarter modules and your Local Repository packages to its local storage. It will then run the package on that machine. Boxstarter will configure your local machine to be able to connect to the remote machine and it may prompt you for permission to change settings. You can always provide the -Force parameter to silence the prompts and allow boxstarter to freely enable remoting if it is not already enabled.</p>
-<p>Here is a screen shot of Boxstarter installing a Minecraft Server (bukkit) on a AWS EC2 instance:</p>
+<p>Boxstarter will use the credential to connect to MyTargetMachine, and will copy the Boxstarter modules and your Local Repository packages to its local storage. It will then run the package on that machine. Boxstarter will configure your local machine to be able to connect to the remote machine, and it may prompt you for permission to change settings. You can always provide the -Force parameter to silence the prompts and allow boxstarter to freely enable remoting if it is not already enabled.</p>
+<p>Here is a screenshot of Boxstarter installing a Minecraft Server (bukkit) on a AWS EC2 instance:</p>
 <p><img src="/assets/images/amazon.png" alt="Screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance" /></p>
 <p>You can pipe several computer names, URIs or Windows PowerShell sessions to <code>Install-BoxstarterPackage</code>. Boxstarter will attempt to install the package on each machine and return a PSObject result for each machine.</p>
 <pre><code class="language-powershell">$cred=Get-Credential 'MyTargetMachine\myusername'
@@ -391,7 +391,7 @@ Boxstarter: Running remote install...
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/56e43edc405c7884957fd5b474f62ad67714d416">56e43ed</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

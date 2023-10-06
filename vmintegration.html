@@ -146,10 +146,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-818e8aba-4f62-4d34-86b6-3d70a833ceed" aria-label="collapse or expand navigation" href="#id-818e8aba-4f62-4d34-86b6-3d70a833ceed"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-3856db90-e202-48b5-80a4-5dc82d080fd5" aria-label="collapse or expand navigation" href="#id-3856db90-e202-48b5-80a4-5dc82d080fd5"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-818e8aba-4f62-4d34-86b6-3d70a833ceed">
+                                                        <div class="collapse" id="id-3856db90-e202-48b5-80a4-5dc82d080fd5">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -255,7 +255,7 @@ Start-VM &quot;myVM&quot;
 <p>Boxstarter's Windows Azure VM support is limited to:</p>
 <ul>
 <li>PowerShell Version 3 or above. Boxstarter leverages the Windows Azure PowerShell toolkit which requires at least PowerShell version 3. This is automatically installed on Windows 8, 8.1 and Server 2012 and 2012 R2. Windows 7 and Server 2008 R2 can be upgraded to Version 3 (or 4) by installing version 3 or 4 of the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=34595">Windows Management Framework</a>.</li>
-<li>The default PowerShell remoting, and endpoints that Azure creates on new VMs, muts be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs and it creates an endpoint that maps to the WINRM secure port.</li>
+<li>The default PowerShell remoting, and endpoints that Azure creates on new VMs, must be present. By default, Windows Azure enables PowerShell remoting on all Windows VMs, and it creates an endpoint that maps to the WINRM secure port.</li>
 </ul>
 <h3 id="installing-the-boxstarter.azure-module">Installing the Boxstarter.Azure module</h3>
 <p>The Boxstarter.Azure module does not automatically install with the main Boxstarter install package, but just a single Chocolatey command can accomplish this.</p>
@@ -325,7 +325,7 @@ Set-AzureVMCheckpoint -VM $vm -CheckpointName BareOS
 Get-AzureVMCheckpoint -VM $vm
 </code></pre>
 <h2 id="working-with-other-virtualization-technologies">Working with other virtualization technologies</h2>
-<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled, and the VM's DNS name is accessible on the network. For &quot;On Premise&quot; VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
+<p>Boxstarter will very soon provide support for AWS VMs. However, Boxstarter can work with any VM provider using Install-BoxstarterPackage as long as the VM has PowerShell remoting enabled, and the VM's DNS name is accessible on the network. For &quot;On Premise&quot; VM providers, if they support the VHD file format, you can use the <code>Enable-BoxstarterVHD</code> command to enable WMI, LocalAccountTokenFilterPolicy, and retrieve the computer name of the VM running the VHD. The VHD must be accessible and writable to the user issuing the command, and it must contain the system volume (the drive with the Windows folder) of the VM.</p>
 <pre><code class="language-powershell">Enable-BoxstarterVHD -VHDPath &quot;C:\Virtual hard disks\win81diff_F2AE6535-2532-455F-8E5A-0211595221F8.avhdx&quot;
 </code></pre>
 <p>This will mount the VHD provided in the VHDPath, enable the WMI Firewall ports and enable LocalAccountTokenFilterPolicy in the Windows registry stored in the VHD.</p>
@@ -384,7 +384,7 @@ Get-AzureVMCheckpoint -VM $vm
             <div class="text-bg-theme-elevation-1 border-top text-center p-3">
                 <span class="small">© 2018 - 2023 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/315e566efac5924242ea42e83527201d39aa56a6">315e566</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/56e43edc405c7884957fd5b474f62ad67714d416">56e43ed</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
