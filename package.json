@@ -11,12 +11,10 @@
     "url": "https://github.com/chocolatey/boxstarter.org/issues"
   },
   "homepage": "https://github.com/chocolatey/boxstarter.org#readme",
+  "scripts": {
+    "choco-theme": "yarn dlx --quiet ts-node --skipIgnore node_modules/choco-theme/build/choco-theme.ts --repository=boxstarter"
+  },
   "devDependencies": {
     "choco-theme": "0.5.14"
-  },
-  "resolutions": {
-    "glob-parent": "^6.0.2",
-    "nth-check": "^2.1.1",
-    "terser": "^5.14.2"
   }
 }
