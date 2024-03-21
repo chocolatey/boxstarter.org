@@ -28,7 +28,7 @@ Since no reboot will be performed, the credential is unnecessary.
 
 ## Reinstall Logic
 
-If you are familiar with Chocolatey, you know that Chocolatey will check if a package has been previously installed and will skip the installation if there is already an installation for that same package. Boxstarter changes this logic just a bit depending on whether or not one or multiple packages are provided to Install-BoxstarterPackage or the Boxstarter URL. If just one package is provided, Boxstarter will always attempt to re-download and install the package, even if it had been previously installed. It's important to note this only applies to the "outer" package. If your package includes calls to `choco install`, those packages will abide by the normal Chocolatey install rules and will not be installed if they already exist in the Chocolatey lib folder. Furthermore, when you supply multiple packages to Boxstarter's command line or URL, it will skip installation for packages already installed.
+If you are familiar with Chocolatey, you know that Chocolatey will check if a package has been previously installed and will skip the installation if there is already an installation for that same package. Boxstarter changes this logic just a bit depending on whether one or multiple packages are provided to Install-BoxstarterPackage or the Boxstarter URL. If just one package is provided, Boxstarter will always attempt to re-download and install the package, even if it had been previously installed. It's important to note this only applies to the "outer" package. If your package includes calls to `choco install`, those packages will abide by the normal Chocolatey install rules and will not be installed if they already exist in the Chocolatey lib folder. Furthermore, when you supply multiple packages to Boxstarter's command line or URL, it will skip installation for packages already installed.
 
 ## Installing a package without a package
 
@@ -157,7 +157,7 @@ Install-BoxstarterPackage -ComputerName MyTargetMachine -PackageName MyPackage -
 
 Boxstarter will use the credential to connect to MyTargetMachine, and will copy the Boxstarter modules and your Local Repository packages to its local storage. It will then run the package on that machine. Boxstarter will configure your local machine to be able to connect to the remote machine, and it may prompt you for permission to change settings. You can always provide the -Force parameter to silence the prompts and allow boxstarter to freely enable remoting if it is not already enabled.
 
-Here is a screenshot of Boxstarter installing a Minecraft Server (bukkit) on a AWS EC2 instance:
+Here is a screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance:
 
 ![Screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance](/assets/images/amazon.png)
 
@@ -231,7 +231,7 @@ When establishing a remote connection, Boxstarter uses CredSSP authentication so
 
 ### Installation Failures
 
-Remote installations performed via PowerShell Remoting can sometimes fail. The symptoms of such failures can manifest themselves in a variety of ways and do not fail in a consistent manner. Boxstarter makes great effort to ensure the success of remote installations by leveraging scheduled tasks when it sees certain install activities. Boxstarter intercepts all calls to MSIEXEC, DISM (Installer for "Windows Features") and Windows Update. It is possible for more involved installation scripts to perform these operations in such a way that Boxstarter will not be able to intercept. If you suspect that your installation is failing due to using a remote session, you can use Boxstarter's `Invoke-FromTask` command to manually wrap your install in a scheduled task and thereby use a Local token.
+Remote installations performed via PowerShell Remoting can sometimes fail. The symptoms of such failures can manifest themselves in a variety of ways and do not fail consistently. Boxstarter makes great effort to ensure the success of remote installations by leveraging scheduled tasks when it sees certain install activities. Boxstarter intercepts all calls to MSIEXEC, DISM (Installer for "Windows Features") and Windows Update. It is possible for more involved installation scripts to perform these operations in such a way that Boxstarter will not be able to intercept. If you suspect that your installation is failing due to using a remote session, you can use Boxstarter's `Invoke-FromTask` command to manually wrap your install in a scheduled task and thereby use a Local token.
 
 ```powershell
 Invoke-FromTask "DISM /Online /NoRestart /Enable-Feature:TelnetClient" -IdleTimeout 20

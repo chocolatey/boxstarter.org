@@ -35,7 +35,7 @@ New-BoxstarterPackage -Name MyPackage -Description "I hope you enjoy MyPackage"
 
 This creates a MyPackage.nuspec file that looks like:
 
-```xml
+```XML
 <?xml version="1.0" ?>
 <package>
     <metadata>
