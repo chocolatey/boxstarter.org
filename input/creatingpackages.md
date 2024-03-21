@@ -69,7 +69,7 @@ These files are saved to your local Boxstarter Repository. This is where Boxstar
 You can change the location by using the Set-BoxstarterConfig command:
 
 ```powershell
-Set-BoxstarterConfig -LocalRepo "c:\some\other\location"
+Set-BoxstarterConfig -LocalRepo "c:\some\location"
 ```
 
 ## Editing and adding resources to your package
