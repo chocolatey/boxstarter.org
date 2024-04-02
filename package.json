@@ -1,6 +1,6 @@
 {
   "name": "boxstarter.org",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@4.1.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chocolatey/boxstarter.org.git"
@@ -15,6 +15,6 @@
     "choco-theme": "yarn dlx --quiet ts-node --skipIgnore node_modules/choco-theme/build/choco-theme.ts --repository=boxstarter"
   },
   "devDependencies": {
-    "choco-theme": "0.5.14"
+    "choco-theme": "0.6.0"
   }
 }
