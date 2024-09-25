@@ -33,9 +33,6 @@
         <link rel="apple-touch-icon" sizes="180x180" href="@baseUrl/apple-touch-icon-180x180.png" />
         <link rel="manifest" href="@baseUrl/site.webmanifest">
         @* CSS and JS *@
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href='@Context.GetLink("/assets/css/boxstarter.min.purged.css")'>
         <script type="text/javascript" src='@Context.GetLink("/assets/js/theme-toggle.min.js")'></script>
         <title>@title</title>
@@ -309,6 +306,7 @@
                 <button type="button" class="btn btn-bg-body d-md-none" data-bs-dismiss="alert" aria-label="Close">I accept</button>
             </div>
         </footer>
+        <script type="text/javascript" src='@Context.GetLink("/assets/js/bootstrap.bundle.min.js")'></script>
         <script type="text/javascript" src='@Context.GetLink("/assets/js/boxstarter.min.js")'></script>
     </body>
 </html>
