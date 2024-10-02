@@ -7,7 +7,7 @@ param(
 try {
     Push-Location $PSScriptRoot
     dotnet tool restore
-    dotnet cake --port $Port
+    dotnet cake recipe.cake --port $Port
 } finally {
     Pop-Location
 }
