@@ -1,6 +1,6 @@
 {
   "name": "boxstarter.org",
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.10.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chocolatey/boxstarter.org.git"
@@ -12,9 +12,16 @@
   },
   "homepage": "https://github.com/chocolatey/boxstarter.org#readme",
   "scripts": {
-    "choco-theme": "yarn dlx --quiet ts-node --skipIgnore node_modules/choco-theme/build/choco-theme.ts --repository=boxstarter"
+    "build-copy-theme": "npx tsx node_modules/@chocolatey-software/build-tools/build/copy-theme.ts boxstarter",
+    "build-purge-css": "npx tsx node_modules/@chocolatey-software/build-tools/build/purge-css.ts boxstarter",
+    "choco-theme": "yarn build-copy-theme && yarn build-purge-css",
+    "link-packages": "npx tsx node_modules/@chocolatey-software/build-tools/build/link.ts"
   },
   "devDependencies": {
-    "choco-theme": "1.4.1"
+    "@chocolatey-software/assets": "2.0.0",
+    "@chocolatey-software/build-tools": "2.0.0"
+  },
+  "dependencies": {
+    "@chocolatey-software/boxstarter": "2.0.0"
   }
 }
