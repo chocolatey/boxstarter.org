@@ -71,15 +71,15 @@ You have lots of options here. Boxstarter supports:
 
 We'll stay simple here and save to a GitHub Gist.
 
-![Boxstarter GitHub Gist](/assets/images/gist1.png)
+![Boxstarter GitHub Gist](https://img.chocolatey.org/boxstarter/gist1.png)
 
 After saving the Gist, we'll click the "View Raw" link
 
-![View raw link on Boxstarter GitHub Gist](/assets/images/gist2.png)
+![View raw link on Boxstarter GitHub Gist](https://img.chocolatey.org/boxstarter/gist2.png)
 
 Now we will copy the raw URL:
 
-![Copy the raw URL for the Boxstarter GitHub Gist](/assets/images/gist3.png)
+![Copy the raw URL for the Boxstarter GitHub Gist](https://img.chocolatey.org/boxstarter/gist3.png)
 
 ### Step 3
 
@@ -103,7 +103,7 @@ START https://boxstarter.org/package/nr/url?c:\temp\myscript.txt
 
 This invokes a Boxstarter installer that will install everything according to your script.
 
-![Boxstarter installer prompt](/assets/images/install.png)
+![Boxstarter installer prompt](https://img.chocolatey.org/boxstarter/install.png)
 
 If not already installed, this will install the Chocolatey CLI and any of its prerequisites. If you did not include /nr/ in the Boxstarter URL, it will manage reboots and automatically log the machine back in, so you do not have to attend to it throughout the installation.
 

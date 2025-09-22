@@ -38,3 +38,11 @@ To preview the site locally on your machine, either run the `.\preview.ps1` or t
 Come join in the conversation about Chocolatey in our [Community Chat Room](https://ch0.co/community).
 
 Please make sure you've read over and agree with the [etiquette regarding communication](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication).
+
+## Images
+
+All images are located in the [Chocolatey Image repository](https://github.com/chocolatey/img/) along with the following information:
+
+1. [How to add images to the image repository](https://github.com/chocolatey/img?tab=readme#adding-images-to-this-repository).
+1. [Where to find stock images](https://github.com/chocolatey/img?tab=readme#where-to-find-stock-images).
+1. [Using images in source code](https://github.com/chocolatey/img?tab=readme#using-images-in-source-code).

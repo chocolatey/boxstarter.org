@@ -112,7 +112,7 @@ Boxstarter's Base Directory (`$Boxstarter.BaseDir`) is copied to e:\BoxstarterDi
 - Invoke a Boxstarter installation of the example package
 - Will prompt the user for their password to use during reboots
 
-![Boxstarter installing package example](/assets/images/console.png)
+![Boxstarter installing package example](https://img.chocolatey.org/boxstarter/console.png)
 
 ## Creating a Boxstarter Share
 
@@ -159,7 +159,7 @@ Boxstarter will use the credential to connect to MyTargetMachine, and will copy 
 
 Here is a screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance:
 
-![Screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance](/assets/images/amazon.png)
+![Screenshot of Boxstarter installing a Minecraft Server (bukkit) on an AWS EC2 instance](https://img.chocolatey.org/boxstarter/amazon.png)
 
 You can pipe several computer names, URIs or Windows PowerShell sessions to `Install-BoxstarterPackage`. Boxstarter will attempt to install the package on each machine and return a PSObject result for each machine.
 
