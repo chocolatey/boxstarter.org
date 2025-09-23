@@ -34,9 +34,9 @@ PS C:\>
 
 Or you can use the shortcuts installed to the desktop and start menu:
 
-![Boxstarter shortcut icon](/assets/images/shortcut.png)
+![Boxstarter shortcut icon](https://img.chocolatey.org/boxstarter/shortcut.png)
 
-![Boxstarter shell](/assets/images/shell.png)
+![Boxstarter shell](https://img.chocolatey.org/boxstarter/shell.png)
 
 The remainder of the instructions on this page cover requirements to consider if using your own shell.
 
@@ -52,11 +52,11 @@ Depending on the OS version you are using, there are a few ways to launch PowerS
 
 **Windows 8**
 
-![Windows 8 administrative privileges in Windows Powershell](/assets/images/win8admin.png)
+![Windows 8 administrative privileges in Windows Powershell](https://img.chocolatey.org/boxstarter/win8admin.png)
 
 **Windows 7**
 
-![Windows 7 administrative privileges in Windows Powershell](/assets/images/win7admin.png)
+![Windows 7 administrative privileges in Windows Powershell](https://img.chocolatey.org/boxstarter/win7admin.png)
 
 ## Execution Policy
 

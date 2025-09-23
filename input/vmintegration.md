@@ -116,7 +116,7 @@ Get-AzurePublishSettingsFile
 
 This command will launch your default browser and initiate a Publisher Settings download. First you will land on the Windows Azure sign in page and as soon as you successfully authenticate, the download will begin.
 
-![Windows Azure download page](/assets/images/publishAzure.png)
+![Windows Azure download page](https://img.chocolatey.org/boxstarter/publishAzure.png)
 
 Now simply import the file just downloaded:
 

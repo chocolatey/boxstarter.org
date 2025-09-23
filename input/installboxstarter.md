@@ -25,7 +25,7 @@ Boxstarter requires the following to work:
 choco install Boxstarter
 ```
 
-![Boxstarter Windows PowerShell install output](/assets/images/installed.png)
+![Boxstarter Windows PowerShell install output](https://img.chocolatey.org/boxstarter/installed.png)
 
 This will download and install the Boxstarter modules to your PSModulePath.
 
@@ -33,7 +33,7 @@ This will download and install the Boxstarter modules to your PSModulePath.
 
 The zip file contains a `Setup.Bat` file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: `Setup.bat` accepts a `-Force` argument to suppress this prompt.
 
-![Boxstarter Module installer](/assets/images/setup.png)
+![Boxstarter Module installer](https://img.chocolatey.org/boxstarter/setup.png)
 
 Boxstarter is now installed in your modules path!
 

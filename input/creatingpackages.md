@@ -64,7 +64,7 @@ try {
 
 These files are saved to your local Boxstarter Repository. This is where Boxstarter will store your local packages and running the Install-BoxstarterPackage command will look here first before any external feed. The repository is located in your AppData directory, but you can always find out exactly where by inspecting the global Boxstarter variable `$Boxstarter.LocalRepo`.
 
-![Windows Powershell output from inspecting the global Boxstarter variable $Boxstarter.LocalRepo](/assets/images/global.png)
+![Windows Powershell output from inspecting the global Boxstarter variable $Boxstarter.LocalRepo](https://img.chocolatey.org/boxstarter/global.png)
 
 You can change the location by using the Set-BoxstarterConfig command:
 

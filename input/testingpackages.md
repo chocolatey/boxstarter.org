@@ -19,7 +19,7 @@ choco install Boxstarter.TestRunner
 
 Boxstarter needs to know where your repository of Chocolatey packages is located. The Boxstarter repository is a single directory on disk that contains one subdirectory per package. By default, Boxstarter maintains this directory in a directory called `BuildPackages` inside the same root directory where the Boxstarter modules reside. See [Creating Packages](creatingpackages) for detailed information on using Boxstarter commands to simplify package creation. All Boxstarter commands that create and build packages act within this directory. The repository location can be found using the `$boxstarter` settings variable in `$Boxstarter.LocalRepo`.
 
-![Boxstarter repository directory](/assets/images/repoDir.png)
+![Boxstarter repository directory](https://img.chocolatey.org/boxstarter/repoDir.png)
 
 This location can be changed using the `Set-BoxstarterConfig` command.
 
@@ -79,7 +79,7 @@ Test-BoxstarterPackage -PackageName "MyPackage1","MyPackage2"
 
 Boxstarter will build their .nupkg files and attempt to install them on the deployment targets specified with `Set-BoxstarterDeploymentOptions`. Boxstarter will use the credentials provided in the deployment options. You can provide several targets to `Set-BoxstarterDeploymentOptions`. One may wish to supply different machines running different versions of windows. If a package installation runs to completion with no exceptions or returned error codes, Boxstarter considers the installation a PASSED test. If `Test-BoxstarterPackage` is called with no packages specified, Boxstarter will iterate over each package in its local repository. It will build the nupkg and compare its version to the version on the package published feed. If the version in the repo is greater than the published version, Boxstarter will initiate a test on the deployment targets otherwise the package test will be skipped.
 
-![Testing Chocolatey packages console output](/assets/images/CI.png)
+![Testing Chocolatey packages console output](https://img.chocolatey.org/boxstarter/CI.png)
 
 ## Publishing Successful Packages
 
@@ -166,7 +166,7 @@ If you administer your own build server, there is some one time setup that you n
     - `AzureSubscriptionId` - The Azure subscription ID Guid to use when using Azure VMs as deployment targets.
     - `AzureSubscriptionCertificate` - The Azure subscription certificate to use when using Azure VMs as deployment targets. This is the Base64 encoded content of the certificate and can be found in the ManagementCertificate attribute of your Azure publish settings file.
 
-    ![Configuring a dedicated build server](/assets/images/tfs.png)
+    ![Configuring a dedicated build server](https://img.chocolatey.org/boxstarter/tfs.png)
 
     > :choco-info: **NOTE**
     >

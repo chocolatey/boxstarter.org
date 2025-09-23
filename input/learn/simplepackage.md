@@ -47,7 +47,7 @@ These are just Chocolatey Install calls and Boxstarter commands. Save this to a 
 
 ### Invoke the Boxstarter shell
 
-![Boxstarter shortcut icon](/assets/images/shortcut.png)
+![Boxstarter shortcut icon](https://img.chocolatey.org/boxstarter/shortcut.png)
 
 The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See [Using Boxstarter Commands](/usingboxstarter) for information about running Boxstarter in your own shell.
 

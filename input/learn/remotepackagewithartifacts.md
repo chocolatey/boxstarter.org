@@ -18,7 +18,7 @@ This walk through will create a NuGet ODATA feed application and deploy it to a 
 
 Create an empty Web Application in Visual Studio and add a NuGet reference to NuGet.Server. After the package installation completes, build the solution. NOTE: This can be performed with the free Visual Studio Express for Web which can be installed via Chocolatey - `choco install VisualStudio2013ExpressWeb`.
 
-![Manage Nuget packages from Visual Studio](/assets/images/NugetServer.png)
+![Manage Nuget packages from Visual Studio](https://img.chocolatey.org/boxstarter/NugetServer.png)
 
 ## Step 2
 
@@ -36,7 +36,7 @@ Otherwise, click on the download link at the top of this page and run the Setup.
 
 ### Invoke the Boxstarter shell
 
-![Boxstarter shortcut icon](/assets/images/shortcut.png)
+![Boxstarter shortcut icon](https://img.chocolatey.org/boxstarter/shortcut.png)
 
 The Boxstarter install creates a shortcut to a shell that provides the easiest way to access Boxstarter commands especially if you are not familiar with PowerShell. See [Using Boxstarter Commands](/usingboxstarter) for information about running Boxstarter in your own shell.
 
@@ -130,4 +130,4 @@ Install-BoxstarterPackage -ComputerName MyMachine -PackageName NugetServer -Cred
 
 Now we should be able to browse to our NuGet server application at http://MyServer
 
-![Running instance of NuGet.Server](/assets/images/NugetServerWeb.png)
+![Running instance of NuGet.Server](https://img.chocolatey.org/boxstarter/NugetServerWeb.png)
