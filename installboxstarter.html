@@ -17,18 +17,18 @@ gtag('config', 'G-0WDD29GGN2');
         <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
         <meta property="og:site_name" content="Boxstarter" />
         <meta property="og:type" content="product" />
-        <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
+        <meta property="og:image" content="https://img.chocolatey.org/social-share/boxstarter-dark-og.png" />
         <meta property="og:url" content="https://boxstarter.org/installboxstarter" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@chocolateynuget">
         <meta name="twitter:creator" content="@chocolateynuget">
         <meta property="product:brand" content="Boxstarter" />
         <meta property="product:category" content="software" />
-        <link rel="shortcut icon" href="https://boxstarter.org/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="https://boxstarter.org/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-167x167.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="https://boxstarter.org/apple-touch-icon-180x180.png" />
+        <link rel="shortcut icon" href="https://img.chocolatey.org/favicons/boxstarter/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="167x167" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-180x180.png" />
         <link rel="manifest" href="https://boxstarter.org/site.webmanifest">
         <link rel="stylesheet" href='/assets/css/boxstarter.min.purged.css'>
         <script type="text/javascript" src='/assets/js/theme-toggle.min.js'></script>
@@ -46,7 +46,7 @@ gtag('config', 'G-0WDD29GGN2');
             <nav class="navbar navbar-expand-lg text-bg-body-secondary">
                 <div class="container-fluid">
                     <a class="navbar-brand link-theme" href="/">
-                        <img src='/assets/images/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
+                        <img src='https://img.chocolatey.org/logos/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
                         Boxstarter
                     </a>
                     <div class="d-flex align-items-center justify-content-center">
@@ -191,10 +191,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-d7aa28d2-0f02-45da-8069-a43723f81cce" aria-label="collapse or expand navigation" href="#id-d7aa28d2-0f02-45da-8069-a43723f81cce"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-132737fc-5f7d-4425-b625-e558c494e0d3" aria-label="collapse or expand navigation" href="#id-132737fc-5f7d-4425-b625-e558c494e0d3"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-d7aa28d2-0f02-45da-8069-a43723f81cce">
+                                                        <div class="collapse" id="id-132737fc-5f7d-4425-b625-e558c494e0d3">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -258,11 +258,11 @@ gtag('config', 'G-0WDD29GGN2');
 <h2 id="installing-from-chocolatey">Installing from Chocolatey</h2>
 <pre><code class="language-powershell">choco install Boxstarter
 </code></pre>
-<p><img src="/assets/images/installed.png" alt="Boxstarter Windows PowerShell install output" /></p>
+<p><img src="https://img.chocolatey.org/boxstarter/installed.png" alt="Boxstarter Windows PowerShell install output" /></p>
 <p>This will download and install the Boxstarter modules to your PSModulePath.</p>
 <h2 id="downloading-the-zip-file">Downloading the zip file</h2>
 <p>The zip file contains a <code>Setup.Bat</code> file that will go to Chocolatey and install Boxstarter. If Chocolatey is not installed on your machine, the Boxstarter installer will request the user's permission to install it. Note: <code>Setup.bat</code> accepts a <code>-Force</code> argument to suppress this prompt.</p>
-<p><img src="/assets/images/setup.png" alt="Boxstarter Module installer" /></p>
+<p><img src="https://img.chocolatey.org/boxstarter/setup.png" alt="Boxstarter Module installer" /></p>
 <p>Boxstarter is now installed in your modules path!</p>
 <p>Both the Chocolatey Boxstarter package and the downloaded zip file available on this website install all Boxstarter modules except the Boxstarter.Azure module which provides integration with Windows Azure VMs. You can install the Azure module by running <code>choco install Boxstarter.Azure</code>. In addition to the Boxstarter.Azure module, it also installs the Windows Azure PowerShell toolkit, the Azure SDK for .Net Libraries and .Net 4.5. It requires PowerShell 3 or higher (the version installed with Windows 8/server 2012 and higher but also <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40855">freely available for download</a> on older versions) to install successfully.</p>
 <p>After Boxstarter is installed, a new PowerShell console must be opened before you can load the modules and run its commands. For convenience, you can use the <a href="usingboxstarter">Boxstarter Shell</a> for running Boxstarter commands which is the easiest way to ensure that all Boxstarter modules are properly loaded regardless of the version of Windows and PowerShell you are running.</p>
@@ -318,7 +318,7 @@ $env:PSModulePath = ($env:PSModulePath -split ';' | Where-Object { $_ -notlike '
             <div class="text-bg-body-secondary border-top text-center p-3">
                 <span class="small">© 2018 - 2025 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/db29129af327feab2ec78b8bfcfd7486769bb96b">db29129</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/8325bfd9ebdfacf8e26d03cc634e3367397ec44e">8325bfd</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">

@@ -17,18 +17,18 @@ gtag('config', 'G-0WDD29GGN2');
         <meta property="og:description" content="Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages. When its time to repave either bare metal or virtualized instances, locally or on a remote machine, Boxstarter can automate both trivial and highly complex installations. Compatible with all Windows versions from Windows 7/2008 R2 forward." />
         <meta property="og:site_name" content="Boxstarter" />
         <meta property="og:type" content="product" />
-        <meta property="og:image" content="https://boxstarter.org/assets/images/social-media/boxstarter-dark-og.png" />
+        <meta property="og:image" content="https://img.chocolatey.org/social-share/boxstarter-dark-og.png" />
         <meta property="og:url" content="https://boxstarter.org/testingpackages" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@chocolateynuget">
         <meta name="twitter:creator" content="@chocolateynuget">
         <meta property="product:brand" content="Boxstarter" />
         <meta property="product:category" content="software" />
-        <link rel="shortcut icon" href="https://boxstarter.org/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="https://boxstarter.org/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://boxstarter.org/apple-touch-icon-167x167.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="https://boxstarter.org/apple-touch-icon-180x180.png" />
+        <link rel="shortcut icon" href="https://img.chocolatey.org/favicons/boxstarter/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="167x167" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://img.chocolatey.org/favicons/boxstarter/apple-touch-icon-180x180.png" />
         <link rel="manifest" href="https://boxstarter.org/site.webmanifest">
         <link rel="stylesheet" href='/assets/css/boxstarter.min.purged.css'>
         <script type="text/javascript" src='/assets/js/theme-toggle.min.js'></script>
@@ -46,7 +46,7 @@ gtag('config', 'G-0WDD29GGN2');
             <nav class="navbar navbar-expand-lg text-bg-body-secondary">
                 <div class="container-fluid">
                     <a class="navbar-brand link-theme" href="/">
-                        <img src='/assets/images/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
+                        <img src='https://img.chocolatey.org/logos/boxstarter-logo-sm.png' alt="Boxstarter" width="70" height="61" class="d-inline-block align-text-middle">
                         Boxstarter
                     </a>
                     <div class="d-flex align-items-center justify-content-center">
@@ -191,10 +191,10 @@ gtag('config', 'G-0WDD29GGN2');
                                                     </li>
                                                     <li class="nav-item nav-item-green">
                                                         <div class="nav-link nav-link-collapse d-flex">
-                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-d7aa28d2-0f02-45da-8069-a43723f81cce" aria-label="collapse or expand navigation" href="#id-d7aa28d2-0f02-45da-8069-a43723f81cce"></button>
+                                                            <button class="btn btn-collapse rounded-0 border-0 ps-3 collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="id-132737fc-5f7d-4425-b625-e558c494e0d3" aria-label="collapse or expand navigation" href="#id-132737fc-5f7d-4425-b625-e558c494e0d3"></button>
                                                             <a href="/learn">Guides</a>
                                                         </div>
-                                                        <div class="collapse" id="id-d7aa28d2-0f02-45da-8069-a43723f81cce">
+                                                        <div class="collapse" id="id-132737fc-5f7d-4425-b625-e558c494e0d3">
                                                             <ul class="navbar-nav">
                                                                         <li class="nav-item">
                                                                             <a class="nav-link ps-5" href="/learn/remotepackagewithartifacts">Deploying A Web Application Remotely</a>
@@ -250,7 +250,7 @@ gtag('config', 'G-0WDD29GGN2');
 </code></pre>
 <h2 id="configuring-the-local-boxstarter-repository">Configuring the Local Boxstarter Repository</h2>
 <p>Boxstarter needs to know where your repository of Chocolatey packages is located. The Boxstarter repository is a single directory on disk that contains one subdirectory per package. By default, Boxstarter maintains this directory in a directory called <code>BuildPackages</code> inside the same root directory where the Boxstarter modules reside. See <a href="creatingpackages">Creating Packages</a> for detailed information on using Boxstarter commands to simplify package creation. All Boxstarter commands that create and build packages act within this directory. The repository location can be found using the <code>$boxstarter</code> settings variable in <code>$Boxstarter.LocalRepo</code>.</p>
-<p><img src="/assets/images/repoDir.png" alt="Boxstarter repository directory" /></p>
+<p><img src="https://img.chocolatey.org/boxstarter/repoDir.png" alt="Boxstarter repository directory" /></p>
 <p>This location can be changed using the <code>Set-BoxstarterConfig</code> command.</p>
 <pre><code class="language-powershell">Set-BoxStarterConfig -LocalRepo &quot;c:\dev\Chocolatey-Packages&quot;
 </code></pre>
@@ -283,7 +283,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
 <pre><code class="language-powershell">Test-BoxstarterPackage -PackageName &quot;MyPackage1&quot;,&quot;MyPackage2&quot;
 </code></pre>
 <p>Boxstarter will build their .nupkg files and attempt to install them on the deployment targets specified with <code>Set-BoxstarterDeploymentOptions</code>. Boxstarter will use the credentials provided in the deployment options. You can provide several targets to <code>Set-BoxstarterDeploymentOptions</code>. One may wish to supply different machines running different versions of windows. If a package installation runs to completion with no exceptions or returned error codes, Boxstarter considers the installation a PASSED test. If <code>Test-BoxstarterPackage</code> is called with no packages specified, Boxstarter will iterate over each package in its local repository. It will build the nupkg and compare its version to the version on the package published feed. If the version in the repo is greater than the published version, Boxstarter will initiate a test on the deployment targets otherwise the package test will be skipped.</p>
-<p><img src="/assets/images/CI.png" alt="Testing Chocolatey packages console output" /></p>
+<p><img src="https://img.chocolatey.org/boxstarter/CI.png" alt="Testing Chocolatey packages console output" /></p>
 <h2 id="publishing-successful-packages">Publishing Successful Packages</h2>
 <p><code>Test-BoxstarterPackage</code> will return a set of test results. One can then use <code>Select-BoxstarterResultsToPublish</code> to consume these results and return the package IDs of the packages who had all deployment targets pass the package installation. These IDs can then be passed to <code>Publish-BoxstarterPackage</code> to publish those packages to their associated feeds.</p>
 <pre><code class="language-powershell">Test-BoxstarterPackage | Select-BoxstarterResultsToPublish | Publish-BoxstarterPackage
@@ -345,7 +345,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
 <li><code>AzureSubscriptionId</code> - The Azure subscription ID Guid to use when using Azure VMs as deployment targets.</li>
 <li><code>AzureSubscriptionCertificate</code> - The Azure subscription certificate to use when using Azure VMs as deployment targets. This is the Base64 encoded content of the certificate and can be found in the ManagementCertificate attribute of your Azure publish settings file.</li>
 </ul>
-<p><img src="/assets/images/tfs.png" alt="Configuring a dedicated build server" /></p>
+<p><img src="https://img.chocolatey.org/boxstarter/tfs.png" alt="Configuring a dedicated build server" /></p>
 <blockquote>
 <p>:choco-info: <strong>NOTE</strong></p>
 <p>All of these MSBuild script parameters are optional for dedicated builds as long as the values were provided in steps 2 and 3 above which may be preferable over having plain text parameter values fed to your build.</p>
@@ -397,7 +397,7 @@ Set-BoxstarterDeployOptions -DeploymentTargetCredentials $cred `
             <div class="text-bg-body-secondary border-top text-center p-3">
                 <span class="small">© 2018 - 2025 <a class="link-theme" href="https://chocolatey.org/">Chocolatey Software, Inc.</a></span><br />
                 <span class="small">© 2012 - 2018 <a class="link-theme" href="https://www.hurryupandwait.io/">Matt Wrock</a></span><br />
-                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/db29129af327feab2ec78b8bfcfd7486769bb96b">db29129</a></span><br />
+                <span class="small">Deployed from <a class="link-theme" href="https://github.com/chocolatey/boxstarter.org/commit/8325bfd9ebdfacf8e26d03cc634e3367397ec44e">8325bfd</a></span><br />
                 <span class="small"><a class="link-theme" href="https://statiq.dev/">Generated by Statiq</a></span>
             </div>
             <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
