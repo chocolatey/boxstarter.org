@@ -14,7 +14,7 @@ jobs:
   misspell:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: haya14busa/action-cond@v1
         id: reporter
         with:
@@ -36,7 +36,7 @@ jobs:
   languagetool:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: haya14busa/action-cond@v1
         id: reporter
         with:
