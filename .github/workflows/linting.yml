@@ -24,7 +24,7 @@ jobs:
       - name: Setup ReviewDog
         uses: reviewdog/action-setup@v1.4.0
       - name: Run misspell with reviewdog
-        uses: reviewdog/action-misspell@v1.21.0
+        uses: reviewdog/action-misspell@v1.27.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
