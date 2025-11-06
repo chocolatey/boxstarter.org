@@ -23,7 +23,7 @@ jobs:
         global-json-file: global.json
 
     - name: Statiq-Build
-      uses: cake-build/cake-action@v1
+      uses: cake-build/cake-action@v3
       with:
         script-path: recipe.cake
         target: Statiq-Build
