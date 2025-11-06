@@ -27,7 +27,7 @@ jobs:
       - name: Setup ReviewDog
         uses: reviewdog/action-setup@v1.4.0
       - name: Run LanguageTool with reviewdog
-        uses: reviewdog/action-languagetool@v1.20.0
+        uses: reviewdog/action-languagetool@v1.23.0
         with:
           github_token: ${{ secrets.github_token }}
           reporter: 'github-check'
