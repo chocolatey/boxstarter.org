@@ -22,7 +22,7 @@ jobs:
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Setup ReviewDog
-        uses: reviewdog/action-setup@v1.4.0
+        uses: reviewdog/action-setup@v1.5.0
       - name: Run misspell with reviewdog
         uses: reviewdog/action-misspell@v1.27.0
         with:
@@ -44,7 +44,7 @@ jobs:
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Setup ReviewDog
-        uses: reviewdog/action-setup@v1.4.0
+        uses: reviewdog/action-setup@v1.5.0
       - name: Run LanguageTool with reviewdog
         uses: reviewdog/action-languagetool@v1.23.0
         with:
