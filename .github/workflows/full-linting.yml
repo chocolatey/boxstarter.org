@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Setup ReviewDog
-        uses: reviewdog/action-setup@v1.4.0
+        uses: reviewdog/action-setup@v1.5.0
       - name: Run misspell with reviewdog
         uses: reviewdog/action-misspell@v1.27.0
         with:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Setup ReviewDog
-        uses: reviewdog/action-setup@v1.4.0
+        uses: reviewdog/action-setup@v1.5.0
       - name: Run LanguageTool with reviewdog
         uses: reviewdog/action-languagetool@v1.23.0
         with:
