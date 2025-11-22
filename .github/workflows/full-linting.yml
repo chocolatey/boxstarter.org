@@ -6,7 +6,7 @@ jobs:
   misspell:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Setup ReviewDog
         uses: reviewdog/action-setup@v1.5.0
       - name: Run misspell with reviewdog
@@ -23,7 +23,7 @@ jobs:
   languagetool:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Setup ReviewDog
         uses: reviewdog/action-setup@v1.5.0
       - name: Run LanguageTool with reviewdog
