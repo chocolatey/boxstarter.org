@@ -22,6 +22,6 @@
     "@chocolatey-software/build-tools": "2.0.0"
   },
   "dependencies": {
-    "@chocolatey-software/boxstarter": "2.0.0"
+    "@chocolatey-software/boxstarter": "2.1.0"
   }
 }
